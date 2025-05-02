@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lnp.it.kr/sitemap.xml
