@@ -1,0 +1,57 @@
+/* 베트남어 폰트 */
+@font-face {
+  font-family: "Noto Sans Vietnamese";
+  src: url("/fonts/NotoSansVietnamese-Regular.woff2") format("woff2"), url("/fonts/NotoSansVietnamese-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Vietnamese";
+  src: url("/fonts/NotoSansVietnamese-Bold.woff2") format("woff2"), url("/fonts/NotoSansVietnamese-Bold.woff")
+    format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 태국어 폰트 */
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("/fonts/NotoSansThai-Regular.woff2") format("woff2"), url("/fonts/NotoSansThai-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("/fonts/NotoSansThai-Bold.woff2") format("woff2"), url("/fonts/NotoSansThai-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 중국어 폰트 */
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("/fonts/NotoSansSC-Regular.woff2") format("woff2"), url("/fonts/NotoSansSC-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("/fonts/NotoSansSC-Bold.woff2") format("woff2"), url("/fonts/NotoSansSC-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 다국어 폰트 패밀리 */
+.multilingual-font {
+  font-family: "Noto Sans", "Noto Sans Vietnamese", "Noto Sans Thai", "Noto Sans SC", sans-serif;
+}

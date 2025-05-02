@@ -1,0 +1,68 @@
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { useTranslations } from "@/lib/translations"
+import { useState } from "react"
+import Link from "next/link"
+
+export default function HeroSection({ locale }: { locale: string }) {
+  const t = useTranslations(locale)
+  const [isLoading, setIsLoading] = useState(true)
+
+  return (
+    <section className="relative w-full bg-white">
+      <div className="container mx-auto px-4 py-6">
+        {/* YouTube 비디오 컨테이너 */}
+        <div className="w-full mx-auto mb-8">
+          <div
+            className="relative w-full overflow-hidden rounded-lg shadow-md bg-gray-100"
+            style={{ paddingBottom: "56.25%" }} // 16:9 비율
+          >
+            {/* 로딩 상태 표시 */}
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
+                <div className="animate-pulse text-gray-400">비디오 로딩 중...</div>
+              </div>
+            )}
+
+            {/* YouTube 임베드 */}
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/OGpOtlJx4Xk?autoplay=1&mute=1&loop=1&playlist=OGpOtlJx4Xk&controls=0&showinfo=0&rel=0"
+              title="LNP Corporation Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              onLoad={() => setIsLoading(false)}
+            ></iframe>
+          </div>
+        </div>
+
+        {/* 텍스트 및 버튼 - 비디오 아래에 명확하게 분리 */}
+        <div className="text-center mt-4">
+          <h1
+            className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider mb-3 text-gray-900"
+            style={{ fontFamily: "serif" }}
+          >
+            LIGHTING INNOVATION
+          </h1>
+          <p className="text-lg md:text-xl mb-5 max-w-3xl mx-auto text-gray-700">
+            최고의 조명 인테리어 솔루션을 제공합니다
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href={`/${locale}/products`}>
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none px-8 py-3 text-lg">
+                {t.exploreProducts}
+              </Button>
+            </Link>
+            <Link href={`/${locale}/consultation`}>
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none px-8 py-3 text-lg">
+                {t.contactUs}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
