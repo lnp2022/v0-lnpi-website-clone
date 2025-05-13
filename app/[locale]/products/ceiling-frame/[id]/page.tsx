@@ -789,12 +789,14 @@ export default function ProductDetailPage({
                         : index === 2
                           ? "便捷的移动性，长度为1.5米"
                           : "以1盒(18件)为单位销售"
-                    : feature.split("\n").map((line, i) => (
-                        <span key={i}>
-                          {line}
-                          {i < feature.split("\n").length - 1 && <br />}
-                        </span>
-                      ))}
+                    : feature.includes("\n")
+                      ? feature.split("\n").map((line, i) => (
+                          <span key={i}>
+                            {line}
+                            {i < feature.split("\n").length - 1 && <br />}
+                          </span>
+                        ))
+                      : feature}
                 </li>
               ))}
             </ul>
