@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import "./fonts.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { LocaleProvider } from "@/components/locale-provider"
@@ -22,14 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  // 로케일에 따라 적절한 폰트 클래스 선택
-  const getFontClass = (locale: string) => {
-    return "multilingual-font"
-  }
-
   return (
     <html lang={params.locale}>
-      <body className={`${inter.className} ${getFontClass(params.locale)}`}>
+      <body className={inter.className}>
         <LocaleProvider locale={params.locale}>
           <div className="flex min-h-screen flex-col">
             <Header />

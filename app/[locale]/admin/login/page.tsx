@@ -80,7 +80,7 @@ export default function AdminLoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">관리자 로그인</CardTitle>
-          <CardDescription className="text-center">자료실 관리를 위한 관리자 계정으로 로그인하세요.</CardDescription>
+          <CardDescription className="text-center">자료실 관리를 위한 관리자 계정으로 로그인하세��.</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">

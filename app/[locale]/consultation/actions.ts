@@ -10,9 +10,8 @@ export async function submitConsultation(prevState: any, formData: FormData) {
   const phone = formData.get("phone") as string
   const inquiryType = formData.get("inquiryType") as string
   const message = formData.get("message") as string
-  const locale = (formData.get("locale") as string) || "ko"
 
-  console.log("폼 데이터:", { name, phone, inquiryType, message: message.substring(0, 20) + "...", locale })
+  console.log("폼 데이터:", { name, phone, inquiryType, message: message.substring(0, 20) + "..." })
 
   try {
     // 프리뷰 환경에서는 이메일 전송을 시뮬레이션하고 성공 응답 반환
@@ -20,7 +19,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
       console.log("프리뷰/개발 환경 감지: 이메일 전송 시뮬레이션")
 
       // 이메일 내용 로깅
-      const inquiryTypeText = getInquiryTypeText(inquiryType, locale)
+      const inquiryTypeText = getInquiryTypeText(inquiryType)
       console.log("이메일 전송 시뮬레이션:", {
         to: ["2022landp@gmail.com", "skvjrxks@naver.com", "lnp_0103@naver.com"],
         subject: `[홈페이지 문의] ${name}님의 ${inquiryTypeText}`,
@@ -35,13 +34,13 @@ export async function submitConsultation(prevState: any, formData: FormData) {
       // 프리뷰 환경에서는 성공 응답 반환
       return {
         success: true,
-        message: getSuccessMessage(locale, true),
+        message: "문의가 성공적으로 접수되었습니다. (프리뷰 모드)",
         preview: true,
       }
     }
 
     // 실제 환경에서 이메일 전송 처리
-    const inquiryTypeText = getInquiryTypeText(inquiryType, locale)
+    const inquiryTypeText = getInquiryTypeText(inquiryType)
 
     // 이메일 설정
     const transporter = nodemailer.createTransport({
@@ -87,7 +86,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
 
       return {
         success: true,
-        message: getSuccessMessage(locale, false),
+        message: "문의가 성공적으로 접수되었습니다.",
         messageId: info.messageId,
       }
     } catch (emailError) {
@@ -102,7 +101,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
         console.log("DNS 관련 오류 발생, 성공으로 처리합니다.")
         return {
           success: true,
-          message: getSuccessMessage(locale, true),
+          message: "문의가 성공적으로 접수되었습니다. (프리뷰 모드)",
           preview: true,
         }
       }
@@ -124,7 +123,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
       console.log("네트워크 관련 오류 발생, 성공으로 처리합니다.")
       return {
         success: true,
-        message: getSuccessMessage(locale, true),
+        message: "문의가 성공적으로 접수되었습니다. (프리뷰 모드)",
         preview: true,
       }
     }
@@ -132,81 +131,20 @@ export async function submitConsultation(prevState: any, formData: FormData) {
     // 기타 오류 처리
     return {
       success: false,
-      message: getErrorMessage(locale, error.message),
+      message: "문의 처리 중 오류가 발생했습니다: " + (error.message || "알 수 없는 오류"),
     }
   }
 }
 
 // 문의 유형 텍스트 반환 함수
-function getInquiryTypeText(inquiryType: string, locale = "ko"): string {
+function getInquiryTypeText(inquiryType: string): string {
   const inquiryTypes = {
-    ko: {
-      all: "(주)엘엔피 판매 모든 상품 구매 문의",
-      ceiling: "우물천장 프레임 구매 문의",
-      switch: "GUGU 무선 스위치 구매 문의",
-      service: "GUGU 스위치 A/S 관련 문의",
-      other: "기타 문의",
-    },
-    en: {
-      all: "Inquiry about all products sold by LNP",
-      ceiling: "Inquiry about ceiling frame purchase",
-      switch: "Inquiry about GUGU wireless switch purchase",
-      service: "Inquiry about GUGU switch after-sales service",
-      other: "Other inquiries",
-    },
-    vi: {
-      all: "Yêu cầu về tất cả các sản phẩm do LNP bán",
-      ceiling: "Yêu cầu về mua khung trần",
-      switch: "Yêu cầu về mua công tắc không dây GUGU",
-      service: "Yêu cầu về dịch vụ sau bán hàng của công tắc GUGU",
-      other: "Các yêu cầu khác",
-    },
-    th: {
-      all: "สอบถามเกี่ยวกับผลิตภัณฑ์ทั้งหมดที่จำหน่ายโดย LNP",
-      ceiling: "สอบถามเกี่ยวกับการซื้อโครงเพดาน",
-      switch: "สอบถามเกี่ยวกับการซื้อสวิตช์ไร้สาย GUGU",
-      service: "สอบถามเกี่ยวกับบริการหลังการขายของสวิตช์ GUGU",
-      other: "สอบถามอื่นๆ",
-    },
-    zh: {
-      all: "关于LNP销售的所有产品的咨询",
-      ceiling: "关于天花板框架购买的咨询",
-      switch: "关于GUGU无线开关购买的咨询",
-      service: "关于GUGU开关售后服务的咨询",
-      other: "其他咨询",
-    },
+    all: "(주)엘엔피 판매 모든 상품 구매 문의",
+    ceiling: "우물천장 프레임 구매 문의",
+    switch: "GUGU 무선 스위치 구매 문의",
+    service: "GUGU 스위치 A/S 관련 문의",
+    other: "기타 문의",
   }
 
-  const localeTypes = inquiryTypes[locale] || inquiryTypes.ko
-  return localeTypes[inquiryType] || inquiryType
-}
-
-// 성공 메시지 반환 함수
-function getSuccessMessage(locale = "ko", isPreview = false): string {
-  const messages = {
-    ko: isPreview ? "문의가 성공적으로 접수되었습니다. (프리뷰 모드)" : "문의가 성공적으로 접수되었습니다.",
-    en: isPreview
-      ? "Your inquiry has been successfully received. (Preview mode)"
-      : "Your inquiry has been successfully received.",
-    vi: isPreview
-      ? "Yêu cầu của bạn đã được nhận thành công. (Chế độ xem trước)"
-      : "Yêu cầu của bạn đã được nhận thành công.",
-    th: isPreview ? "ได้รับคำถามของคุณเรียบร้อยแล้ว (โหมดตัวอย่าง)" : "ได้รับคำถามของคุณเรียบร้อยแล้ว",
-    zh: isPreview ? "您的咨询已成功接收。(预览模式)" : "您的咨询已成功接收。",
-  }
-
-  return messages[locale] || messages.ko
-}
-
-// 오류 메시지 반환 함수
-function getErrorMessage(locale = "ko", errorMessage = ""): string {
-  const messages = {
-    ko: `문의 처리 중 오류가 발생했습니다: ${errorMessage || "알 수 없는 오류"}`,
-    en: `An error occurred while processing your inquiry: ${errorMessage || "Unknown error"}`,
-    vi: `Đã xảy ra lỗi khi xử lý yêu cầu của bạn: ${errorMessage || "Lỗi không xác định"}`,
-    th: `เกิดข้อผิดพลาดขณะประมวลผลคำถามของคุณ: ${errorMessage || "ข้อผิดพลาดที่ไม่รู้จัก"}`,
-    zh: `处理您的咨询时出错: ${errorMessage || "未知错误"}`,
-  }
-
-  return messages[locale] || messages.ko
+  return inquiryTypes[inquiryType] || inquiryType
 }

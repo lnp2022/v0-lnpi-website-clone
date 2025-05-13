@@ -37,7 +37,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานเดี่ยวแบบนกนางนวล (53mm x 56mm)"
                 : "海鸥型单体天花板框架 (53mm x 56mm)",
       category: "seagull-single",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001-Kh8GBOoM75NgWbphr4KxfmLJCbqs6U.png", // ID 3의 이미지로 변경
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/002%20%282%29-znH45SbsAG11QvolEu8nfGeZVCfRYo.png", // ID 3의 이미지로 변경
     },
     {
       id: 2,
@@ -52,7 +52,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานเดี่ยวมาตรฐาน (53mm x 56mm)"
                 : "标准单体天花板框架 (53mm x 56mm)",
       category: "standard-single",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/002-RQ0Ljae7ITlPR2TlQErW3WENLrNXWr.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/007-TdNLGzQB16RKgKCuRhrqGNKdPtaA29.png",
     },
     {
       id: 3,
@@ -67,7 +67,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานห่อแผ่น (43mm x 50mm)"
                 : "贴膜天花板框架 (43mm x 50mm)",
       category: "sheet-wrapping",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/003-uOutItYeWepeo39GdiZtSmKhD5l8QD.png", // ID 1의 이미지로 변경
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrapping-frame-1-UpAlGHxzTb4UG2wddZivUmrWtJlXJD.png", // ID 1의 이미지로 변경
     },
     {
       id: 4,
@@ -189,14 +189,12 @@ export default function CeilingFramePage({
       {/* 제품 그리드 */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredProducts.map((product, index) => (
+          {filteredProducts.map((product) => (
             <div key={product.id} className="group">
               <Link href={`/${params.locale}/products/ceiling-frame/${product.id}`}>
                 <div className="relative aspect-square overflow-hidden bg-gray-100 mb-4">
                   <Image
-                    src={
-                      index === 0 && activeCategory === "all" ? "/images/ceiling-frame/frame-detail.jpg" : product.image
-                    }
+                    src={product.image || "/placeholder.svg"}
                     alt={product.name}
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-300"

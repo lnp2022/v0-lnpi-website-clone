@@ -7,196 +7,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Download, FileText, X } from "lucide-react"
 import { useState } from "react"
 
-// 게시글 제목 다국어 지원 함수
-function getPostTitle(locale: string, id: number): string {
-  switch (id) {
-    case 1:
-      switch (locale) {
-        case "ko":
-          return "엘엔피-카달로그"
-        case "en":
-          return "LNP-Catalog"
-        case "vi":
-          return "LNP-Danh mục"
-        case "th":
-          return "LNP-แคตตาล็อก"
-        case "zh":
-          return "LNP-产品目录"
-        default:
-          return "엘엔피-카달로그"
-      }
-    case 2:
-      switch (locale) {
-        case "ko":
-          return "GUGU 스위치 - 카달로그"
-        case "en":
-          return "GUGU Switch - Catalog"
-        case "vi":
-          return "Công tắc GUGU - Danh mục"
-        case "th":
-          return "สวิตช์ GUGU - แคตตาล็อก"
-        case "zh":
-          return "GUGU 开关 - 产品目录"
-        default:
-          return "GUGU 스위치 - 카달로그"
-      }
-    case 3:
-      switch (locale) {
-        case "ko":
-          return "한방 우물 설치 가이드"
-        case "en":
-          return "Single Ceiling Frame Installation Guide"
-        case "vi":
-          return "Hướng dẫn lắp đặt khung trần đơn"
-        case "th":
-          return "คู่มือการติดตั้งเฟรมเพดานเดี่ยว"
-        case "zh":
-          return "单体天花板框架安装指南"
-        default:
-          return "한방 우물 설치 가이드"
-      }
-    case 4:
-      switch (locale) {
-        case "ko":
-          return "2025년~2026년 아파트 입주 정보"
-        case "en":
-          return "2025-2026 Apartment Move-in Information"
-        case "vi":
-          return "Thông tin chuyển vào căn hộ 2025-2026"
-        case "th":
-          return "ข้อมูลการเข้าอยู่อาศัยในอพาร์ตเมนต์ปี 2025-2026"
-        case "zh":
-          return "2025-2026年公寓入住信息"
-        default:
-          return "2025년~2026년 아파트 입주 정보"
-      }
-    default:
-      return ""
-  }
-}
-
-// 게시글 내용 다국어 지원 함수
-function getPostContent(locale: string, id: number): string {
-  switch (id) {
-    case 1:
-      switch (locale) {
-        case "ko":
-          return "엘엔피-카달로그"
-        case "en":
-          return "LNP-Catalog"
-        case "vi":
-          return "LNP-Danh mục"
-        case "th":
-          return "LNP-แคตตาล็อ��"
-        case "zh":
-          return "LNP-产品目录"
-        default:
-          return "엘엔피-카달로그"
-      }
-    case 2:
-      switch (locale) {
-        case "ko":
-          return "GUGU 스마트 무선 스위치 카달로그"
-        case "en":
-          return "GUGU Smart Wireless Switch Catalog"
-        case "vi":
-          return "Danh mục công tắc không dây thông minh GUGU"
-        case "th":
-          return "แคตตาล็อกสวิตช์ไร้สายอัจฉริยะ GUGU"
-        case "zh":
-          return "GUGU 智能无线开关产品目录"
-        default:
-          return "GUGU 스마트 무선 스위치 카달로그"
-      }
-    case 3:
-      switch (locale) {
-        case "ko":
-          return "한방 우물 설치 가이드"
-        case "en":
-          return "Single Ceiling Frame Installation Guide"
-        case "vi":
-          return "Hướng dẫn lắp đặt khung trần đơn"
-        case "th":
-          return "คู่มือการติดตั้งเฟรมเพดานเดี่ยว"
-        case "zh":
-          return "单体天花板框架安装指南"
-        default:
-          return "한방 우물 설치 가이드"
-      }
-    case 4:
-      switch (locale) {
-        case "ko":
-          return "2025년~2026년 아파트 입주 정보"
-        case "en":
-          return "2025-2026 Apartment Move-in Information"
-        case "vi":
-          return "Thông tin chuyển vào căn hộ 2025-2026"
-        case "th":
-          return "ข้อมูลการเข้าอยู่อาศัยในอพาร์ตเมนต์ปี 2025-2026"
-        case "zh":
-          return "2025-2026年公寓入住信息"
-        default:
-          return "2025년~2026년 아파트 입주 정보"
-      }
-    default:
-      return ""
-  }
-}
-
-// 버튼 텍스트 다국어 지원 함수
-function getBackButtonText(locale: string): string {
-  switch (locale) {
-    case "ko":
-      return "게시판으로 돌아가기"
-    case "en":
-      return "Back to Board"
-    case "vi":
-      return "Quay lại bảng tin"
-    case "th":
-      return "กลับไปที่กระดาน"
-    case "zh":
-      return "返回公告栏"
-    default:
-      return "게시판으로 돌아가기"
-  }
-}
-
-// 첨부 파일 섹션 제목 다국어 지원 함수
-function getAttachmentSectionTitle(locale: string): string {
-  switch (locale) {
-    case "ko":
-      return "첨부 파일"
-    case "en":
-      return "Attachments"
-    case "vi":
-      return "Tệp đính kèm"
-    case "th":
-      return "ไฟล์แนบ"
-    case "zh":
-      return "附件"
-    default:
-      return "첨부 파일"
-  }
-}
-
-// 다운로드 버튼 텍스트 다국어 지원 함수
-function getDownloadButtonText(locale: string): string {
-  switch (locale) {
-    case "ko":
-      return "다운로드"
-    case "en":
-      return "Download"
-    case "vi":
-      return "Tải xuống"
-    case "th":
-      return "ดาวน์โหลด"
-    case "zh":
-      return "下载"
-    default:
-      return "다운로드"
-  }
-}
-
 export default function BoardDetailPage({
   params,
 }: {
@@ -211,7 +21,7 @@ export default function BoardDetailPage({
   const posts = [
     {
       id: 1,
-      title: getPostTitle(params.locale, 1),
+      title: "엘엔피-카달로그",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001.jpg-icWjHi3iehfJu2jF3LFxI1yMBrIHWP.jpeg"],
       files: [
         {
@@ -221,11 +31,11 @@ export default function BoardDetailPage({
           fileId: "1-Xy8r6r6n0AwcCbOwEG9NqqQdDjlJAuK",
         },
       ],
-      content: getPostContent(params.locale, 1),
+      content: "엘엔피-카달로그",
     },
     {
       id: 2,
-      title: getPostTitle(params.locale, 2),
+      title: "GUGU 스위치 - 카달로그",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j904H5t9bNNUkRMS1dlW0Ht5nJXnvU.png"],
       files: [
         {
@@ -241,11 +51,11 @@ export default function BoardDetailPage({
           fileId: "1ziDgfBdIIUBb2A5aCseRwB5VqrZkLBRi",
         },
       ],
-      content: getPostContent(params.locale, 2),
+      content: "GUGU 스마트 무선 스위치 카달로그",
     },
     {
       id: 3,
-      title: getPostTitle(params.locale, 3),
+      title: "한방 우물 설치 가이드",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PMzl8NDQH2SK7hwijo9Zfac9Lee24T.png"],
       files: [
         {
@@ -255,11 +65,11 @@ export default function BoardDetailPage({
           fileId: "1My15GpcI8sgaLQNusmnojfIprP4ZaUw7",
         },
       ],
-      content: getPostContent(params.locale, 3),
+      content: "한방 우물 설치 가이드",
     },
     {
       id: 4,
-      title: getPostTitle(params.locale, 4),
+      title: "2025년~2026년 아파트 입주 정보",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8WJFz0qPg3p82AvmALJ0cX37GPqdAN.png"],
       files: [
         {
@@ -269,7 +79,7 @@ export default function BoardDetailPage({
           fileId: "16bFhFQWLRutsYEJnFmVw8RWwxdaGnH6H",
         },
       ],
-      content: getPostContent(params.locale, 4),
+      content: "2025년~2026년 아파트 입주 정보",
     },
   ]
 
@@ -296,7 +106,7 @@ export default function BoardDetailPage({
       <Link href={`/${params.locale}/board`}>
         <Button variant="ghost" className="mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
-          {getBackButtonText(params.locale)}
+          게시판으로 돌아가기
         </Button>
       </Link>
 
@@ -324,7 +134,7 @@ export default function BoardDetailPage({
       {/* 첨부 파일 */}
       {post.files && post.files.length > 0 && (
         <div className="mt-8">
-          <h3 className="text-xl font-bold mb-4">{getAttachmentSectionTitle(params.locale)}</h3>
+          <h3 className="text-xl font-bold mb-4">첨부 파일</h3>
           <div className="space-y-2">
             {post.files.map((file, index) => (
               <a
@@ -352,7 +162,7 @@ export default function BoardDetailPage({
                   }}
                 >
                   <Download className="h-4 w-4 mr-1" />
-                  {getDownloadButtonText(params.locale)}
+                  다운로드
                 </Button>
               </a>
             ))}

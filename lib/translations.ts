@@ -207,33 +207,6 @@ const ko = {
   patent4Title: "특허증 - 조명 제어 장치 (2022)",
   patent5Title: "특허증 - 우물천장 직간접 조명시스템 (2023)",
   patent6Title: "연구개발전담부서 인정서 (2022)",
-
-  // 액세서리 페이지 번역 추가
-  allAccessories: "전체 제품",
-  threeMTape: "3M 양면 테이프",
-  blackCushionTape: "블랙 쿠션 테이프",
-  threeMTapeProduct: "3M 양면 테이프 - (1롤-20미터)",
-  threeMTapeDescription: "우물천장 프레임 시공에 최적화된 고강도 양면 테이프",
-  threeMTapeFeature1: "강력한 접착력으로 안정적인 시공 가능",
-  threeMTapeFeature2: "다양한 표면에 사용 가능",
-  threeMTapeFeature3: "내구성이 뛰어나 오랜 시간 유지",
-  threeMTapeFeature4: "시공이 간편하고 빠름",
-  blackCushionTapeProduct: "블랙 쿠션 테이프 - (1롤-30미터)",
-  blackCushionTapeDescription: "마감재와 프레임 사이 간격을 메우는 특수 쿠션 테이프",
-  blackCushionTapeFeature1: "빛 샘 방지 효과",
-  blackCushionTapeFeature2: "다양한 표면에 사용 가능",
-  blackCushionTapeFeature3: "내열성이 우수하여 LED 조명에 적합",
-  blackCushionTapeFeature4: "쉽게 잘리고 부착이 간편함",
-  accessoriesNote:
-    "3M 양면 테이프 & 블랙 쿠션 테이프는 선택 사항 입니다. 고객님의 시공 방법에 따라 강력 접착재 또는 실리콘 처리 등으로 대체 가능 합니다.",
-  keyFeatures: "주요 특징",
-  accessoriesIntro: "기타 자재 소개",
-  accessoriesIntroP1:
-    "주식회사 엘엔피는 우물천장 프레임과 무선 스위치 외에도 시공에 필요한 다양한 기타 자재를 제공하고 있습니다. 고품질의 3M 양면 테이프와 블랙 쿠션 테이프는 우물천장 프레임 시공의 완성도를 높이는 필수 자재입니다.",
-  accessoriesIntroP2:
-    "3M 양면 테이프는 강력한 접착력으로 마감재를 천장에 안정적으로 고정시켜 주며, 블랙 쿠션 테이프는 마감재와 프레임 사이의 간격을 메워 빛 샘을 방지하고 깔끔한 마감을 가능하게 합니다.",
-  accessoriesIntroP3:
-    "모든 자재는 엄격한 품질 관리를 통해 선별된 제품으로, 시공의 편의성과 내구성을 모두 고려하여 선정되었습니다. 자재에 대한 자세한 정보나 구매 문의는 문의하기 버튼을 통해 연락 주시기 바랍니다.",
 }
 
 // 영어 번역
@@ -451,33 +424,6 @@ const en = {
   patent4Title: "Patent - Lighting Control Device (2022)",
   patent5Title: "Patent - Direct and Indirect Ceiling Lighting System (2023)",
   patent6Title: "R&D Department Certificate (2022)",
-
-  // 액세서리 페이지 번역 추가
-  allAccessories: "All Products",
-  threeMTape: "3M Double-Sided Tape",
-  blackCushionTape: "Black Cushion Tape",
-  threeMTapeProduct: "3M Double-Sided Tape - (1 Roll-20 meters)",
-  threeMTapeDescription: "High-strength double-sided tape optimized for ceiling frame installation",
-  threeMTapeFeature1: "Stable installation with strong adhesion",
-  threeMTapeFeature2: "Can be used on various surfaces",
-  threeMTapeFeature3: "Excellent durability for long-lasting use",
-  threeMTapeFeature4: "Quick and easy installation",
-  blackCushionTapeProduct: "Black Cushion Tape - (1 Roll-30 meters)",
-  blackCushionTapeDescription: "Special cushion tape that fills gaps between finishing materials and frames",
-  blackCushionTapeFeature1: "Prevents light leakage",
-  blackCushionTapeFeature2: "Can be used on various surfaces",
-  blackCushionTapeFeature3: "Heat resistance suitable for LED lighting",
-  blackCushionTapeFeature4: "Easy to cut and apply",
-  accessoriesNote:
-    "3M double-sided tape & black cushion tape are optional. They can be replaced with strong adhesives or silicone treatment depending on your installation method.",
-  keyFeatures: "Key Features",
-  accessoriesIntro: "Introduction to Accessories",
-  accessoriesIntroP1:
-    "LNP Corporation provides various accessories needed for installation in addition to ceiling frames and wireless switches. High-quality 3M double-sided tape and black cushion tape are essential materials that enhance the completeness of ceiling frame installation.",
-  accessoriesIntroP2:
-    "3M double-sided tape securely fixes finishing materials to the ceiling with strong adhesion, and black cushion tape fills the gap between finishing materials and frames to prevent light leakage and enable clean finishing.",
-  accessoriesIntroP3:
-    "All materials are selected through strict quality control, considering both installation convenience and durability. For detailed information about materials or purchase inquiries, please contact us through the inquiry button.",
 }
 
 // 베트남어 번역
@@ -692,33 +638,6 @@ const vi = {
   patent4Title: "Bằng sáng chế - Thiết bị điều khiển đèn (2022)",
   patent5Title: "Bằng sáng chế - Hệ thống chiếu sáng trần trực tiếp và gián tiếp (2023)",
   patent6Title: "Chứng nhận Bộ phận R&D (2022)",
-
-  // 액세서리 페이지 번역 추가
-  allAccessories: "Tất cả sản phẩm",
-  threeMTape: "Băng keo hai mặt 3M",
-  blackCushionTape: "Băng keo đệm đen",
-  threeMTapeProduct: "Băng keo hai mặt 3M - (1 cuộn-20 mét)",
-  threeMTapeDescription: "Băng keo hai mặt cường độ cao được tối ưu hóa cho việc lắp đặt khung trần",
-  threeMTapeFeature1: "Lắp đặt ổn định với độ bám dính mạnh",
-  threeMTapeFeature2: "Có thể sử dụng trên nhiều bề mặt khác nhau",
-  threeMTapeFeature3: "Độ bền xuất sắc cho việc sử dụng lâu dài",
-  threeMTapeFeature4: "Lắp đặt nhanh chóng và dễ dàng",
-  blackCushionTapeProduct: "Băng keo đệm đen - (1 cuộn-30 mét)",
-  blackCushionTapeDescription: "Băng keo đệm đặc biệt lấp đầy khoảng trống giữa vật liệu hoàn thiện và khung",
-  blackCushionTapeFeature1: "Ngăn chặn rò rỉ ánh sáng",
-  blackCushionTapeFeature2: "Có thể sử dụng trên nhiều bề mặt khác nhau",
-  blackCushionTapeFeature3: "Khả năng chịu nhiệt phù hợp cho đèn LED",
-  blackCushionTapeFeature4: "Dễ dàng cắt và dán",
-  accessoriesNote:
-    "Băng keo hai mặt 3M & băng keo đệm đen là tùy chọn. Chúng có thể được thay thế bằng keo dán mạnh hoặc xử lý silicon tùy thuộc vào phương pháp lắp đặt của bạn.",
-  keyFeatures: "Tính năng chính",
-  accessoriesIntro: "Giới thiệu về Phụ kiện",
-  accessoriesIntroP1:
-    "Công ty LNP cung cấp nhiều phụ kiện cần thiết cho việc lắp đặt ngoài khung trần và công tắc không dây. Băng keo hai mặt 3M chất lượng cao và băng keo đệm đen là những vật liệu thiết yếu giúp nâng cao sự hoàn thiện của việc lắp đặt khung trần.",
-  accessoriesIntroP2:
-    "Băng keo hai mặt 3M cố định chắc chắn vật liệu hoàn thiện lên trần nhà với độ bám dính mạnh, và băng keo đệm đen lấp đầy khoảng trống giữa vật liệu hoàn thiện và khung để ngăn chặn rò rỉ ánh sáng và cho phép hoàn thiện sạch sẽ.",
-  accessoriesIntroP3:
-    "Tất cả vật liệu được lựa chọn thông qua kiểm soát chất lượng nghiêm ngặt, xem xét cả sự thuận tiện khi lắp đặt và độ bền. Để biết thông tin chi tiết về vật liệu hoặc yêu cầu mua hàng, vui lòng liên hệ với chúng tôi thông qua nút yêu cầu thông tin.",
 }
 
 // 태국어 번역
@@ -827,7 +746,7 @@ const th = {
   historyItem2019_3: "จดทะเบียนสิทธิบัตรที่เกี่ยวข้องกับเฟรมไฟเพดานสร้างบรรยากาศ",
 
   // Vision and Mission Additional Translations
-  visionText: "จากมุมมองของลูกค้า ด้วยหัวใจเดียวกันกับลูกค้า ยอมรับเสียงของลูกค้าอย่างกระตือรือร้น",
+  visionText: "จากมุมมองของลูกค้า ด้วยหัวใจเดียวกันกับลูกค้า ยอมรับเสียงขอ��ลูกค้าอย่างกระตือรือร้น",
   missionText: "ผู้นำเทรนด์การตกแต่งภายในด้วยแสงสว่างที่เติบโตไปพร้อมกับลูกค้า",
 
   // Products Page
@@ -925,32 +844,6 @@ const th = {
   patent4Title: "สิทธิบัตร - อุปกรณ์ควบคุมแสงสว่าง (2022)",
   patent5Title: "สิทธิบัตร - ระบบไฟเพดานทางตรงและทางอ้อม (2023)",
   patent6Title: "ใบรับรองแผนก R&D (2022)",
-
-  // 액세서리 페이지 번역 추가
-  allAccessories: "สินค้าทั้งหมด",
-  threeMTape: "เทป 3M สองหน้า",
-  blackCushionTape: "เทปรองสีดำ",
-  threeMTapeProduct: "เทป 3M สองหน้า - (1 ม้วน-20 เมตร)",
-  threeMTapeDescription: "เทปสองหน้าความแข็งแรงสูงที่เหมาะสำหรับการติดตั้งเฟรมเพดาน",
-  threeMTapeFeature1: "การติดตั้งที่มั่นคงด้วยการยึดเกาะที่แข็งแรง",
-  threeMTapeFeature2: "สามารถใช้ได้กับพื้นผิวที่หลากหลาย",
-  threeMTapeFeature3: "ความทนทานที่ยอดเยี่ยมสำหรับการใช้งานระยะยาว",
-  threeMTapeFeature4: "ติดตั้งได้อย่างรวดเร็วและง่ายดาย",
-  blackCushionTapeProduct: "เทปรองสีดำ - (1 ม้วน-30 เมตร)",
-  blackCushionTapeDescription: "เทปรองพิเศษที่ช่วยเติมเต็มช่องว่างระหว่างวัสดุตกแต่งและเฟรม",
-  blackCushionTapeFeature1: "ป้องกันการรั่วไหลของแสง",
-  blackCushionTapeFeature2: "สามารถใช้ได้กับพื้นผิวที่หลากหลาย",
-  blackCushionTapeFeature3: "ความทนทานต่อความร้อนเหมาะสำหรับไฟ LED",
-  blackCushionTapeFeature4: "ตัดและติดได้ง่าย",
-  accessoriesNote: "เทป 3M สองหน้าและเทปรองสีดำเป็นตัวเลือก สามารถแทนที่ด้วยกาวแรงหรือการใช้ซิลิโคนขึ้นอยู่กับวิธีการติดตั้งของคุณ",
-  keyFeatures: "คุณสมบัติหลัก",
-  accessoriesIntro: "แนะนำอุปกรณ์เสริม",
-  accessoriesIntroP1:
-    "บริษัท LNP จัดหาอุปกรณ์เสริมต่างๆ ที่จำเป็นสำหรับการติดตั้งนอกเหนือจากเฟรมเพดานและสวิตช์ไร้สาย เทป 3M สองหน้าคุณภาพสูงและเทปรองสีดำเป็นวัสดุที่จำเป็นซึ่งช่วยเพิ่มความสมบูรณ์ของการติดตั้งเฟรมเพดาน",
-  accessoriesIntroP2:
-    "เทป 3M สองหน้ายึดวัสดุตกแต่งกับเพดานอย่างมั่นคงด้วยการยึดเกาะที่แข็งแรง และเทปรองสีดำช่วยเติมเต็มช่องว่างระหว่างวัสดุตกแต่งและเฟรมเพื่อป้องกันการรั่วไหลของแสงและช่วยให้การตกแต่งเรียบร้อย",
-  accessoriesIntroP3:
-    "วัสดุทั้งหมดได้รับการคัดเลือกผ่านการควบคุมคุณภาพที่เข้มงวด โดยคำนึงถึงทั้งความสะดวกในการติดตั้งและความทนทาน สำหรับข้อมูลโดยละเอียดเกี่ยวกับวัสดุหรือการสอบถามการซื้อ โปรดติดต่อเราผ่านปุ่มสอบถาม",
 }
 
 // 중국어 간체 번역 추가
@@ -1155,32 +1048,6 @@ const zh = {
   patent4Title: "专利 - 照明控制设备 (2022)",
   patent5Title: "专利 - 天花板直接和间接照明系统 (2023)",
   patent6Title: "研发部门证书 (2022)",
-
-  // 액세서리 페이지 번역 추가
-  allAccessories: "所有产品",
-  threeMTape: "3M双面胶带",
-  blackCushionTape: "黑色缓冲胶带",
-  threeMTapeProduct: "3M双面胶带 - (1卷-20米)",
-  threeMTapeDescription: "为天花板框架安装优化的高强度双面胶带",
-  threeMTapeFeature1: "强力粘合确保稳定安装",
-  threeMTapeFeature2: "可用于各种表面",
-  threeMTapeFeature3: "出色的耐久性确保长期使用",
-  threeMTapeFeature4: "快速简便的安装",
-  blackCushionTapeProduct: "黑色缓冲胶带 - (1卷-30米)",
-  blackCushionTapeDescription: "填充装饰材料与框架之间缝隙的特殊缓冲胶带",
-  blackCushionTapeFeature1: "防止光线泄漏",
-  blackCushionTapeFeature2: "可用于各种表面",
-  blackCushionTapeFeature3: "适合LED照明的耐热性",
-  blackCushionTapeFeature4: "易于切割和应用",
-  accessoriesNote: "3M双面胶带和黑色缓冲胶带是可选的。根据您的安装方法，可以用强力粘合剂或硅胶处理替代。",
-  keyFeatures: "主要特点",
-  accessoriesIntro: "配件介绍",
-  accessoriesIntroP1:
-    "除了天花板框架和无线开关外，LNP公司还提供各种安装所需的配件。高质量的3M双面胶带和黑色缓冲胶带是提高天花板框架安装完整性的必要材料。",
-  accessoriesIntroP2:
-    "3M双面胶带通过强力粘合将装饰材料牢固地固定在天花板上，而黑色缓冲胶带填充装饰材料与框架之间的缝隙，防止光线泄漏并实现干净的装饰效果。",
-  accessoriesIntroP3:
-    "所有材料都经过严格的质量控制筛选，同时考虑安装便利性和耐久性。有关材料的详细信息或购买咨询，请通过咨询按钮联系我们。",
 }
 
 // 번역 함수
@@ -1191,6 +1058,13 @@ export function useTranslations(locale: string) {
     case "vi":
       return vi
     case "th":
+      \
+      // The following issues need to be fixed:
+      // The การกอสรางตกแตงภายในดวยไฟเพดานสรางบรรยากาศ variable is undeclared. Please fix the import or declare the variable before using it.
+      // The ซงแทบจะไมไดทเนองจากภาระดานราคา variable is undeclared. Please fix the import or declare the variable before using it.
+      // The ระยะเวลากอสราง variable is undeclared. Please fix the import or declare the variable before using it.
+      // The และการฟงกระจายของฝน variable is undeclared. Please fix the import or declare the variable before using it.
+      // The เพราะมนถกดเนนการดวยการกอสรางงานไมทมราคาแพงเทานน variable is undeclared. Please fix the import or declare the variable before using it.
       return th
     case "zh":
       return zh

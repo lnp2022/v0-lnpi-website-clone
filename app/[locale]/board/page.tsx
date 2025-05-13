@@ -4,110 +4,6 @@ import { useTranslations } from "@/lib/translations"
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
 
-// 게시판 제목 다국어 지원 함수
-function getBoardTitle(locale: string): string {
-  switch (locale) {
-    case "ko":
-      return "주식회사 엘엔피의 각종 자료를 다운 받을 수 있는 공간 입니다."
-    case "en":
-      return "A space where you can download various materials from LNP Corporation."
-    case "vi":
-      return "Không gian nơi bạn có thể tải xuống các tài liệu khác nhau từ Công ty LNP."
-    case "th":
-      return "พื้นที่ที่คุณสามารถดาวน์โหลดเอกสารต่างๆ จากบริษัท LNP"
-    case "zh":
-      return "您可以下载LNP公司各种资料的空间。"
-    default:
-      return "주식회사 엘엔피의 각종 자료를 다운 받을 수 있는 공간 입니다."
-  }
-}
-
-// 게시판 설명 다국어 지원 함수
-function getBoardDescription(locale: string): string {
-  switch (locale) {
-    case "ko":
-      return "게시판에 없는 자료 중 궁금 하신 부분은 문의 하기 게시판을 이용하시면 빠르게 대응해 드리도록 하겠습니다."
-    case "en":
-      return "If you have any questions about materials not on the board, please use the inquiry board and we will respond quickly."
-    case "vi":
-      return "Nếu bạn có bất kỳ câu hỏi nào về tài liệu không có trên bảng tin, vui lòng sử dụng bảng tin liên hệ và chúng tôi sẽ phản hồi nhanh chóng."
-    case "th":
-      return "หากคุณมีคำถามเกี่ยวกับเอกสารที่ไม่มีอยู่บนกระดาน โปรดใช้กระดานสอบถามและเราจะตอบกลับอย่างรวดเร็ว"
-    case "zh":
-      return "如果您对公告栏上没有的资料有任何疑问，请使用咨询公告栏，我们将迅速回应。"
-    default:
-      return "게시판에 없는 자료 중 궁금 하신 부분은 문의 하기 게시판을 이용하시면 빠르게 대응해 드리도록 하겠습니다."
-  }
-}
-
-// 게시글 제목 다국어 지원 함수
-function getPostTitle(locale: string, id: number): string {
-  switch (id) {
-    case 1:
-      switch (locale) {
-        case "ko":
-          return "엘엔피-카달로그"
-        case "en":
-          return "LNP-Catalog"
-        case "vi":
-          return "LNP-Danh mục"
-        case "th":
-          return "LNP-แคตตาล็อก"
-        case "zh":
-          return "LNP-产品目录"
-        default:
-          return "엘엔피-카달로그"
-      }
-    case 2:
-      switch (locale) {
-        case "ko":
-          return "GUGU 스위치 - 카달로그"
-        case "en":
-          return "GUGU Switch - Catalog"
-        case "vi":
-          return "Công tắc GUGU - Danh mục"
-        case "th":
-          return "สวิตช์ GUGU - แคตตาล็อก"
-        case "zh":
-          return "GUGU 开关 - 产品目录"
-        default:
-          return "GUGU 스위치 - 카달로그"
-      }
-    case 3:
-      switch (locale) {
-        case "ko":
-          return "한방 우물 설치 가이드"
-        case "en":
-          return "Single Ceiling Frame Installation Guide"
-        case "vi":
-          return "Hướng dẫn lắp đặt khung trần đơn"
-        case "th":
-          return "คู่มือการติดตั้งเฟรมเพดานเดี่ยว"
-        case "zh":
-          return "单体天花板框架安装指南"
-        default:
-          return "한방 우물 설치 가이드"
-      }
-    case 4:
-      switch (locale) {
-        case "ko":
-          return "2025년~2026년 아파트 입주 정보"
-        case "en":
-          return "2025-2026 Apartment Move-in Information"
-        case "vi":
-          return "Thông tin chuyển vào căn hộ 2025-2026"
-        case "th":
-          return "ข้อมูลการเข้าอยู่อาศัยในอพาร์ตเมนต์ปี 2025-2026"
-        case "zh":
-          return "2025-2026年公寓入住信息"
-        default:
-          return "2025년~2026년 아파트 입주 정보"
-      }
-    default:
-      return ""
-  }
-}
-
 export default function BoardPage({
   params,
 }: {
@@ -119,7 +15,7 @@ export default function BoardPage({
   const posts = [
     {
       id: 1,
-      title: getPostTitle(params.locale, 1),
+      title: "엘엔피-카달로그",
       bgColor: "bg-[#f5f2ea]", // 베이지색 배경
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001.jpg-icWjHi3iehfJu2jF3LFxI1yMBrIHWP.jpeg"],
       files: [
@@ -134,7 +30,7 @@ export default function BoardPage({
     },
     {
       id: 2,
-      title: getPostTitle(params.locale, 2),
+      title: "GUGU 스위치 - 카달로그",
       bgColor: "bg-[#f5f2ea]",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j904H5t9bNNUkRMS1dlW0Ht5nJXnvU.png"],
       files: [
@@ -155,7 +51,7 @@ export default function BoardPage({
     },
     {
       id: 3,
-      title: getPostTitle(params.locale, 3),
+      title: "한방 우물 설치 가이드",
       bgColor: "bg-[#f5f2ea]",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PMzl8NDQH2SK7hwijo9Zfac9Lee24T.png"],
       files: [
@@ -170,7 +66,7 @@ export default function BoardPage({
     },
     {
       id: 4,
-      title: getPostTitle(params.locale, 4),
+      title: "2025년~2026년 아파트 입주 정보",
       bgColor: "bg-[#f5f2ea]",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8WJFz0qPg3p82AvmALJ0cX37GPqdAN.png"],
       files: [
@@ -190,11 +86,15 @@ export default function BoardPage({
       {/* 게시판 헤더 */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">
-          {params.locale === "ko" ? "주식회사 엘엔피의" : t.companyName}
+          주식회사 엘엔피의
           <br />
-          <span className="text-orange-500">{getBoardTitle(params.locale)}</span>
+          <span className="text-orange-500">각종 자료를 다운 받을 수 있는 공간 입니다.</span>
         </h1>
-        <p className="text-gray-600 mt-4">{getBoardDescription(params.locale)}</p>
+        <p className="text-gray-600 mt-4">
+          게시판에 없는 자료 중 궁금 하신 부분은
+          <br />
+          문의 하기 게시판을 이용하시면 빠르게 대응해 드리도록 하겠습니다.
+        </p>
       </div>
 
       {/* 게시글 그리드 */}
