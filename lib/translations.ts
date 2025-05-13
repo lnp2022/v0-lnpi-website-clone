@@ -526,7 +526,7 @@ const vi = {
 
   // Company History Additional Translations
   historyItem2023_1: "Đăng ký bằng sáng chế cho đèn chiếu sáng đường viền trần",
-  historyItem2023_2: "Đăng ký b���ng sáng chế cho khung trần đơn",
+  historyItem2023_2: "Đăng ký bng sáng chế cho khung trần đơn",
   historyItem2022_1: "Đăng ký bằng sáng chế cho công nghệ công tắc cảm ứng không dây GUGU",
   historyItem2022_2: "Thành lập viện nghiên cứu",
   historyItem2022_3: "Phát triển khung trần đơn",
@@ -746,7 +746,7 @@ const th = {
   historyItem2019_3: "จดทะเบียนสิทธิบัตรที่เกี่ยวข้องกับเฟรมไฟเพดานสร้างบรรยากาศ",
 
   // Vision and Mission Additional Translations
-  visionText: "จากมุมมองของลูกค้า ด้วยหัวใจเดียวกันกับลูกค้า ยอมรับเสียงขอ��ลูกค้าอย่างกระตือรือร้น",
+  visionText: "จากมุมมองของลูกค้า ด้วยหัวใจเดียวกันกับลูกค้า ยอมรับเสียงของลูกค้าอย่างกระตือรือร้น",
   missionText: "ผู้นำเทรนด์การตกแต่งภายในด้วยแสงสว่างที่เติบโตไปพร้อมกับลูกค้า",
 
   // Products Page
@@ -919,7 +919,7 @@ const zh = {
   companyHistory: "公司历史",
   history2023: "进入越南市场并建立当地公司",
   history2020: "推出新型无线开关产品并获得专利",
-  history2018: "开发并推出天花板框架系���",
+  history2018: "开发并推出天花板框架系统",
   history2015: "建立企业研究所",
   history2010: "成立LNP公司",
   visionAndMission: "愿景与使命",
@@ -1058,13 +1058,6 @@ export function useTranslations(locale: string) {
     case "vi":
       return vi
     case "th":
-      \
-      // The following issues need to be fixed:
-      // The การกอสรางตกแตงภายในดวยไฟเพดานสรางบรรยากาศ variable is undeclared. Please fix the import or declare the variable before using it.
-      // The ซงแทบจะไมไดทเนองจากภาระดานราคา variable is undeclared. Please fix the import or declare the variable before using it.
-      // The ระยะเวลากอสราง variable is undeclared. Please fix the import or declare the variable before using it.
-      // The และการฟงกระจายของฝน variable is undeclared. Please fix the import or declare the variable before using it.
-      // The เพราะมนถกดเนนการดวยการกอสรางงานไมทมราคาแพงเทานน variable is undeclared. Please fix the import or declare the variable before using it.
       return th
     case "zh":
       return zh
