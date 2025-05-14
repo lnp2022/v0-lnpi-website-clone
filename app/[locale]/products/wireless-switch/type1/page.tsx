@@ -23,49 +23,379 @@ export default function StandardWirelessSwitchPage({
   const koreanCatalogEmbedUrl = "https://drive.google.com/file/d/1Uyvr_2x6JdvdFKDH5WeUmVmtxLTBhc3R/preview"
   const englishCatalogEmbedUrl = "https://drive.google.com/file/d/1ziDgfBdIIUBb2A5aCseRwB5VqrZkLBRi/preview"
 
-  // 일반 타입 무선 스위치 제품 데이터
+  // 일반 타입 무선 스위치 제품 데이터 부분을 다음과 같이 변경합니다:
   const products = [
     {
       id: 1,
-      name: "GUGU 일반 무선 터치 스위치 6채널",
-      description: "6개의 독립적인 채널을 제공하는 무선 스위치",
+      name:
+        params.locale === "ko"
+          ? "GUGU 일반 무선 터치 스위치 6채널"
+          : params.locale === "en"
+            ? "GUGU Standard Wireless Touch Switch 6 Channel"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây tiêu chuẩn GUGU 6 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายมาตรฐาน GUGU 6 ช่อง"
+                : "GUGU标准无线触摸开关6通道",
+      description:
+        params.locale === "ko"
+          ? "6개의 독립적인 채널을 제공하는 무선 스위치"
+          : params.locale === "en"
+            ? "Wireless switch providing 6 independent channels"
+            : params.locale === "vi"
+              ? "Công tắc không dây cung cấp 6 kênh độc lập"
+              : params.locale === "th"
+                ? "สวิตช์ไร้สายที่มี 6 ช่องอิสระ"
+                : "提供6个独立通道的无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001-DIALUXbgc5KkkhqAKtXm1t7kCqcVeS.png",
-      features: ["6채널 독립 제어", "간편한 설치", "배터리 교체 용이", "고급 터치 감도"],
+      features: [
+        params.locale === "ko"
+          ? "6채널 독립 제어"
+          : params.locale === "en"
+            ? "6 Channel Independent Control"
+            : params.locale === "vi"
+              ? "Điều khiển độc lập 6 kênh"
+              : params.locale === "th"
+                ? "การควบคุมอิสระ 6 ช่อง"
+                : "6通道独立控制",
+        params.locale === "ko"
+          ? "간편한 설치"
+          : params.locale === "en"
+            ? "Easy Installation"
+            : params.locale === "vi"
+              ? "Dễ dàng lắp đặt"
+              : params.locale === "th"
+                ? "ติดตั้งง่าย"
+                : "安装简便",
+        params.locale === "ko"
+          ? "배터리 교체 용이"
+          : params.locale === "en"
+            ? "Easy Battery Replacement"
+            : params.locale === "vi"
+              ? "Dễ dàng thay pin"
+              : params.locale === "th"
+                ? "เปลี่ยนแบตเตอรี่ง่าย"
+                : "电池更换便捷",
+        params.locale === "ko"
+          ? "고급 터치 감도"
+          : params.locale === "en"
+            ? "Advanced Touch Sensitivity"
+            : params.locale === "vi"
+              ? "Độ nhạy cảm ứng nâng cao"
+              : params.locale === "th"
+                ? "ความไวในการสัมผัสขั้นสูง"
+                : "高级触摸灵敏度",
+      ],
     },
     {
       id: 2,
-      name: "GUGU 일반 무선 터치 스위치 5채널",
-      description: "5개의 독립적인 채널을 제공하는 무선 스위치",
+      name:
+        params.locale === "ko"
+          ? "GUGU 일반 무선 터치 스위치 5채널"
+          : params.locale === "en"
+            ? "GUGU Standard Wireless Touch Switch 5 Channel"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây tiêu chuẩn GUGU 5 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายมาตรฐาน GUGU 5 ช่อง"
+                : "GUGU标准无线触摸开关5通道",
+      description:
+        params.locale === "ko"
+          ? "5개의 독립적인 채널을 제공하는 무선 스위치"
+          : params.locale === "en"
+            ? "Wireless switch providing 5 independent channels"
+            : params.locale === "vi"
+              ? "Công tắc không dây cung cấp 5 kênh độc lập"
+              : params.locale === "th"
+                ? "สวิตช์ไร้สายที่มี 5 ช่องอิสระ"
+                : "提供5个独立通道的无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/002-Xjs1c4VEPRQsqpCAj4keLIH56KbJt9.png",
-      features: ["5채널 독립 제어", "간편한 설치", "배터리 교체 용이", "고급 터치 감도"],
+      features: [
+        params.locale === "ko"
+          ? "5채널 독립 제어"
+          : params.locale === "en"
+            ? "5 Channel Independent Control"
+            : params.locale === "vi"
+              ? "Điều khiển độc lập 5 kênh"
+              : params.locale === "th"
+                ? "การควบคุมอิสระ 5 ช่อง"
+                : "5通道独立控制",
+        params.locale === "ko"
+          ? "간편한 설치"
+          : params.locale === "en"
+            ? "Easy Installation"
+            : params.locale === "vi"
+              ? "Dễ dàng lắp đặt"
+              : params.locale === "th"
+                ? "ติดตั้งง่าย"
+                : "安装简便",
+        params.locale === "ko"
+          ? "배터리 교체 용이"
+          : params.locale === "en"
+            ? "Easy Battery Replacement"
+            : params.locale === "vi"
+              ? "Dễ dàng thay pin"
+              : params.locale === "th"
+                ? "เปลี่ยนแบตเตอรี่ง่าย"
+                : "电池更换便捷",
+        params.locale === "ko"
+          ? "고급 터치 감도"
+          : params.locale === "en"
+            ? "Advanced Touch Sensitivity"
+            : params.locale === "vi"
+              ? "Độ nhạy cảm ứng nâng cao"
+              : params.locale === "th"
+                ? "ความไวในการสัมผัสขั้นสูง"
+                : "高级触摸灵敏度",
+      ],
     },
     {
       id: 3,
-      name: "GUGU 일반 무선 터치 스위치 4채널",
-      description: "4개의 독립적인 채널을 제공하는 무선 스위치",
+      name:
+        params.locale === "ko"
+          ? "GUGU 일반 무선 터치 스위치 4채널"
+          : params.locale === "en"
+            ? "GUGU Standard Wireless Touch Switch 4 Channel"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây tiêu chuẩn GUGU 4 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายมาตรฐาน GUGU 4 ช่อง"
+                : "GUGU标准无线触摸开关4通道",
+      description:
+        params.locale === "ko"
+          ? "4개의 독립적인 채널을 제공하는 무선 스위치"
+          : params.locale === "en"
+            ? "Wireless switch providing 4 independent channels"
+            : params.locale === "vi"
+              ? "Công tắc không dây cung cấp 4 kênh độc lập"
+              : params.locale === "th"
+                ? "สวิตช์ไร้สายที่มี 4 ช่องอิสระ"
+                : "提供4个独立通道的无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/003-qdmNeHYLUOlHNucGOqHbzRLSttyH2r.png",
-      features: ["4채널 독립 제어", "간편한 설치", "배터리 교체 용이", "고급 터치 감도"],
+      features: [
+        params.locale === "ko"
+          ? "4채널 독립 제어"
+          : params.locale === "en"
+            ? "4 Channel Independent Control"
+            : params.locale === "vi"
+              ? "Điều khiển độc lập 4 kênh"
+              : params.locale === "th"
+                ? "การควบคุมอิสระ 4 ช่อง"
+                : "4通道独立控制",
+        params.locale === "ko"
+          ? "간편한 설치"
+          : params.locale === "en"
+            ? "Easy Installation"
+            : params.locale === "vi"
+              ? "Dễ dàng lắp đặt"
+              : params.locale === "th"
+                ? "ติดตั้งง่าย"
+                : "安装简便",
+        params.locale === "ko"
+          ? "배터리 교체 용이"
+          : params.locale === "en"
+            ? "Easy Battery Replacement"
+            : params.locale === "vi"
+              ? "Dễ dàng thay pin"
+              : params.locale === "th"
+                ? "เปลี่ยนแบตเตอรี่ง่าย"
+                : "电池更换便捷",
+        params.locale === "ko"
+          ? "고급 터치 감도"
+          : params.locale === "en"
+            ? "Advanced Touch Sensitivity"
+            : params.locale === "vi"
+              ? "Độ nhạy cảm ứng nâng cao"
+              : params.locale === "th"
+                ? "ความไวในการสัมผัสขั้นสูง"
+                : "高级触摸灵敏度",
+      ],
     },
     {
       id: 4,
-      name: "GUGU 일반 무선 터치 스위치 3채널",
-      description: "3개의 독립적인 채널을 제공하는 무선 스위치",
+      name:
+        params.locale === "ko"
+          ? "GUGU 일반 무선 터치 스위치 3채널"
+          : params.locale === "en"
+            ? "GUGU Standard Wireless Touch Switch 3 Channel"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây tiêu chuẩn GUGU 3 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายมาตรฐาน GUGU 3 ช่อง"
+                : "GUGU标准无线触摸开关3通道",
+      description:
+        params.locale === "ko"
+          ? "3개의 독립적인 채널을 제공하는 무선 스위치"
+          : params.locale === "en"
+            ? "Wireless switch providing 3 independent channels"
+            : params.locale === "vi"
+              ? "Công tắc không dây cung cấp 3 kênh độc lập"
+              : params.locale === "th"
+                ? "สวิตช์ไร้สายที่มี 3 ช่องอิสระ"
+                : "提供3个独立通道的无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/004-4Ki6VGu2rxfzhYuQ2pD6nX1pAvzy2j.png",
-      features: ["3채널 독립 제어", "간편한 설치", "배터리 교체 용이", "고급 터치 감도"],
+      features: [
+        params.locale === "ko"
+          ? "3채널 독립 제어"
+          : params.locale === "en"
+            ? "3 Channel Independent Control"
+            : params.locale === "vi"
+              ? "Điều khiển độc lập 3 kênh"
+              : params.locale === "th"
+                ? "การควบคุมอิสระ 3 ช่อง"
+                : "3通道独立控制",
+        params.locale === "ko"
+          ? "간편한 설치"
+          : params.locale === "en"
+            ? "Easy Installation"
+            : params.locale === "vi"
+              ? "Dễ dàng lắp đặt"
+              : params.locale === "th"
+                ? "ติดตั้งง่าย"
+                : "安装简便",
+        params.locale === "ko"
+          ? "배터리 교체 용이"
+          : params.locale === "en"
+            ? "Easy Battery Replacement"
+            : params.locale === "vi"
+              ? "Dễ dàng thay pin"
+              : params.locale === "th"
+                ? "เปลี่ยนแบตเตอรี่ง่าย"
+                : "电池更换便捷",
+        params.locale === "ko"
+          ? "고급 터치 감도"
+          : params.locale === "en"
+            ? "Advanced Touch Sensitivity"
+            : params.locale === "vi"
+              ? "Độ nhạy cảm ứng nâng cao"
+              : params.locale === "th"
+                ? "ความไวในการสัมผัสขั้นสูง"
+                : "高级触摸灵敏度",
+      ],
     },
     {
       id: 5,
-      name: "GUGU 일반 무선 터치 스위치 2채널",
-      description: "2개의 독립적인 채널을 제공하는 무선 스위치",
+      name:
+        params.locale === "ko"
+          ? "GUGU 일반 무선 터치 스위치 2채널"
+          : params.locale === "en"
+            ? "GUGU Standard Wireless Touch Switch 2 Channel"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây tiêu chuẩn GUGU 2 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายมาตรฐาน GUGU 2 ช่อง"
+                : "GUGU标准无线触摸开关2通道",
+      description:
+        params.locale === "ko"
+          ? "2개의 독립적인 채널을 제공하는 무선 스위치"
+          : params.locale === "en"
+            ? "Wireless switch providing 2 independent channels"
+            : params.locale === "vi"
+              ? "Công tắc không dây cung cấp 2 kênh độc lập"
+              : params.locale === "th"
+                ? "สวิตช์ไร้สายที่มี 2 ช่องอิสระ"
+                : "提供2个独立通道的无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/005-1mHh7UO7x7zc6YSkwkrXxBjiR8LNmC.png",
-      features: ["2채널 독립 제어", "간편한 설치", "배터리 교체 용이", "고급 터치 감도"],
+      features: [
+        params.locale === "ko"
+          ? "2채널 독립 제어"
+          : params.locale === "en"
+            ? "2 Channel Independent Control"
+            : params.locale === "vi"
+              ? "Điều khiển độc lập 2 kênh"
+              : params.locale === "th"
+                ? "การควบคุมอิสระ 2 ช่อง"
+                : "2通道独立控制",
+        params.locale === "ko"
+          ? "간편한 설치"
+          : params.locale === "en"
+            ? "Easy Installation"
+            : params.locale === "vi"
+              ? "Dễ dàng lắp đặt"
+              : params.locale === "th"
+                ? "ติดตั้งง่าย"
+                : "安装简便",
+        params.locale === "ko"
+          ? "배터리 교체 용이"
+          : params.locale === "en"
+            ? "Easy Battery Replacement"
+            : params.locale === "vi"
+              ? "Dễ dàng thay pin"
+              : params.locale === "th"
+                ? "เปลี่ยนแบตเตอรี่ง่าย"
+                : "电池更换便捷",
+        params.locale === "ko"
+          ? "고급 터치 감도"
+          : params.locale === "en"
+            ? "Advanced Touch Sensitivity"
+            : params.locale === "vi"
+              ? "Độ nhạy cảm ứng nâng cao"
+              : params.locale === "th"
+                ? "ความไวในการสัมผัสขั้นสูง"
+                : "高级触摸灵敏度",
+      ],
     },
     {
       id: 6,
-      name: "GUGU 일반 무선 터치 스위치 1채널",
-      description: "1개의 채널을 제공하는 심플한 무선 스위치",
+      name:
+        params.locale === "ko"
+          ? "GUGU 일반 무선 터치 스위치 1채널"
+          : params.locale === "en"
+            ? "GUGU Standard Wireless Touch Switch 1 Channel"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây tiêu chuẩn GUGU 1 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายมาตรฐาน GUGU 1 ช่อง"
+                : "GUGU标准无线触摸开关1通道",
+      description:
+        params.locale === "ko"
+          ? "1개의 채널을 제공하는 심플한 무선 스위치"
+          : params.locale === "en"
+            ? "Simple wireless switch providing 1 channel"
+            : params.locale === "vi"
+              ? "Công tắc không dây đơn giản cung cấp 1 kênh"
+              : params.locale === "th"
+                ? "สวิตช์ไร้สายแบบเรียบง่ายที่มี 1 ช่อง"
+                : "提供1个通道的简单无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/006-JadHl2SunceNfFKHscbC8V1bsYeppK.png",
-      features: ["1채널 제어", "간편한 설치", "배터리 교체 용이", "고급 터치 감도"],
+      features: [
+        params.locale === "ko"
+          ? "1채널 제어"
+          : params.locale === "en"
+            ? "1 Channel Control"
+            : params.locale === "vi"
+              ? "Điều khiển 1 kênh"
+              : params.locale === "th"
+                ? "การควบคุม 1 ช่อง"
+                : "1通道控制",
+        params.locale === "ko"
+          ? "간편한 설치"
+          : params.locale === "en"
+            ? "Easy Installation"
+            : params.locale === "vi"
+              ? "Dễ dàng lắp đặt"
+              : params.locale === "th"
+                ? "ติดตั้งง่าย"
+                : "安装简便",
+        params.locale === "ko"
+          ? "배터리 교체 용이"
+          : params.locale === "en"
+            ? "Easy Battery Replacement"
+            : params.locale === "vi"
+              ? "Dễ dàng thay pin"
+              : params.locale === "th"
+                ? "เปลี่ยนแบตเตอรี่ง่าย"
+                : "电池更换便捷",
+        params.locale === "ko"
+          ? "고급 터치 감도"
+          : params.locale === "en"
+            ? "Advanced Touch Sensitivity"
+            : params.locale === "vi"
+              ? "Độ nhạy cảm ứng nâng cao"
+              : params.locale === "th"
+                ? "ความไวในการสัมผัสขั้นสูง"
+                : "高级触摸灵敏度",
+      ],
     },
   ]
 
@@ -85,8 +415,28 @@ export default function StandardWirelessSwitchPage({
         </Button>
       </Link>
 
-      <h1 className="text-3xl font-bold mb-2 text-center">GUGU 스마트 무선 터치 스위치</h1>
-      <h2 className="text-xl text-gray-600 mb-8 text-center">일반 타입 (앱 미지원 타입)</h2>
+      <h1 className="text-3xl font-bold mb-2 text-center">
+        {params.locale === "ko"
+          ? "GUGU 스마트 무선 터치 스위치"
+          : params.locale === "en"
+            ? "GUGU Smart Wireless Touch Switch"
+            : params.locale === "vi"
+              ? "Công tắc cảm ứng không dây thông minh GUGU"
+              : params.locale === "th"
+                ? "สวิตช์ทัชไร้สายอัจฉริยะ GUGU"
+                : "GUGU智能无线触摸开关"}
+      </h1>
+      <h2 className="text-xl text-gray-600 mb-8 text-center">
+        {params.locale === "ko"
+          ? "일반 타입 (앱 미지원 타입)"
+          : params.locale === "en"
+            ? "Standard Type (Non-App Type)"
+            : params.locale === "vi"
+              ? "Loại tiêu chuẩn (không hỗ trợ ứng dụng)"
+              : params.locale === "th"
+                ? "แบบมาตรฐาน (ไม่รองรับแอป)"
+                : "标准型（非应用型）"}
+      </h2>
 
       {/* 제품 정보 이미지 */}
       <div className="container mx-auto px-4 mb-8">
@@ -95,7 +445,17 @@ export default function StandardWirelessSwitchPage({
             <div className="relative" style={{ height: "600px" }}>
               <Image
                 src="/images/wireless-switch/product-info-wide.png"
-                alt="GUGU 무선 스위치 제품 정보"
+                alt={
+                  params.locale === "ko"
+                    ? "GUGU 무선 스위치 제품 정보"
+                    : params.locale === "en"
+                      ? "GUGU Wireless Switch Product Information"
+                      : params.locale === "vi"
+                        ? "Thông tin sản phẩm công tắc không dây GUGU"
+                        : params.locale === "th"
+                          ? "ข้อมูลผลิตภัณฑ์สวิตช์ไร้สาย GUGU"
+                          : "GUGU无线开关产品信息"
+                }
                 fill
                 className="object-contain"
                 quality={100}
@@ -107,11 +467,35 @@ export default function StandardWirelessSwitchPage({
 
       <div className="mb-8">
         <p className="text-gray-700 text-center max-w-3xl mx-auto">
-          GUGU 스마트 무선 터치 스위치 일반 타입은 간편한 설치와 사용이 특징인 제품입니다.
+          {params.locale === "ko"
+            ? "GUGU 스마트 무선 터치 스위치 일반 타입은 간편한 설치와 사용이 특징인 제품입니다."
+            : params.locale === "en"
+              ? "GUGU Smart Wireless Touch Switch Standard Type is a product characterized by easy installation and use."
+              : params.locale === "vi"
+                ? "Công tắc cảm ứng không dây thông minh GUGU loại tiêu chuẩn là sản phẩm đặc trưng bởi cài đặt và sử dụng dễ dàng."
+                : params.locale === "th"
+                  ? "สวิตช์ทัชไร้สายอัจฉริยะ GUGU แบบมาตรฐานเป็นผลิตภัณฑ์ที่มีลักษณะเด่นคือติดตั้งและใช้งานง่าย"
+                  : "GUGU智能无线触摸开关标准型是一款以安装和使用简便为特点的产品。"}
           <br />
-          별도의 앱 설치 없이 스위치만으로 조명을 제어할 수 있어 사용이 간편합니다.
+          {params.locale === "ko"
+            ? "별도의 앱 설치 없이 스위치만으로 조명을 제어할 수 있어 사용이 간편합니다."
+            : params.locale === "en"
+              ? "It is easy to use as you can control the lighting with just the switch without installing a separate app."
+              : params.locale === "vi"
+                ? "Dễ dàng sử dụng vì bạn có thể điều khiển đèn chỉ với công tắc mà không cần cài đặt ứng dụng riêng biệt."
+                : params.locale === "th"
+                  ? "ใช้งานง่ายเนื่องจากคุณสามารถควบคุมแสงสว่างด้วยสวิตช์เท่านั้นโดยไม่ต้องติดตั้งแอปแยกต่างหาก"
+                  : "无需安装单独的应用程序，仅通过开关即可控制照明，使用方便。"}
           <br />
-          1채널부터 6채널까지 다양한 옵션을 제공하여 고객의 필요에 맞게 선택할 수 있습니다.
+          {params.locale === "ko"
+            ? "1채널부터 6채널까지 다양한 옵션을 제공하여 고객의 필요에 맞게 선택할 수 있습니다."
+            : params.locale === "en"
+              ? "It provides various options from 1 channel to 6 channels so that customers can choose according to their needs."
+              : params.locale === "vi"
+                ? "Nó cung cấp nhiều tùy chọn từ 1 kênh đến 6 kênh để khách hàng có thể lựa chọn theo nhu cầu của họ."
+                : params.locale === "th"
+                  ? "มีตัวเลือกหลากหลายตั้งแต่ 1 ช่องถึง 6 ช่องเพื่อให้ลูกค้าสามารถเลือกตามความต้องการของพวกเขา"
+                  : "提供从1通道到6通道的各种选项，客户可以根据需求选择。"}
         </p>
       </div>
 
@@ -129,7 +513,17 @@ export default function StandardWirelessSwitchPage({
               <h3 className="text-xl font-bold mb-2">{product.name}</h3>
               <p className="text-gray-700 mb-4">{product.description}</p>
               <div>
-                <h4 className="font-semibold mb-2">주요 특징:</h4>
+                <h4 className="font-semibold mb-2">
+                  {params.locale === "ko"
+                    ? "주요 특징:"
+                    : params.locale === "en"
+                      ? "Key Features:"
+                      : params.locale === "vi"
+                        ? "Tính năng chính:"
+                        : params.locale === "th"
+                          ? "คุณสมบัติหลัก:"
+                          : "主要特点:"}
+                </h4>
                 <ul className="list-disc pl-5 text-gray-700">
                   {product.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -148,31 +542,112 @@ export default function StandardWirelessSwitchPage({
 
       {/* 제품 특징 섹션 */}
       <div className="mt-16 bg-gray-50 p-8 rounded-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">제품 특징</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          {params.locale === "ko"
+            ? "제품 특징"
+            : params.locale === "en"
+              ? "Product Features"
+              : params.locale === "vi"
+                ? "Tính năng sản phẩm"
+                : params.locale === "th"
+                  ? "คุณสมบัติผลิตภัณฑ์"
+                  : "产品特点"}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-bold mb-2">간편한 설치</h3>
+            <h3 className="text-lg font-bold mb-2">
+              {params.locale === "ko"
+                ? "간편한 설치"
+                : params.locale === "en"
+                  ? "Easy Installation"
+                  : params.locale === "vi"
+                    ? "Dễ dàng lắp đặt"
+                    : params.locale === "th"
+                      ? "ติดตั้งง่าย"
+                      : "安装简便"}
+            </h3>
             <p className="text-gray-700">
-              기존 스위치 위치에 쉽게 설치할 수 있으며, 별도의 배선 공사가 필요 없어 설치 비용과 시간을 절약할 수
-              있습니다.
+              {params.locale === "ko"
+                ? "기존 스위치 위치에 쉽게 설치할 수 있으며, 별도의 배선 공사가 필요 없어 설치 비용과 시간을 절약할 수 있습니다."
+                : params.locale === "en"
+                  ? "It can be easily installed in the position of existing switches, and no separate wiring work is required, saving installation costs and time."
+                  : params.locale === "vi"
+                    ? "Nó có thể được lắp đặt dễ dàng ở vị trí của các công tắc hiện có, và không cần công việc đi dây riêng biệt, tiết kiệm chi phí và thời gian lắp đặt."
+                    : params.locale === "th"
+                      ? "สามารถติดตั้งได้ง่ายในตำแหน่งของสวิตช์ที่มีอยู่ และไม่จำเป็นต้องมีงานเดินสายแยกต่างหาก ช่วยประหยัดค่าใช้จ่ายและเวลาในการติดตั้ง"
+                      : "可以轻松安装在现有开关位置，无需单独布线工作，节省安装成本和时间。"}
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-bold mb-2">다양한 채널 옵션</h3>
+            <h3 className="text-lg font-bold mb-2">
+              {params.locale === "ko"
+                ? "다양한 채널 옵션"
+                : params.locale === "en"
+                  ? "Various Channel Options"
+                  : params.locale === "vi"
+                    ? "Nhiều tùy chọn kênh"
+                    : params.locale === "th"
+                      ? "ตัวเลือกช่องที่หลากหลาย"
+                      : "多种通道选项"}
+            </h3>
             <p className="text-gray-700">
-              1채널부터 6채널까지 다양한 옵션을 제공하여 고객의 필요에 맞게 선택할 수 있습니다.
+              {params.locale === "ko"
+                ? "1채널부터 6채널까지 다양한 옵션을 제공하여 고객의 필요에 맞게 선택할 수 있습니다."
+                : params.locale === "en"
+                  ? "It provides various options from 1 channel to 6 channels so that customers can choose according to their needs."
+                  : params.locale === "vi"
+                    ? "Nó cung cấp nhiều tùy chọn từ 1 kênh đến 6 kênh để khách hàng có thể lựa chọn theo nhu cầu của họ."
+                    : params.locale === "th"
+                      ? "มีตัวเลือกหลากหลายตั้งแต่ 1 ช่องถึง 6 ช่องเพื่อให้ลูกค้าสามารถเลือกตามความต้องการของพวกเขา"
+                      : "提供从1通道到6通道的各种选项，客户可以根据需求选择。"}
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-bold mb-2">고급 터치 감도</h3>
+            <h3 className="text-lg font-bold mb-2">
+              {params.locale === "ko"
+                ? "고급 터치 감도"
+                : params.locale === "en"
+                  ? "Advanced Touch Sensitivity"
+                  : params.locale === "vi"
+                    ? "Độ nhạy cảm ứng nâng cao"
+                    : params.locale === "th"
+                      ? "ความไวในการสัมผัสขั้นสูง"
+                      : "高级触摸灵敏度"}
+            </h3>
             <p className="text-gray-700">
-              정밀한 터치 감도로 가벼운 터치만으로도 작동하며, 오작동을 방지하는 기술이 적용되었습니다.
+              {params.locale === "ko"
+                ? "정밀한 터치 감도로 가벼운 터치만으로도 작동하며, 오작동을 방지하는 기술이 적용되었습니다."
+                : params.locale === "en"
+                  ? "It operates with just a light touch with precise touch sensitivity, and technology to prevent malfunction has been applied."
+                  : params.locale === "vi"
+                    ? "Nó hoạt động chỉ với một cú chạm nhẹ với độ nhạy cảm ứng chính xác, và công nghệ để ngăn chặn sự cố đã được áp dụng."
+                    : params.locale === "th"
+                      ? "ทำงานด้วยการสัมผัสเบาๆ ด้วยความไวในการสัมผัสที่แม่นยำ และมีการใช้เทคโนโลยีเพื่อป้องกันการทำงานผิดพลาด"
+                      : "采用精确的触摸灵敏度，轻触即可操作，并应用了防止误操作的技术。"}
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-bold mb-2">배터리 교체 용이</h3>
+            <h3 className="text-lg font-bold mb-2">
+              {params.locale === "ko"
+                ? "배터리 교체 용이"
+                : params.locale === "en"
+                  ? "Easy Battery Replacement"
+                  : params.locale === "vi"
+                    ? "Dễ dàng thay pin"
+                    : params.locale === "th"
+                      ? "เปลี่ยนแบตเตอรี่ง่าย"
+                      : "电池更换便捷"}
+            </h3>
             <p className="text-gray-700">
-              배터리 교체가 간편하며, 저전력 설계로 배터리 수명이 길어 유지 관리가 편리합니다.
+              {params.locale === "ko"
+                ? "배터리 교체가 간편하며, 저전력 설계로 배터리 수명이 길어 유지 관리가 편리합니다."
+                : params.locale === "en"
+                  ? "Battery replacement is simple, and maintenance is convenient with a long battery life due to low-power design."
+                  : params.locale === "vi"
+                    ? "Thay pin đơn giản, và bảo trì thuận tiện với tuổi thọ pin dài do thiết kế tiêu thụ điện năng thấp."
+                    : params.locale === "th"
+                      ? "การเปลี่ยนแบตเตอรี่ทำได้ง่าย และการบำรุงรักษาสะดวกด้วยอายุการใช้งานแบตเตอรี่ที่ยาวนานเนื่องจากการออกแบบที่ใช้พลังงานต่ำ"
+                      : "电池更换简单，低功耗设计使电池寿命更长，维护方便。"}
             </p>
           </div>
         </div>
@@ -180,15 +655,53 @@ export default function StandardWirelessSwitchPage({
 
       {/* 카탈로그 섹션 */}
       <div className="mt-16 bg-gray-50 p-8 rounded-lg">
-        <h2 className="text-2xl font-bold mb-4 text-center">제품 카탈로그</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">
+          {params.locale === "ko"
+            ? "제품 카탈로그"
+            : params.locale === "en"
+              ? "Product Catalog"
+              : params.locale === "vi"
+                ? "Danh mục sản phẩm"
+                : params.locale === "th"
+                  ? "แคตตาล็อกสินค้า"
+                  : "产品目录"}
+        </h2>
         <p className="text-gray-700 mb-6 text-center">
-          GUGU 무선 스위치의 상세 사양과 설치 방법이 포함된 카탈로그를 확인하세요.
+          {params.locale === "ko"
+            ? "GUGU 무선 스위치의 상세 사양과 설치 방법이 포함된 카탈로그를 확인하세요."
+            : params.locale === "en"
+              ? "Check the catalog that includes detailed specifications and installation methods for GUGU wireless switches."
+              : params.locale === "vi"
+                ? "Kiểm tra danh mục bao gồm thông số kỹ thuật chi tiết và phương pháp lắp đặt cho công tắc không dây GUGU."
+                : params.locale === "th"
+                  ? "ตรวจสอบแคตตาล็อกที่รวมข้อมูลจำเพาะโดยละเอียดและวิธีการติดตั้งสำหรับสวิตช์ไร้สาย GUGU"
+                  : "查看包含GUGU无线开关详细规格和安装方法的目录。"}
         </p>
 
         <Tabs defaultValue="korean" className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-6">
-            <TabsTrigger value="korean">한글 카탈로그</TabsTrigger>
-            <TabsTrigger value="english">영문 카탈로그</TabsTrigger>
+            <TabsTrigger value="korean">
+              {params.locale === "ko"
+                ? "한글 카탈로그"
+                : params.locale === "en"
+                  ? "Korean Catalog"
+                  : params.locale === "vi"
+                    ? "Danh mục tiếng Hàn"
+                    : params.locale === "th"
+                      ? "แคตตาล็อกภาษาเกาหลี"
+                      : "韩文目录"}
+            </TabsTrigger>
+            <TabsTrigger value="english">
+              {params.locale === "ko"
+                ? "영문 카탈로그"
+                : params.locale === "en"
+                  ? "English Catalog"
+                  : params.locale === "vi"
+                    ? "Danh mục tiếng Anh"
+                    : params.locale === "th"
+                      ? "แคตตาล็อกภาษาอังกฤษ"
+                      : "英文目录"}
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="korean" className="border rounded-lg bg-white p-4 mx-auto max-w-[70%]">
@@ -200,7 +713,15 @@ export default function StandardWirelessSwitchPage({
                 className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
               >
                 <Download size={16} />
-                카탈로그 다운로드
+                {params.locale === "ko"
+                  ? "카탈로그 다운로드"
+                  : params.locale === "en"
+                    ? "Download Catalog"
+                    : params.locale === "vi"
+                      ? "Tải xuống danh mục"
+                      : params.locale === "th"
+                        ? "ดาวน์โหลดแคตตาล็อก"
+                        : "下载目录"}
               </a>
             </div>
             <div className="w-full h-[600px] border rounded overflow-auto">
@@ -223,7 +744,15 @@ export default function StandardWirelessSwitchPage({
                 className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
               >
                 <Download size={16} />
-                카탈로그 다운로드
+                {params.locale === "ko"
+                  ? "카탈로그 다운로드"
+                  : params.locale === "en"
+                    ? "Download Catalog"
+                    : params.locale === "vi"
+                      ? "Tải xuống danh mục"
+                      : params.locale === "th"
+                        ? "ดาวน์โหลดแคตตาล็อก"
+                        : "下载目录"}
               </a>
             </div>
             <div className="w-full h-[600px] border rounded overflow-auto">

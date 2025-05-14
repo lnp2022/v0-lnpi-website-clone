@@ -207,6 +207,9 @@ const ko = {
   patent4Title: "특허증 - 조명 제어 장치 (2022)",
   patent5Title: "특허증 - 우물천장 직간접 조명시스템 (2023)",
   patent6Title: "연구개발전담부서 인정서 (2022)",
+
+  // 무선 스위치 페이지
+  backToProducts: "제품으로 돌아가기",
 }
 
 // 영어 번역
@@ -424,6 +427,9 @@ const en = {
   patent4Title: "Patent - Lighting Control Device (2022)",
   patent5Title: "Patent - Direct and Indirect Ceiling Lighting System (2023)",
   patent6Title: "R&D Department Certificate (2022)",
+
+  // 무선 스위치 페이지
+  backToProducts: "Back to Products",
 }
 
 // 베트남어 번역
@@ -638,6 +644,9 @@ const vi = {
   patent4Title: "Bằng sáng chế - Thiết bị điều khiển đèn (2022)",
   patent5Title: "Bằng sáng chế - Hệ thống chiếu sáng trần trực tiếp và gián tiếp (2023)",
   patent6Title: "Chứng nhận Bộ phận R&D (2022)",
+
+  // 무선 스위치 페이지
+  backToProducts: "Quay lại Sản phẩm",
 }
 
 // 태국어 번역
@@ -844,6 +853,9 @@ const th = {
   patent4Title: "สิทธิบัตร - อุปกรณ์ควบคุมแสงสว่าง (2022)",
   patent5Title: "สิทธิบัตร - ระบบไฟเพดานทางตรงและทางอ้อม (2023)",
   patent6Title: "ใบรับรองแผนก R&D (2022)",
+
+  // 무선 스위치 페이지
+  backToProducts: "กลับไปที่สินค้า",
 }
 
 // 중국어 간체 번역 추가
@@ -1048,6 +1060,9 @@ const zh = {
   patent4Title: "专利 - 照明控制设备 (2022)",
   patent5Title: "专利 - 天花板直接和间接照明系统 (2023)",
   patent6Title: "研发部门证书 (2022)",
+
+  // 무선 스위치 페이지
+  backToProducts: "返回产品",
 }
 
 // 번역 함수
