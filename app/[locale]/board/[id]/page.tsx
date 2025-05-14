@@ -21,7 +21,16 @@ export default function BoardDetailPage({
   const posts = [
     {
       id: 1,
-      title: "엘엔피-카달로그",
+      title:
+        params.locale === "ko"
+          ? "엘엔피-카달로그"
+          : params.locale === "en"
+            ? "LNP-Catalog"
+            : params.locale === "vi"
+              ? "LNP-Danh mục sản phẩm"
+              : params.locale === "th"
+                ? "LNP-แคตตาล็อก"
+                : "LNP-产品目录",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001.jpg-icWjHi3iehfJu2jF3LFxI1yMBrIHWP.jpeg"],
       files: [
         {
@@ -35,7 +44,16 @@ export default function BoardDetailPage({
     },
     {
       id: 2,
-      title: "GUGU 스위치 - 카달로그",
+      title:
+        params.locale === "ko"
+          ? "GUGU 스위치 - 카달로그"
+          : params.locale === "en"
+            ? "GUGU Switch - Catalog"
+            : params.locale === "vi"
+              ? "Công tắc GUGU - Danh mục sản phẩm"
+              : params.locale === "th"
+                ? "สวิตช์ GUGU - แคตตาล็อก"
+                : "GUGU开关 - 产品目录",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j904H5t9bNNUkRMS1dlW0Ht5nJXnvU.png"],
       files: [
         {
@@ -55,7 +73,16 @@ export default function BoardDetailPage({
     },
     {
       id: 3,
-      title: "한방 우물 설치 가이드",
+      title:
+        params.locale === "ko"
+          ? "한방 우물 설치 가이드"
+          : params.locale === "en"
+            ? "Single Ceiling Installation Guide"
+            : params.locale === "vi"
+              ? "Hướng dẫn lắp đặt trần đơn"
+              : params.locale === "th"
+                ? "คู่มือการติดตั้งเพดานเดี่ยว"
+                : "单体天花板安装指南",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PMzl8NDQH2SK7hwijo9Zfac9Lee24T.png"],
       files: [
         {
@@ -69,7 +96,16 @@ export default function BoardDetailPage({
     },
     {
       id: 4,
-      title: "2025년~2026년 아파트 입주 정보",
+      title:
+        params.locale === "ko"
+          ? "2025년~2026년 아파트 입주 정보"
+          : params.locale === "en"
+            ? "2025-2026 Apartment Move-in Information"
+            : params.locale === "vi"
+              ? "Thông tin chuyển vào căn hộ 2025-2026"
+              : params.locale === "th"
+                ? "ข้อมูลการเข้าอยู่อาศัยในอพาร์ทเมนท์ปี 2025-2026"
+                : "2025-2026年公寓入住信息",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8WJFz0qPg3p82AvmALJ0cX37GPqdAN.png"],
       files: [
         {
@@ -106,7 +142,15 @@ export default function BoardDetailPage({
       <Link href={`/${params.locale}/board`}>
         <Button variant="ghost" className="mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
-          게시판으로 돌아가기
+          {params.locale === "ko"
+            ? "게시판으로 돌아가기"
+            : params.locale === "en"
+              ? "Back to Board"
+              : params.locale === "vi"
+                ? "Quay lại Bảng tin"
+                : params.locale === "th"
+                  ? "กลับไปที่กระดาน"
+                  : "返回公告栏"}
         </Button>
       </Link>
 
@@ -134,7 +178,17 @@ export default function BoardDetailPage({
       {/* 첨부 파일 */}
       {post.files && post.files.length > 0 && (
         <div className="mt-8">
-          <h3 className="text-xl font-bold mb-4">첨부 파일</h3>
+          <h3 className="text-xl font-bold mb-4">
+            {params.locale === "ko"
+              ? "첨부 파일"
+              : params.locale === "en"
+                ? "Attached Files"
+                : params.locale === "vi"
+                  ? "Tệp đính kèm"
+                  : params.locale === "th"
+                    ? "ไฟล์แนบ"
+                    : "附件"}
+          </h3>
           <div className="space-y-2">
             {post.files.map((file, index) => (
               <a
@@ -162,7 +216,15 @@ export default function BoardDetailPage({
                   }}
                 >
                   <Download className="h-4 w-4 mr-1" />
-                  다운로드
+                  {params.locale === "ko"
+                    ? "다운로드"
+                    : params.locale === "en"
+                      ? "Download"
+                      : params.locale === "vi"
+                        ? "Tải xuống"
+                        : params.locale === "th"
+                          ? "ดาวน์โหลด"
+                          : "下载"}
                 </Button>
               </a>
             ))}

@@ -15,7 +15,16 @@ export default function BoardPage({
   const posts = [
     {
       id: 1,
-      title: "엘엔피-카달로그",
+      title:
+        params.locale === "ko"
+          ? "엘엔피-카달로그"
+          : params.locale === "en"
+            ? "LNP-Catalog"
+            : params.locale === "vi"
+              ? "LNP-Danh mục sản phẩm"
+              : params.locale === "th"
+                ? "LNP-แคตตาล็อก"
+                : "LNP-产品目录",
       bgColor: "bg-[#f5f2ea]", // 베이지색 배경
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001.jpg-icWjHi3iehfJu2jF3LFxI1yMBrIHWP.jpeg"],
       files: [
@@ -30,7 +39,16 @@ export default function BoardPage({
     },
     {
       id: 2,
-      title: "GUGU 스위치 - 카달로그",
+      title:
+        params.locale === "ko"
+          ? "GUGU 스위치 - 카달로그"
+          : params.locale === "en"
+            ? "GUGU Switch - Catalog"
+            : params.locale === "vi"
+              ? "Công tắc GUGU - Danh mục sản phẩm"
+              : params.locale === "th"
+                ? "สวิตช์ GUGU - แคตตาล็อก"
+                : "GUGU开关 - 产品目录",
       bgColor: "bg-[#f5f2ea]",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j904H5t9bNNUkRMS1dlW0Ht5nJXnvU.png"],
       files: [
@@ -51,7 +69,16 @@ export default function BoardPage({
     },
     {
       id: 3,
-      title: "한방 우물 설치 가이드",
+      title:
+        params.locale === "ko"
+          ? "한방 우물 설치 가이드"
+          : params.locale === "en"
+            ? "Single Ceiling Installation Guide"
+            : params.locale === "vi"
+              ? "Hướng dẫn lắp đặt trần đơn"
+              : params.locale === "th"
+                ? "คู่มือการติดตั้งเพดานเดี่ยว"
+                : "单体天花板安装指南",
       bgColor: "bg-[#f5f2ea]",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PMzl8NDQH2SK7hwijo9Zfac9Lee24T.png"],
       files: [
@@ -66,7 +93,16 @@ export default function BoardPage({
     },
     {
       id: 4,
-      title: "2025년~2026년 아파트 입주 정보",
+      title:
+        params.locale === "ko"
+          ? "2025년~2026년 아파트 입주 정보"
+          : params.locale === "en"
+            ? "2025-2026 Apartment Move-in Information"
+            : params.locale === "vi"
+              ? "Thông tin chuyển vào căn hộ 2025-2026"
+              : params.locale === "th"
+                ? "ข้อมูลการเข้าอยู่อาศัยในอพาร์ทเมนท์ปี 2025-2026"
+                : "2025-2026年公寓入住信息",
       bgColor: "bg-[#f5f2ea]",
       images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8WJFz0qPg3p82AvmALJ0cX37GPqdAN.png"],
       files: [
@@ -86,14 +122,48 @@ export default function BoardPage({
       {/* 게시판 헤더 */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">
-          주식회사 엘엔피의
+          {params.locale === "ko"
+            ? "주식회사 엘엔피의"
+            : params.locale === "en"
+              ? "LNP Corporation's"
+              : params.locale === "vi"
+                ? "Của Công ty LNP"
+                : params.locale === "th"
+                  ? "ของบริษัท LNP"
+                  : "LNP公司的"}
           <br />
-          <span className="text-orange-500">각종 자료를 다운 받을 수 있는 공간 입니다.</span>
+          <span className="text-orange-500">
+            {params.locale === "ko"
+              ? "각종 자료를 다운 받을 수 있는 공간 입니다."
+              : params.locale === "en"
+                ? "space where you can download various materials."
+                : params.locale === "vi"
+                  ? "không gian nơi bạn có thể tải xuống các tài liệu khác nhau."
+                  : params.locale === "th"
+                    ? "พื้นที่ที่คุณสามารถดาวน์โหลดเอกสารต่างๆ ได้"
+                    : "可以下载各种资料的空间。"}
+          </span>
         </h1>
         <p className="text-gray-600 mt-4">
-          게시판에 없는 자료 중 궁금 하신 부분은
+          {params.locale === "ko"
+            ? "게시판에 없는 자료 중 궁금 하신 부분은"
+            : params.locale === "en"
+              ? "If you have any questions about materials not on the board,"
+              : params.locale === "vi"
+                ? "Nếu bạn có bất kỳ câu hỏi nào về tài liệu không có trên bảng,"
+                : params.locale === "th"
+                  ? "หากคุณมีคำถามเกี่ยวกับเอกสารที่ไม่มีในกระดาน"
+                  : "如果您对板上没有的资料有任何疑问，"}
           <br />
-          문의 하기 게시판을 이용하시면 빠르게 대응해 드리도록 하겠습니다.
+          {params.locale === "ko"
+            ? "문의 하기 게시판을 이용하시면 빠르게 대응해 드리도록 하겠습니다."
+            : params.locale === "en"
+              ? "please use the inquiry board and we will respond quickly."
+              : params.locale === "vi"
+                ? "vui lòng sử dụng bảng yêu cầu và chúng tôi sẽ phản hồi nhanh chóng."
+                : params.locale === "th"
+                  ? "โปรดใช้กระดานสอบถามและเราจะตอบกลับอย่างรวดเร็ว"
+                  : "请使用咨询板块，我们将快速回应。"}
         </p>
       </div>
 
