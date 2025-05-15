@@ -26,15 +26,17 @@ export default function HeroSection({ locale }: { locale: string }) {
             )}
 
             {/* YouTube 임베드 */}
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/OGpOtlJx4Xk?autoplay=1&mute=1&loop=1&playlist=OGpOtlJx4Xk&controls=0&showinfo=0&rel=0"
-              title="LNP Corporation Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              onLoad={() => setIsLoading(false)}
-            ></iframe>
+            <video
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              onLoadedData={() => setIsLoading(false)}
+            >
+              <source src="/videos/hero-video.mp4" type="video/mp4" />
+              {t.videoNotSupported}
+            </video>
           </div>
         </div>
 
