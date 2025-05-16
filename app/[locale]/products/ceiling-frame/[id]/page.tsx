@@ -694,13 +694,14 @@ export default function ProductDetailPage({
   const getInstallationGuideImage = (id: number) => {
     switch (id) {
       case 1:
-        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%ED%95%9C%EB%B0%A9%EC%9A%B0%EB%AC%BC-%EC%84%A4%EC%B9%98%EA%B0%80%EC%9D%B4%EB%93%9C-TqpwSvSFyRVqEN0JGBaQ7We29FEjXq.png" // 한방우물 설치가이드 이미지
+        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-koQs1byIhYLIIcJimFUzNEBhViiGJd.jpeg" // 첨부파일 1.jpg
       case 2:
-        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%EC%9A%B0%EB%AC%BC%EC%B2%9C%EC%9E%A5%20%EC%8B%9C%EA%B3%B5%EB%B0%A9%EB%B2%95-CILNbUC9mD1M39dbVleRRFmyCl4gM1.png" // 우물천장 무드등 시공 방법 이미지
+        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-ppaNNhgRsoz35SVCexWzyueCZJUlWL.jpeg" // 첨부파일 2.jpg (우물천장 무드등 시공 방법)
       case 3:
-        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%ED%95%9C%EB%B0%A9%EC%9A%B0%EB%AC%BC-%EC%84%A4%EC%B9%98%EA%B0%80%EC%9D%B4%EB%93%9C-TqpwSvSFyRVqEN0JGBaQ7We29FEjXq.png" // 한방우물 설치가이드 이미지
+        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-lpz7iI4UK6tIhdfQ2SgDMDXOCWNFrP.png"
+        // 첨부파일 3.jpg
       default:
-        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%ED%95%9C%EB%B0%A9%EC%9A%B0%EB%AC%BC-%EC%84%A4%EC%B9%98%EA%B0%80%EC%9D%B4%EB%93%9C-TqpwSvSFyRVqEN0JGBaQ7We29FEjXq.png" // 기본값으로 한방우물 설치가이드 이미지
+        return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-koQs1byIhYLIIcJimFUzNEBhViiGJd.jpeg" // 기본값으로 첨부파일 1.jpg
     }
   }
 
