@@ -82,7 +82,7 @@ export default function CompanyPage({
                     ? "Thông qua các giải pháp sáng tạo này, chúng tôi đã mở ra một kỷ nguyên mà bất kỳ ai cũng có thể lựa chọn lắp đặt đèn tạo không khí trần mà không gặp khó khăn."
                     : params.locale === "th"
                       ? "ผ่านโซลูชั่นที่เป็นนวัตกรรมเหล่านี้ เราได้เปิดยุคที่ทุกคนสามารถเลือกการติดตั้งไฟเพดานสร้างบรรยากาศได้โดยไม่มีภาระ"
-                      : "通过这些创新解决方案，我们开创了任何人都可以毫无负担地选择天花板氛围灯安装的时代。"}
+                      : "通过这些创新解决方案，我们开创了一个任何人都可以毫无负担地选择天花板氛围灯安装的时代。"}
             </p>
 
             <p className="text-gray-700 mb-4">
@@ -296,7 +296,12 @@ export default function CompanyPage({
           {/* 이미지 1 - 우물천장 조립체 특허증 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image src="/images/company/KC/1.png" alt="특허증 - 우물천장 조립체" fill className="object-contain" />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-D3RkMKsBiZakljFRqIKcl8HzxQHap6.jpeg"
+                alt="특허증 - 우물천장 조립체"
+                fill
+                className="object-contain"
+              />
             </div>
             <p className="text-xs text-center text-gray-700">특허증 - 우물천장 조립체</p>
           </div>
@@ -305,7 +310,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="/images/company/KC/2.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-7xAjdW0zcmnpaE2A7SU47tFM1ieYQc.jpeg"
                 alt="특허증 - 우물천장 직간접 조명시스템"
                 fill
                 className="object-contain"
@@ -318,7 +323,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="/images/company/KC/3.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.jpg-JLRtXCXdyqUUcxpEtZnIwfTpz1wUOH.jpeg"
                 alt="디자인등록증 - 우물형 천장 조명등용 몰딩바"
                 fill
                 className="object-contain"
@@ -331,7 +336,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="/images/company/KC/4.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.jpg-Ts4smtQvQBhMH7cWjU5MqwH53I4dcC.jpeg"
                 alt="디자인등록증 - 우물형 천장 조명등용 몰딩바"
                 fill
                 className="object-contain"
@@ -344,7 +349,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="/images/company/KC/5.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5.jpg-zM5FIQLBaeSoqGel3XbPHcEKMTd37r.jpeg"
                 alt="특허증 - 무선 조명 제어 장치"
                 fill
                 className="object-contain"
@@ -356,7 +361,12 @@ export default function CompanyPage({
           {/* 이미지 6 - 연구개발전담부서 인정서 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image src="/images/company/KC/6.png" alt="연구개발전담부서 인정서" fill className="object-contain" />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6.jpg-wPNwQJcc1ptXz2ATeGmhC4JbD9frdz.jpeg"
+                alt="연구개발전담부서 인정서"
+                fill
+                className="object-contain"
+              />
             </div>
             <p className="text-xs text-center text-gray-700">연구개발전담부서 인정서</p>
           </div>
@@ -364,7 +374,12 @@ export default function CompanyPage({
           {/* 이미지 7 - 안전인증서 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image src="/images/company/KC/7.png" alt="안전인증서 (KTR)" fill className="object-contain" />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.jpg-A26ekncwaJ9LHFLBBa2qEd9OZeTKiZ.jpeg"
+                alt="안전인증서 (KTR)"
+                fill
+                className="object-contain"
+              />
             </div>
             <p className="text-xs text-center text-gray-700">안전인증서 (KTR)</p>
           </div>
@@ -372,7 +387,12 @@ export default function CompanyPage({
           {/* 이미지 8 - 방송통신기자재 적합인증서 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image src="/images/company/KC/8.png" alt="방송통신기자재 적합인증서" fill className="object-contain" />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8.jpg-xTrK8dIs2FXRnjPVCwZWe15WhpMk4E.jpeg"
+                alt="방송통신기자재 적합인증서"
+                fill
+                className="object-contain"
+              />
             </div>
             <p className="text-xs text-center text-gray-700">방송통신기자재 적합인증서</p>
           </div>

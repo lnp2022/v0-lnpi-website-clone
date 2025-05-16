@@ -37,7 +37,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานเดี่ยวแบบนกนางนวล (53mm x 56mm)"
                 : "海鸥型单体天花板框架 (53mm x 56mm)",
       category: "seagull-single",
-      image: "/images/ceiling-frame/new/1.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/002%20%282%29-znH45SbsAG11QvolEu8nfGeZVCfRYo.png", // ID 3의 이미지로 변경
     },
     {
       id: 2,
@@ -52,7 +52,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานเดี่ยวมาตรฐาน (53mm x 56mm)"
                 : "标准单体天花板框架 (53mm x 56mm)",
       category: "standard-single",
-      image: "/images/ceiling-frame/new/2.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/007-TdNLGzQB16RKgKCuRhrqGNKdPtaA29.png",
     },
     {
       id: 3,
@@ -67,7 +67,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานห่อแผ่น (43mm x 50mm)"
                 : "贴膜天花板框架 (43mm x 50mm)",
       category: "sheet-wrapping",
-      image: "/images/ceiling-frame/new/3.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrapping-frame-1-UpAlGHxzTb4UG2wddZivUmrWtJlXJD.png", // ID 1의 이미지로 변경
     },
     {
       id: 4,
@@ -82,7 +82,7 @@ export default function CeilingFramePage({
                 ? "ฝาครอบม้วนเฟรมเดี่ยว (50 เมตร)"
                 : "单体框架卷盖 (50米)",
       category: "accessories",
-      image: "/images/ceiling-frame/new/4.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/004-42NLqeiXXmeP6yduQtkQHQv0qW7Qqk.png",
     },
     {
       id: 5,
@@ -97,7 +97,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งมุมโค้งเฟรมเดี่ยว (200mm x 200mm)"
                 : "单体框架圆角装饰材料 (200mm x 200mm)",
       category: "accessories",
-      image: "/images/ceiling-frame/new/5.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/005-kEOVMphin4pjhtMzgU0euqDD5SZy3i.png",
     },
     {
       id: 6,
@@ -112,7 +112,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งมุมโค้งเฟรมห่อแผ่น (150mm x 150mm)"
                 : "贴膜圆角装饰材料 (150mm x 150mm)",
       category: "accessories",
-      image: "/images/ceiling-frame/new/6.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/006-48EhDy4fUvM7blyu6N1UAJd03kYnDN.png",
     },
     {
       id: 7,
@@ -127,7 +127,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งมุมฉากเฟรมห่อแผ่น (100mm x 100mm)"
                 : "贴膜直角装饰材料 (100mm x 100mm)",
       category: "accessories",
-      image: "/images/ceiling-frame/new/7.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/007-iZ3FPte2ZdtiwyHb67jNNts18mTNnY.png",
     },
     {
       id: 8,
@@ -142,7 +142,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งตรงกลางเฟรมห่อแผ่น (100mm)"
                 : "贴膜中间装饰材料 (100mm)",
       category: "accessories",
-      image: "/images/ceiling-frame/new/8.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/008-vJ8dQc0KE6KZfdT9vxFesS3nffKLH5.png",
     },
   ]
 
