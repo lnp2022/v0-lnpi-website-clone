@@ -37,7 +37,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานเดี่ยวแบบนกนางนวล (53mm x 56mm)"
                 : "海鸥型单体天花板框架 (53mm x 56mm)",
       category: "seagull-single",
-      image: "/images/products/ceiling-frame/new/1.png",
+      image: "/images/ceiling-frame/new/1.png",
     },
     {
       id: 2,
@@ -52,7 +52,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานเดี่ยวมาตรฐาน (53mm x 56mm)"
                 : "标准单体天花板框架 (53mm x 56mm)",
       category: "standard-single",
-      image: "/images/products/ceiling-frame/new/2.png",
+      image: "/images/ceiling-frame/new/2.png",
     },
     {
       id: 3,
@@ -67,7 +67,7 @@ export default function CeilingFramePage({
                 ? "เฟรมเพดานห่อแผ่น (43mm x 50mm)"
                 : "贴膜天花板框架 (43mm x 50mm)",
       category: "sheet-wrapping",
-      image: "/images/products/ceiling-frame/new/3.png",
+      image: "/images/ceiling-frame/new/3.png",
     },
     {
       id: 4,
@@ -82,7 +82,7 @@ export default function CeilingFramePage({
                 ? "ฝาครอบม้วนเฟรมเดี่ยว (50 เมตร)"
                 : "单体框架卷盖 (50米)",
       category: "accessories",
-      image: "/images/products/ceiling-frame/new/4.png",
+      image: "/images/ceiling-frame/new/4.png",
     },
     {
       id: 5,
@@ -97,7 +97,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งมุมโค้งเฟรมเดี่ยว (200mm x 200mm)"
                 : "单体框架圆角装饰材料 (200mm x 200mm)",
       category: "accessories",
-      image: "/images/products/ceiling-frame/new/5.png",
+      image: "/images/ceiling-frame/new/5.png",
     },
     {
       id: 6,
@@ -112,7 +112,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งมุมโค้งเฟรมห่อแผ่น (150mm x 150mm)"
                 : "贴膜圆角装饰材料 (150mm x 150mm)",
       category: "accessories",
-      image: "/images/products/ceiling-frame/new/6.png",
+      image: "/images/ceiling-frame/new/6.png",
     },
     {
       id: 7,
@@ -127,7 +127,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งมุมฉากเฟรมห่อแผ่น (100mm x 100mm)"
                 : "贴膜直角装饰材料 (100mm x 100mm)",
       category: "accessories",
-      image: "/images/products/ceiling-frame/new/7.png",
+      image: "/images/ceiling-frame/new/7.png",
     },
     {
       id: 8,
@@ -142,7 +142,7 @@ export default function CeilingFramePage({
                 ? "วัสดุตกแต่งตรงกลางเฟรมห่อแผ่น (100mm)"
                 : "贴膜中间装饰材料 (100mm)",
       category: "accessories",
-      image: "/images/products/ceiling-frame/new/8.png",
+      image: "/images/ceiling-frame/new/8.png",
     },
   ]
 
