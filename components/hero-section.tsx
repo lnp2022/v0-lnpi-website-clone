@@ -1,82 +1,93 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { useTranslations } from "@/lib/translations"
 import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 
-export default function HeroSection({ locale }: { locale: string }) {
-  const t = useTranslations(locale)
+export default function HeroSection() {
+  const t = useTranslations("Hero")
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
-  // 프로젝트에 이미 존재하는 이미지 사용
-  const images = [
-    "/images/001.jpg",
-    "/images/002.jpg",
-    "/images/003.jpg",
-    "/images/004.jpg",
-  ]
+  const images = ["/images/move/001.jpg", "/images/move/002.jpg", "/images/move/003.jpg", "/images/move/004.jpg"]
 
-  // 이미지 자동 전환
   useEffect(() => {
+    // Preload images
+    const imagePromises = images.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.src = src
+        img.onload = () => resolve(src)
+        img.onerror = (error) => {
+          console.error(`Failed to load image: ${src}`, error)
+          reject(error)
+        }
+      })
+    })
+
+    // Set loading to false when at least one image is loaded
+    Promise.any(imagePromises)
+      .then(() => {
+        setIsLoading(false)
+      })
+      .catch((error) => {
+        console.error("모든 이미지 로딩 실패:", error)
+        setIsLoading(false) // Still set loading to false to show something
+      })
+
+    // Set up image rotation
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 5000) // 5초마다 이미지 변경
+    }, 5000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [images])
 
   return (
-    <section className="relative w-full bg-white">
-      <div className="container mx-auto px-4 py-6">
-        <div className="w-full mx-auto mb-8">
-          <div
-            className="relative w-full overflow-hidden rounded-lg shadow-md bg-gray-100"
-            style={{ paddingBottom: "56.25%" }} // 16:9 비율
-          >
-            {/* 단순화된 이미지 슬라이드쇼 */}
-            {images.map((src, index) => (
-              <div
-                key={index}
-                className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-                  index === currentImageIndex ? "opacity-100" : "opacity-0"
-                }`}
-                style={{
-                  backgroundImage: `url(${src})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                aria-hidden={index !== currentImageIndex}
-              />
-            ))}
-          </div>
+    <section className="relative w-full h-screen overflow-hidden">
+      {isLoading ? (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <p className="text-xl font-medium">이미지 로딩 중...</p>
         </div>
+      ) : (
+        <>
+          {images.map((image, index) => (
+            <div
+              key={image}
+              className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+              style={{
+                opacity: currentImageIndex === index ? 1 : 0,
+                backgroundImage: `url(${image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                zIndex: currentImageIndex === index ? 10 : 0,
+              }}
+              aria-hidden={currentImageIndex !== index}
+            />
+          ))}
 
-        {/* 텍스트 및 버튼 - 비디오 아래에 명확하게 분리 */}
-        <div className="text-center mt-4">
-          <h1
-            className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider mb-3 text-gray-900"
-            style={{ fontFamily: "serif" }}
-          >
-            LIGHTING INNOVATION
-          </h1>
-          <p className="text-lg md:text-xl mb-5 max-w-3xl mx-auto text-gray-700">
-            최고의 조명 인테리어 솔루션을 제공합니다
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={`/${locale}/products`}>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none px-8 py-3 text-lg">
-                {t.exploreProducts}
-              </Button>
-            </Link>
-            <Link href={`/${locale}/consultation`}>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none px-8 py-3 text-lg">
-                {t.contactUs}
-              </Button>
-            </Link>
+          <div className="absolute inset-0 bg-black/30 z-20" />
+
+          <div className="relative z-30 container mx-auto px-4 h-full flex flex-col justify-center items-start">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-3xl">{t("title")}</h1>
+            <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl">{t("subtitle")}</p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/ko/products"
+                className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition-colors"
+              >
+                {t("productButton")}
+              </Link>
+              <Link
+                href="/ko/consultation"
+                className="bg-transparent border border-white text-white hover:bg-white/10 px-6 py-3 rounded-md font-medium transition-colors"
+              >
+                {t("consultButton")}
+              </Link>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </section>
   )
 }
