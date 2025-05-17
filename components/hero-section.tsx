@@ -28,7 +28,7 @@ export default function HeroSection({ locale }: { locale: string }) {
             {/* 비디오 플레이어 */}
             <video
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src="/images/move/홈페이지 영상.mp4"
+              src="/images/홈페이지 영상.mp4"
               title="LNP Corporation Video"
               autoPlay
               muted
