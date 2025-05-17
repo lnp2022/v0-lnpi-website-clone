@@ -296,12 +296,7 @@ export default function CompanyPage({
           {/* 이미지 1 - 우물천장 조립체 특허증 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image
-                src="/images/company/1.png"
-                alt="특허증 - 우물천장 조립체"
-                fill
-                className="object-contain"
-              />
+              <Image src="/images/company/1.png" alt="특허증 - 우물천장 조립체" fill className="object-contain" />
             </div>
             <p className="text-xs text-center text-gray-700">특허증 - 우물천장 조립체</p>
           </div>
@@ -348,12 +343,7 @@ export default function CompanyPage({
           {/* 이미지 5 - 무선 조명 제어 장치 특허증 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image
-                src="/images/company/5.png"
-                alt="특허증 - 무선 조명 제어 장치"
-                fill
-                className="object-contain"
-              />
+              <Image src="/images/company/5.png" alt="특허증 - 무선 조명 제어 장치" fill className="object-contain" />
             </div>
             <p className="text-xs text-center text-gray-700">특허증 - 무선 조명 제어 장치</p>
           </div>
@@ -361,12 +351,7 @@ export default function CompanyPage({
           {/* 이미지 6 - 연구개발전담부서 인정서 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image
-                src="/images/company/6.png"
-                alt="연구개발전담부서 인정서"
-                fill
-                className="object-contain"
-              />
+              <Image src="/images/company/6.png" alt="연구개발전담부서 인정서" fill className="object-contain" />
             </div>
             <p className="text-xs text-center text-gray-700">연구개발전담부서 인정서</p>
           </div>
@@ -374,12 +359,7 @@ export default function CompanyPage({
           {/* 이미지 7 - 안전인증서 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image
-                src="/images/company/7.png"
-                alt="안전인증서 (KTR)"
-                fill
-                className="object-contain"
-              />
+              <Image src="/images/company/7.png" alt="안전인증서 (KTR)" fill className="object-contain" />
             </div>
             <p className="text-xs text-center text-gray-700">안전인증서 (KTR)</p>
           </div>
@@ -387,12 +367,7 @@ export default function CompanyPage({
           {/* 이미지 8 - 방송통신기자재 적합인증서 */}
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
-              <Image
-                src="/images/company/8.png"
-                alt="방송통신기자재 적합인증서"
-                fill
-                className="object-contain"
-              />
+              <Image src="/images/company/8.png" alt="방송통신기자재 적합인증서" fill className="object-contain" />
             </div>
             <p className="text-xs text-center text-gray-700">방송통신기자재 적합인증서</p>
           </div>
