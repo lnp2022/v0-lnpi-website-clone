@@ -2,40 +2,53 @@
 
 import { Button } from "@/components/ui/button"
 import { useTranslations } from "@/lib/translations"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 export default function HeroSection({ locale }: { locale: string }) {
   const t = useTranslations(locale)
-  const [isLoading, setIsLoading] = useState(true)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // 프로젝트에 이미 존재하는 이미지 사용
+  const images = [
+    "/images/move/001.jpg",
+    "/images/move/002.jpg",
+    "/images/move/003.jpg",
+    "/images/move/004.jpg",
+  ]
+
+  // 이미지 자동 전환
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 5000) // 5초마다 이미지 변경
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section className="relative w-full bg-white">
       <div className="container mx-auto px-4 py-6">
-        {/* YouTube 비디오 컨테이너 */}
         <div className="w-full mx-auto mb-8">
           <div
             className="relative w-full overflow-hidden rounded-lg shadow-md bg-gray-100"
             style={{ paddingBottom: "56.25%" }} // 16:9 비율
           >
-            {/* 로딩 상태 표시 */}
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
-                <div className="animate-pulse text-gray-400">비디오 로딩 중...</div>
-              </div>
-            )}
-
-            {/* 비디오 플레이어 */}
-            <video
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src="/images/move/홈페이지 영상.mp4"
-              title="LNP Corporation Video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              onLoadedData={() => setIsLoading(false)}
-            ></video>
+            {/* 단순화된 이미지 슬라이드쇼 */}
+            {images.map((src, index) => (
+              <div
+                key={index}
+                className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+                style={{
+                  backgroundImage: `url(${src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+                aria-hidden={index !== currentImageIndex}
+              />
+            ))}
           </div>
         </div>
 

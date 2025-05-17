@@ -664,7 +664,7 @@ const th = {
   ceilingFrame: "เฟรมเพดาน",
   wirelessSwitch: "สวิตช์ไร้สาย GUGU",
   freeConsultation: "ติดต่อเรา",
-  board: "กระดานข่าว",
+  board: "กร���ดานข่าว",
 
   // Ceiling Frame Submenu
   ceilingFrameType1: "เฟรมเพดานห่อแผ่น",
