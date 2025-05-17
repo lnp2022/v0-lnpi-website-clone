@@ -297,7 +297,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-D3RkMKsBiZakljFRqIKcl8HzxQHap6.jpeg"
+                src="/images/company/1.png"
                 alt="특허증 - 우물천장 조립체"
                 fill
                 className="object-contain"
@@ -310,7 +310,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-7xAjdW0zcmnpaE2A7SU47tFM1ieYQc.jpeg"
+                src="/images/company/2.png"
                 alt="특허증 - 우물천장 직간접 조명시스템"
                 fill
                 className="object-contain"
@@ -323,7 +323,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.jpg-JLRtXCXdyqUUcxpEtZnIwfTpz1wUOH.jpeg"
+                src="/images/company/3.png"
                 alt="디자인등록증 - 우물형 천장 조명등용 몰딩바"
                 fill
                 className="object-contain"
@@ -336,7 +336,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.jpg-Ts4smtQvQBhMH7cWjU5MqwH53I4dcC.jpeg"
+                src="/images/company/4.png"
                 alt="디자인등록증 - 우물형 천장 조명등용 몰딩바"
                 fill
                 className="object-contain"
@@ -349,7 +349,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5.jpg-zM5FIQLBaeSoqGel3XbPHcEKMTd37r.jpeg"
+                src="/images/company/5.png"
                 alt="특허증 - 무선 조명 제어 장치"
                 fill
                 className="object-contain"
@@ -362,7 +362,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6.jpg-wPNwQJcc1ptXz2ATeGmhC4JbD9frdz.jpeg"
+                src="/images/company/6.png"
                 alt="연구개발전담부서 인정서"
                 fill
                 className="object-contain"
@@ -375,7 +375,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.jpg-A26ekncwaJ9LHFLBBa2qEd9OZeTKiZ.jpeg"
+                src="/images/company/7.png"
                 alt="안전인증서 (KTR)"
                 fill
                 className="object-contain"
@@ -388,7 +388,7 @@ export default function CompanyPage({
           <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all">
             <div className="relative aspect-[3/4] w-full max-w-[150px] mx-auto mb-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8.jpg-xTrK8dIs2FXRnjPVCwZWe15WhpMk4E.jpeg"
+                src="/images/company/8.png"
                 alt="방송통신기자재 적합인증서"
                 fill
                 className="object-contain"
