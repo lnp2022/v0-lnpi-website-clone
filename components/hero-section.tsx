@@ -11,10 +11,10 @@ export default function HeroSection({ locale }: { locale: string }) {
 
   // 프로젝트에 이미 존재하는 이미지 사용
   const images = [
-    "/images/move/001.jpg",
-    "/images/move/002.jpg",
-    "/images/move/003.jpg",
-    "/images/move/004.jpg",
+    "/images/001.jpg",
+    "/images/002.jpg",
+    "/images/003.jpg",
+    "/images/004.jpg",
   ]
 
   // 이미지 자동 전환
