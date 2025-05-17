@@ -1,11 +1,6 @@
-"use client"
+import { redirect } from "next/navigation"
 
-import HeroSection from "../components/hero-section"
-
-export default function Page() {
-  return (
-    <main>
-      <HeroSection />
-    </main>
-  )
+export default function Home() {
+  // 기본 로케일로 리다이렉트
+  redirect("/ko")
 }

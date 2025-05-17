@@ -1,194 +1,104 @@
 "use client"
 
-// Inspired by react-hot-toast library
-import * as React from "react"
+import { useState, useEffect, useCallback } from "react"
 
-import type {
-  ToastActionElement,
-  ToastProps,
-} from "@/components/ui/toast"
-
-const TOAST_LIMIT = 1
-const TOAST_REMOVE_DELAY = 1000000
-
-type ToasterToast = ToastProps & {
+type ToastType = {
   id: string
-  title?: React.ReactNode
-  description?: React.ReactNode
-  action?: ToastActionElement
+  title: string
+  description?: string
+  variant?: "default" | "destructive"
+  duration?: number
 }
 
-const actionTypes = {
-  ADD_TOAST: "ADD_TOAST",
-  UPDATE_TOAST: "UPDATE_TOAST",
-  DISMISS_TOAST: "DISMISS_TOAST",
-  REMOVE_TOAST: "REMOVE_TOAST",
-} as const
+type ToastOptions = Omit<ToastType, "id">
 
-let count = 0
+export function useToast() {
+  const [toasts, setToasts] = useState<ToastType[]>([])
 
-function genId() {
-  count = (count + 1) % Number.MAX_SAFE_INTEGER
-  return count.toString()
-}
+  const toast = useCallback(({ title, description, variant = "default", duration = 3000 }: ToastOptions) => {
+    const id = Math.random().toString(36).substring(2, 9)
+    const newToast = { id, title, description, variant, duration }
 
-type ActionType = typeof actionTypes
+    setToasts((prevToasts) => [...prevToasts, newToast])
 
-type Action =
-  | {
-      type: ActionType["ADD_TOAST"]
-      toast: ToasterToast
-    }
-  | {
-      type: ActionType["UPDATE_TOAST"]
-      toast: Partial<ToasterToast>
-    }
-  | {
-      type: ActionType["DISMISS_TOAST"]
-      toastId?: ToasterToast["id"]
-    }
-  | {
-      type: ActionType["REMOVE_TOAST"]
-      toastId?: ToasterToast["id"]
-    }
+    // 자동으로 토스트 제거
+    setTimeout(() => {
+      setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id))
+    }, duration)
 
-interface State {
-  toasts: ToasterToast[]
-}
+    return id
+  }, [])
 
-const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
+  const dismiss = useCallback((id: string) => {
+    setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id))
+  }, [])
 
-const addToRemoveQueue = (toastId: string) => {
-  if (toastTimeouts.has(toastId)) {
-    return
-  }
+  // 컴포넌트 렌더링
+  useEffect(() => {
+    if (toasts.length > 0) {
+      const toastContainer = document.getElementById("toast-container")
 
-  const timeout = setTimeout(() => {
-    toastTimeouts.delete(toastId)
-    dispatch({
-      type: "REMOVE_TOAST",
-      toastId: toastId,
-    })
-  }, TOAST_REMOVE_DELAY)
-
-  toastTimeouts.set(toastId, timeout)
-}
-
-export const reducer = (state: State, action: Action): State => {
-  switch (action.type) {
-    case "ADD_TOAST":
-      return {
-        ...state,
-        toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT),
+      if (!toastContainer) {
+        const container = document.createElement("div")
+        container.id = "toast-container"
+        container.className = "fixed top-4 right-4 z-50 flex flex-col gap-2"
+        document.body.appendChild(container)
       }
 
-    case "UPDATE_TOAST":
-      return {
-        ...state,
-        toasts: state.toasts.map((t) =>
-          t.id === action.toast.id ? { ...t, ...action.toast } : t
-        ),
-      }
-
-    case "DISMISS_TOAST": {
-      const { toastId } = action
-
-      // ! Side effects ! - This could be extracted into a dismissToast() action,
-      // but I'll keep it here for simplicity
-      if (toastId) {
-        addToRemoveQueue(toastId)
-      } else {
-        state.toasts.forEach((toast) => {
-          addToRemoveQueue(toast.id)
-        })
-      }
-
-      return {
-        ...state,
-        toasts: state.toasts.map((t) =>
-          t.id === toastId || toastId === undefined
-            ? {
-                ...t,
-                open: false,
-              }
-            : t
-        ),
-      }
-    }
-    case "REMOVE_TOAST":
-      if (action.toastId === undefined) {
-        return {
-          ...state,
-          toasts: [],
+      return () => {
+        const container = document.getElementById("toast-container")
+        if (container && toasts.length === 0) {
+          document.body.removeChild(container)
         }
       }
-      return {
-        ...state,
-        toasts: state.toasts.filter((t) => t.id !== action.toastId),
-      }
-  }
-}
-
-const listeners: Array<(state: State) => void> = []
-
-let memoryState: State = { toasts: [] }
-
-function dispatch(action: Action) {
-  memoryState = reducer(memoryState, action)
-  listeners.forEach((listener) => {
-    listener(memoryState)
-  })
-}
-
-type Toast = Omit<ToasterToast, "id">
-
-function toast({ ...props }: Toast) {
-  const id = genId()
-
-  const update = (props: ToasterToast) =>
-    dispatch({
-      type: "UPDATE_TOAST",
-      toast: { ...props, id },
-    })
-  const dismiss = () => dispatch({ type: "DISMISS_TOAST", toastId: id })
-
-  dispatch({
-    type: "ADD_TOAST",
-    toast: {
-      ...props,
-      id,
-      open: true,
-      onOpenChange: (open) => {
-        if (!open) dismiss()
-      },
-    },
-  })
-
-  return {
-    id: id,
-    dismiss,
-    update,
-  }
-}
-
-function useToast() {
-  const [state, setState] = React.useState<State>(memoryState)
-
-  React.useEffect(() => {
-    listeners.push(setState)
-    return () => {
-      const index = listeners.indexOf(setState)
-      if (index > -1) {
-        listeners.splice(index, 1)
-      }
     }
-  }, [state])
+  }, [toasts])
 
-  return {
-    ...state,
-    toast,
-    dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
-  }
+  // 토스트 렌더링
+  useEffect(() => {
+    const container = document.getElementById("toast-container")
+
+    if (container) {
+      // 기존 토스트 제거
+      container.innerHTML = ""
+
+      // 새 토스트 추가
+      toasts.forEach((toast) => {
+        const toastElement = document.createElement("div")
+        toastElement.className = `bg-white border rounded-md shadow-md p-4 mb-2 transform transition-all duration-300 ease-in-out ${
+          toast.variant === "destructive" ? "border-red-500" : "border-gray-200"
+        }`
+
+        const titleElement = document.createElement("div")
+        titleElement.className = `font-semibold ${toast.variant === "destructive" ? "text-red-600" : "text-gray-900"}`
+        titleElement.textContent = toast.title
+
+        toastElement.appendChild(titleElement)
+
+        if (toast.description) {
+          const descriptionElement = document.createElement("div")
+          descriptionElement.className = "text-sm text-gray-600 mt-1"
+          descriptionElement.textContent = toast.description
+          toastElement.appendChild(descriptionElement)
+        }
+
+        // 닫기 버튼
+        const closeButton = document.createElement("button")
+        closeButton.className = "absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+        closeButton.innerHTML = "×"
+        closeButton.onclick = () => dismiss(toast.id)
+
+        toastElement.appendChild(closeButton)
+        container.appendChild(toastElement)
+
+        // 애니메이션
+        setTimeout(() => {
+          toastElement.style.opacity = "1"
+          toastElement.style.transform = "translateY(0)"
+        }, 10)
+      })
+    }
+  }, [toasts, dismiss])
+
+  return { toast, dismiss }
 }
-
-export { useToast, toast }
