@@ -413,6 +413,48 @@ export default function CompanyPage({
           </div>
         </div>
       </section>
+      
+      {/* 회사 위치 */}
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold mb-8 text-center">
+          {params.locale === "ko" ? "회사 위치" : "Company Location"}
+        </h2>
+        <div className="mb-4 text-center">
+          <p className="text-lg font-medium">경기도 김포시 태장로 789</p>
+          <p className="text-gray-600">789 Taejang-ro, Gimpo-si, Gyeonggi-do, South Korea</p>
+        </div>
+
+        {/* Google Maps 임베드 */}
+        <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.5574003850236!2d126.71584237677893!3d37.64470997203083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c85b8eea8b651%3A0xdbf11f574fe3ad2a!2s789%20Taejang-ro%2C%20Gimpo-si%2C%20Gyeonggi-do%2C%20South%20Korea!5e0!3m2!1sen!2sus!4v1716118323013!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <a
+            href="https://map.naver.com/v5/directions/-/14107873.066399302,4538764.369372845,%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%97%98%EC%97%94%ED%94%BC,1302865516,PLACE_POI/-/transit?c=14107873.0664,4538764.3694,15,0,0,0,dh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors flex items-center"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            네이버 길 찾기
+          </a>
+        </div>
+      </section>
     </div>
   )
 }
