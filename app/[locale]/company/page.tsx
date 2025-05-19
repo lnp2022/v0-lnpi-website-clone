@@ -420,8 +420,8 @@ export default function CompanyPage({
           {params.locale === "ko" ? "회사 위치" : "Company Location"}
         </h2>
         <div className="mb-4 text-center">
-          <p className="text-lg font-medium">경기도 김포시 태장로 789</p>
-          <p className="text-gray-600">789 Taejang-ro, Gimpo-si, Gyeonggi-do, South Korea</p>
+          <p className="text-lg font-medium">경기도 김포시 태장로 789,(금광하이테크시티) 지하 1층 B103호</p>
+          <p className="text-gray-600">B103, B1F, Geumgwang Hi-Tech City, 789, Taejang-ro, Gimpo-si, Gyeonggi-do, Republic of Korea</p>
         </div>
 
         {/* Google Maps 임베드 */}
