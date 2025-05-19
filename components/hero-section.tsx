@@ -2,40 +2,55 @@
 
 import { Button } from "@/components/ui/button"
 import { useTranslations } from "@/lib/translations"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function HeroSection({ locale }: { locale: string }) {
   const t = useTranslations(locale)
-  const [isLoading, setIsLoading] = useState(true)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // Array of hero images to cycle through
+  const heroImages = [
+    "/images/hero-slides/slide1.jpg",
+    "/images/hero-slides/slide2.jpg",
+    "/images/hero-slides/slide3.jpg",
+    "/images/hero-slides/slide4.jpg",
+  ]
+
+  // Effect to change image every 1 second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section className="relative w-full bg-white">
       <div className="container mx-auto px-4 py-6">
-        {/* YouTube 비디오 컨테이너 */}
+        {/* Image slideshow container */}
         <div className="w-full mx-auto mb-8">
           <div
             className="relative w-full overflow-hidden rounded-lg shadow-md bg-gray-100"
-            style={{ paddingBottom: "56.25%" }} // 16:9 비율
+            style={{ paddingBottom: "56.25%" }} // 16:9 ratio
           >
-            {/* 로딩 상태 표시 */}
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
-                <div className="animate-pulse text-gray-400">비디오 로딩 중...</div>
-              </div>
-            )}
-
-            {/* 비디오 플레이어 */}
-            <video
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src="/images/홈페이지 영상.mp4"
-              title="LNP Corporation Video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              onLoadedData={() => setIsLoading(false)}
-            ></video>
+            {/* Image slideshow */}
+            <div className="absolute inset-0">
+              {heroImages.map((src, index) => (
+                <Image
+                  key={src}
+                  src={src || "/placeholder.svg"}
+                  alt={`Hero slide ${index + 1}`}
+                  fill
+                  className={`object-cover transition-opacity duration-300 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                  priority={index === 0}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
