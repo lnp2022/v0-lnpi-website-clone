@@ -83,10 +83,10 @@ export default function HeroSection({ locale }: { locale: string }) {
       {/* 🌟 신제품 팝업 창 코드 시작 🌟 */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4">
-          <div className="relative bg-white rounded-xl shadow-2xl max-w-md w-full overflow-hidden">
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-5xl w-full overflow-hidden mx-4">
             
             {/* 팝업 이미지 들어가는 곳 */}
-            <div className="relative w-full h-[400px] bg-gray-100">
+            <div className="relative w-full h-[800px] bg-gray-100">
               <Image
                 src="/images/popup.jpg" // 나중에 여기에 진짜 팝업 이미지 이름을 넣을 거예요!
                 alt="신제품 출시 안내"
