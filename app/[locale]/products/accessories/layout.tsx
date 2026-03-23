@@ -1,11 +1,12 @@
 import type React from "react"
 
-export default function AccessoriesLayout({
+export default async function AccessoriesLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params
   return <div>{children}</div>
 }
