@@ -17,7 +17,7 @@ const initialState = {
 export default function ConsultationPage({
   params,
 }: {
-  export default function ConsultationPage({ params }: { params: Promise<{ locale: string }> }) {
+  params: Promise<{ locale: string }>
 }) {
   const { locale } = use(params)
   const t = useTranslations(locale)
