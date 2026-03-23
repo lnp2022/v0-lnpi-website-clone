@@ -1,3 +1,5 @@
+"use client" // 🌟 바로 이 마법의 단어가 추가되었습니다!
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -24,8 +26,8 @@ export default function AllInOneSwitchPage({ params: { locale } }: { params: { l
 
       {/* 2. 상세 페이지 이미지 영역 (나중에 진짜 이미지를 넣을 곳입니다) */}
       <div className="max-w-4xl mx-auto bg-gray-50 min-h-[600px] flex items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 mb-12 relative overflow-hidden">
-        <p className="text-gray-500 text-lg font-medium z-10">
-          이곳에 핫템뷰님이 기획하신 '제품 상세설명 이미지'가 길게 들어갈 자리입니다! 🖼️
+        <p className="text-gray-500 text-lg font-medium z-10 text-center px-4">
+          이곳에 핫템뷰님이 기획하신<br/>'제품 상세설명 이미지'가 길게 들어갈 자리입니다! 🖼️
         </p>
       </div>
 
