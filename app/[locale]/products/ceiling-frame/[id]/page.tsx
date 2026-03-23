@@ -5,7 +5,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Download, X } from "lucide-react"
 import Link from "next/link"
-import Link from "next/link"
 import { useState, useEffect, use } from "react" // ✅ use를 추가했습니다.
 
 export default function ProductDetailPage({
