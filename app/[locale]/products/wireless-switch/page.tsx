@@ -3,112 +3,114 @@
 import { useTranslations } from "@/lib/translations"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, use } from "react" // ✅ use를 추가했습니다.
 
 export default function WirelessSwitchPage({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }> // ✅ Promise 타입으로 수정했습니다.
 }) {
-  const t = useTranslations(params.locale)
+  // ✅ 아래 한 줄로 locale을 안전하게 가져오며, 다른 데이터는 전혀 건드리지 않습니다.
+  const { locale } = use(params)
+  const t = useTranslations(locale)
   const [activeCategory, setActiveCategory] = useState("all")
 
-  // 무선 스위치 서브 카테고리
+  // 무선 스위치 서브 카테고리 (핫템뷰님 원본 데이터 100% 유지)
   const categories = [
     {
       id: "all",
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "전체 제품"
-          : params.locale === "en"
+          : locale === "en"
             ? "All Products"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Tất cả sản phẩm"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สินค้าทั้งหมด"
                 : "所有产品",
     },
     {
       id: "app-type",
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "앱 지원 타입"
-          : params.locale === "en"
+          : locale === "en"
             ? "App Support Type"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Loại hỗ trợ ứng dụng"
-              : params.locale === "th"
+              : locale === "th"
                 ? "แบบรองรับแอป"
                 : "应用支持型",
     },
     {
       id: "standard-type",
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "일반 타입"
-          : params.locale === "en"
+          : locale === "en"
             ? "Standard Type"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Loại tiêu chuẩn"
-              : params.locale === "th"
+              : locale === "th"
                 ? "แบบมาตรฐาน"
                 : "标准型",
     },
   ]
 
-  // 제품 데이터
+  // 제품 데이터 (핫템뷰님 원본 데이터 100% 유지)
   const products = [
     {
       id: 1,
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "GUGU 스마트 무선 터치 스위치 (앱 지원 타입)"
-          : params.locale === "en"
+          : locale === "en"
             ? "GUGU Smart Wireless Touch Switch (App Support Type)"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Công tắc cảm ứng không dây thông minh GUGU (Loại hỗ trợ ứng dụng)"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สวิตช์ทัชไร้สายอัจฉริยะ GUGU (แบบรองรับแอป)"
                 : "GUGU智能无线触摸开关（应用支持型）",
       description:
-        params.locale === "ko"
+        locale === "ko"
           ? "스마트폰 앱으로 제어 가능한 고급형 무선 스위치"
-          : params.locale === "en"
+          : locale === "en"
             ? "Premium wireless switch that can be controlled via smartphone app"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Công tắc không dây cao cấp có thể điều khiển qua ứng dụng điện thoại thông minh"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สวิตช์ไร้สายระดับพรีเมียมที่สามารถควบคุมผ่านแอปสมาร์ทโฟน"
                 : "可通过智能手机应用控制的高级无线开关",
       category: "app-type",
       image: "/images/wireless-switch/001.png",
-      link: `/${params.locale}/products/wireless-switch/type2`,
+      link: `/${locale}/products/wireless-switch/type2`,
     },
     {
       id: 2,
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "GUGU 스마트 무선 터치 스위치 (일반 타입)"
-          : params.locale === "en"
+          : locale === "en"
             ? "GUGU Smart Wireless Touch Switch (Standard Type)"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Công tắc cảm ứng không dây thông minh GUGU (Loại tiêu chuẩn)"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สวิตช์ทัชไร้สายอัจฉริยะ GUGU (แบบมาตรฐาน)"
                 : "GUGU智能无线触摸开关（标准型）",
       description:
-        params.locale === "ko"
+        locale === "ko"
           ? "간편한 설치와 사용이 가능한 기본형 무선 스위치"
-          : params.locale === "en"
+          : locale === "en"
             ? "Basic wireless switch with easy installation and use"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Công tắc không dây cơ bản với cài đặt và sử dụng dễ dàng"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สวิตช์ไร้สายพื้นฐานที่ติดตั้งและใช้งานง่าย"
                 : "安装和使用简便的基本型无线开关",
       category: "standard-type",
       image: "/images/wireless-switch/002.png",
-      link: `/${params.locale}/products/wireless-switch/type1`,
+      link: `/${locale}/products/wireless-switch/type1`,
     },
   ]
 
@@ -123,13 +125,13 @@ export default function WirelessSwitchPage({
         <Image
           src="/images/wireless-switch/main.png"
           alt={
-            params.locale === "ko"
+            locale === "ko"
               ? "GUGU 무선 스위치"
-              : params.locale === "en"
+              : locale === "en"
                 ? "GUGU Wireless Switch"
-                : params.locale === "vi"
+                : locale === "vi"
                   ? "Công tắc không dây GUGU"
-                  : params.locale === "th"
+                  : locale === "th"
                     ? "สวิตช์ไร้สาย GUGU"
                     : "GUGU无线开关"
           }
