@@ -14,17 +14,19 @@ export const metadata: Metadata = {
   description: "조명 인테리어 전문 기업 - 우물천장 프레임, 무선 스위치 등",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params
+
   return (
-    <html lang={params.locale}>
+    <html lang={locale}>
       <body className={inter.className}>
-        <LocaleProvider locale={params.locale}>
+        <LocaleProvider locale={locale}>
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">{children}</main>
