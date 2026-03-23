@@ -4,15 +4,18 @@ import { useTranslations } from "@/lib/translations"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import { use } from "react" // ✅ 딱 한 줄 추가했습니다!
 
 export default function ProductsPage({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }> // ✅ Next.js 15 방식인 'Promise'로 수정했습니다.
 }) {
-  const t = useTranslations(params.locale)
+  // ✅ 아래 한 줄로 locale을 안전하게 가져오며, 다른 데이터는 전혀 건드리지 않습니다.
+  const { locale } = use(params)
+  const t = useTranslations(locale)
 
-  // 제품 카테고리 데이터
+  // 제품 카테고리 데이터 (핫템뷰님 원본 100% 유지)
   const categories = [
     {
       id: "ceiling-frame",
@@ -34,67 +37,67 @@ export default function ProductsPage({
     },
   ]
 
-  // 베스트셀러 제품 데이터
+  // 베스트셀러 제품 데이터 (핫템뷰님 원본 100% 유지)
   const bestSellers = [
     {
       id: 1,
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "일반 시트지 래핑 우물 프레임"
-          : params.locale === "en"
+          : locale === "en"
             ? "Sheet Wrapping Ceiling Frame"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Khung trần bọc tấm"
-              : params.locale === "th"
+              : locale === "th"
                 ? "เฟรมเพดานห่อแผ่น"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "贴膜天花板框架"
                   : "일반 시트지 래핑 우물 프레임",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/001-OOLFB74OSScko2hn9pbnQlbp2bYCYy.png",
       description:
-        params.locale === "ko"
+        locale === "ko"
           ? "깔끔한 디자인과 시공의 편의성을 최대화"
-          : params.locale === "en"
+          : locale === "en"
             ? "Maximizing clean design and construction convenience"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Tối đa hóa thiết kế sạch sẽ và tiện lợi trong xây dựng"
-              : params.locale === "th"
+              : locale === "th"
                 ? "เพิ่มประสิทธิภาพการออกแบบที่สะอาดและความสะดวกในการก่อสร้าง"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "最大化简洁设计和施工便利性"
                   : "깔끔한 디자인과 시공의 편의성을 최대화",
       features: [
-        params.locale === "ko"
+        locale === "ko"
           ? "시공의 편의성 최대화(30분 이내 시공 가능)"
-          : params.locale === "en"
+          : locale === "en"
             ? "Maximizing construction convenience (installation possible within 30 minutes)"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Tối đa hóa tiện lợi xây dựng (có thể lắp đặt trong vòng 30 phút)"
-              : params.locale === "th"
+              : locale === "th"
                 ? "เพิ่มประสิทธิภาพความสะดวกในการก่อสร้าง (สามารถติดตั้งได้ภายใน 30 นาที)"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "最大化施工便利性（30分钟内可安装）"
                   : "시공의 편의성 최대화(30분 이내 시공 가능)",
-        params.locale === "ko"
+        locale === "ko"
           ? "직각과 라운드 코너 마감재 선택 가능"
-          : params.locale === "en"
+          : locale === "en"
             ? "Square and round corner finishing materials available"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Có sẵn vật liệu hoàn thiện góc vuông và tròn"
-              : params.locale === "th"
+              : locale === "th"
                 ? "มีวัสดุตกแต่งมุมฉากและมุมโค้งให้เลือก"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "可选择直角和圆角装饰材料"
                   : "직각과 라운드 코너 마감재 선택 가능",
-        params.locale === "ko"
+        locale === "ko"
           ? "난연 PVC 재질로 화재 걱정 없음"
-          : params.locale === "en"
+          : locale === "en"
             ? "No fire concerns with flame-retardant PVC material"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Không lo lắng về hỏa hoạn với vật liệu PVC chống cháy"
-              : params.locale === "th"
+              : locale === "th"
                 ? "ไม่ต้องกังวลเรื่องไฟไหม้ด้วยวัสดุ PVC หน่วงไฟ"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "采用阻燃PVC材料，无火灾隐患"
                   : "난연 PVC 재질로 화재 걱정 없음",
       ],
@@ -102,62 +105,62 @@ export default function ProductsPage({
     {
       id: 2,
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "한방 우물 프레임"
-          : params.locale === "en"
+          : locale === "en"
             ? "Single Ceiling Frame"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Khung trần đơn"
-              : params.locale === "th"
+              : locale === "th"
                 ? "เฟรมเพดานเดี่ยว"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "单体天花板框架"
                   : "한방 우물 프레임",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/002-eyBARVeFGfC88CZISqcpIovM4oDEUZ.png",
       description:
-        params.locale === "ko"
+        locale === "ko"
           ? "세련된 디자인과 T5 조명 2줄 시공 가능"
-          : params.locale === "en"
+          : locale === "en"
             ? "Sophisticated design with dual T5 lighting installation"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Thiết kế tinh tế với lắp đặt đèn T5 kép"
-              : params.locale === "th"
+              : locale === "th"
                 ? "การออกแบบที่ทันสมัยพร้อมการติดตั้งไฟ T5 แบบคู่"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "精致设计，可安装双排T5照明"
                   : "세련된 디자인과 T5 조명 2줄 시공 가능",
       features: [
-        params.locale === "ko"
+        locale === "ko"
           ? "1가지 타입으로 자재 재고 부담의 최소화"
-          : params.locale === "en"
+          : locale === "en"
             ? "Minimizing material inventory burden with a single type"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Giảm thiểu gánh nặng tồn kho vật liệu với một loại duy nhất"
-              : params.locale === "th"
+              : locale === "th"
                 ? "ลดภาระสินค้าคงคลังวัสดุด้วยประเภทเดียว"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "单一类型最大限度减少材料库存负担"
                   : "1가지 타입으로 자재 재고 부담의 최소화",
-        params.locale === "ko"
+        locale === "ko"
           ? "길이 상관 없이 중간 마감재 없이 시공 가능"
-          : params.locale === "en"
+          : locale === "en"
             ? "Installation possible without middle finishing materials regardless of length"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Có thể lắp đặt mà không cần vật liệu hoàn thiện giữa bất kể chiều dài"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สามารถติดตั้งได้โดยไม่ต้องใช้วัสดุตกแต่งตรงกลางโดยไม่คำนึงถึงความยาว"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "无论长度如何，都可以在没有中间装饰材料的情况下进行安装"
                   : "길이 상관 없이 중간 마감재 없이 시공 가능",
-        params.locale === "ko"
+        locale === "ko"
           ? "난연 PC 재질로 화재 걱정 없음"
-          : params.locale === "en"
+          : locale === "en"
             ? "No fire concerns with flame-retardant PC material"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Không lo lắng về hỏa hoạn với vật liệu PC chống cháy"
-              : params.locale === "th"
+              : locale === "th"
                 ? "ไม่ต้องกังวลเรื่องไฟไหม้ด้วยวัสดุ PC หน่วงไฟ"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "采用阻燃PC材料，无火灾隐患"
                   : "난연 PC 재질로 화재 걱정 없음",
       ],
@@ -165,62 +168,62 @@ export default function ProductsPage({
     {
       id: 3,
       name:
-        params.locale === "ko"
+        locale === "ko"
           ? "GUGU 무선 스위치 - 앱 지원 타입"
-          : params.locale === "en"
+          : locale === "en"
             ? "GUGU Wireless Switch - App Support Type"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Công tắc không dây GUGU - Loại hỗ trợ ứng dụng"
-              : params.locale === "th"
+              : locale === "th"
                 ? "สวิตช์ไร้สาย GUGU - แบบรองรับแอป"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "GUGU无线开关 - 应用支持型"
-                  : "GUGU 무선 ��위치 - 앱 지원 타입",
+                  : "GUGU 무선 스위치 - 앱 지원 타입",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/003-Xy2FqNrCMKkLKNyHkZIrXKfyPXPdEn.png",
       description:
-        params.locale === "ko"
+        locale === "ko"
           ? "이질감 없는 디자인과 쉬운 설치 및 A/S"
-          : params.locale === "en"
+          : locale === "en"
             ? "Seamless design with easy installation and service"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Thiết kế liền mạch với lắp đặt và dịch vụ dễ dàng"
-              : params.locale === "th"
+              : locale === "th"
                 ? "การออกแบบที่กลมกลืนพร้อมการติดตั้งและบริการที่ง่ายดาย"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "无缝设计，易于安装和维修"
                   : "이질감 없는 디자인과 쉬운 설치 및 A/S",
       features: [
-        params.locale === "ko"
+        locale === "ko"
           ? "1인 가구 안심 케어 서비스 제공"
-          : params.locale === "en"
+          : locale === "en"
             ? "Providing safety care service for single-person households"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Cung cấp dịch vụ chăm sóc an toàn cho hộ gia đình một người"
-              : params.locale === "th"
+              : locale === "th"
                 ? "ให้บริการดูแลความปลอดภัยสำหรับครัวเรือนคนเดียว"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "为单人家庭提供安心护理服务"
                   : "1인 가구 안심 케어 서비스 제공",
-        params.locale === "ko"
+        locale === "ko"
           ? "1~6채널 까지 원하는 채널로 선택 가능"
-          : params.locale === "en"
+          : locale === "en"
             ? "Choose from 1 to 6 channels as desired"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Lựa chọn từ 1 đến 6 kênh theo mong muốn"
-              : params.locale === "th"
+              : locale === "th"
                 ? "เลือกจาก 1 ถึง 6 ช่องตามต้องการ"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "可根据需要选择1至6个通道"
                   : "1~6채널 까지 원하는 채널로 선택 가능",
-        params.locale === "ko"
+        locale === "ko"
           ? "컨넥터 방식으로 고객이 직접 A/S 가능"
-          : params.locale === "en"
+          : locale === "en"
             ? "Customers can service directly with connector method"
-            : params.locale === "vi"
+            : locale === "vi"
               ? "Khách hàng có thể tự bảo dưỡng với phương pháp kết nối"
-              : params.locale === "th"
+              : locale === "th"
                 ? "ลูกค้าสามารถบริการได้โดยตรงด้วยวิธีการเชื่อมต่อ"
-                : params.locale === "zh"
+                : locale === "zh"
                   ? "客户可以通过连接器方式直接维修"
                   : "컨넥터 방식으로 고객이 직접 A/S 가능",
       ],
@@ -256,7 +259,7 @@ export default function ProductsPage({
               <p className="text-sm text-gray-500">{category.description}</p>
             </div>
             <div className="p-6 pt-0">
-              <Link href={`/${params.locale}/products/${category.id}`} className="w-full">
+              <Link href={`/${locale}/products/${category.id}`} className="w-full">
                 <Button variant="outline" className="w-full">
                   {t.viewProducts}
                 </Button>
@@ -284,15 +287,15 @@ export default function ProductsPage({
               </div>
               <div className="p-6">
                 <p className="font-semibold">
-                  {params.locale === "ko"
+                  {locale === "ko"
                     ? "주요 특징"
-                    : params.locale === "en"
+                    : locale === "en"
                       ? "Key Features"
-                      : params.locale === "vi"
+                      : locale === "vi"
                         ? "Tính năng chính"
-                        : params.locale === "th"
+                        : locale === "th"
                           ? "คุณสมบัติหลัก"
-                          : params.locale === "zh"
+                          : locale === "zh"
                             ? "主要特点"
                             : "주요 특징"}
                 </p>
@@ -303,7 +306,7 @@ export default function ProductsPage({
                 </ul>
               </div>
               <div className="p-6 pt-0">
-                <Link href={`/${params.locale}/consultation?product=${encodeURIComponent(product.name)}`}>
+                <Link href={`/${locale}/consultation?product=${encodeURIComponent(product.name)}`}>
                   <Button className="w-full">{t.inquire}</Button>
                 </Link>
               </div>
