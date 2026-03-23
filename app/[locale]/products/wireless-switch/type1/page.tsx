@@ -175,7 +175,7 @@ export default function StandardWirelessSwitchPage({
                 : "提供4个独立通道的无线开关",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/003-qdmNeHYLUOlHNucGOqHbzRLSttyH2r.png",
       features: [
-        plocale === "ko"
+        locale === "ko"
           ? "4채널 독립 제어"
           : locale === "en"
             ? "4 Channel Independent Control"
@@ -199,7 +199,7 @@ export default function StandardWirelessSwitchPage({
             ? "Easy Battery Replacement"
             : locale === "vi"
               ? "Dễ dàng thay pin"
-              : plocale === "th"
+              : locale === "th"
                 ? "เปลี่ยนแบตเตอรี่ง่าย"
                 : "电池更换便捷",
         locale === "ko"
