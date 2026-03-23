@@ -38,8 +38,9 @@ export default function Header() {
     { href: `/${locale}/products/ceiling-frame/1`, label: t.ceilingFrameType3 },
   ]
 
-  // 무선 스위치 하위 메뉴
+  // 무선 스위치 하위 메뉴 (🌟 다국어 사전에서 읽어오도록 수정됨!)
   const wirelessSwitchSubmenu = [
+    { href: `/${locale}/products/wireless-switch/all-in-one`, label: t.wirelessSwitchAllInOne }, 
     { href: `/${locale}/products/wireless-switch/type1`, label: t.wirelessSwitchType1 },
     { href: `/${locale}/products/wireless-switch/type2`, label: t.wirelessSwitchType2 },
   ]
