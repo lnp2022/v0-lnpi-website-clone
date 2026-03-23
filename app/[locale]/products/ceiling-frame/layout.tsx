@@ -1,16 +1,17 @@
 import type React from "react"
 import ProductSubmenu from "@/components/product-submenu"
 
-export default function CeilingFrameLayout({
+export default async function CeilingFrameLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params
   return (
     <div>
-      <ProductSubmenu locale={params.locale} />
+      <ProductSubmenu locale={locale} />
       {children}
     </div>
   )
