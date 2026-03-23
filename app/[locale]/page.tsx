@@ -7,17 +7,21 @@ import ProductShowcase from "@/components/product-showcase"
 import CompanyHighlights from "@/components/company-highlights"
 import HeroSection from "@/components/hero-section"
 import { useTranslations } from "@/lib/translations"
+import { use } from "react"
+
 
 export default function Home({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }> // ✅ Next.js 15 방식인 'Promise'로 수정했습니다.
 }) {
-  const t = useTranslations(params.locale)
+  // ✅ 아래 한 줄로 params에서 locale을 안전하게 꺼내옵니다.
+  const { locale } = use(params)
+  const t = useTranslations(locale)
 
   return (
     <div className="flex flex-col">
-      <HeroSection locale={params.locale} />
+      <HeroSection locale={locale} />
 
       {/* 회사 소개 섹션 */}
       <section className="py-16 bg-white">
@@ -26,7 +30,7 @@ export default function Home({
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-4">{t.companyIntroTitle}</h2>
               <p className="text-gray-700 mb-6">{t.companyIntroDescription}</p>
-              <Link href={`/${params.locale}/company`}>
+              <Link href={`/${locale}/company`}>
                 <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50">
                   {t.learnMore}
                 </Button>
@@ -44,17 +48,17 @@ export default function Home({
       </section>
 
       {/* 제품 쇼케이스 */}
-      <ProductShowcase locale={params.locale} />
+      <ProductShowcase locale={locale} />
 
       {/* 회사 하이라이트 */}
-      <CompanyHighlights locale={params.locale} />
+      <CompanyHighlights locale={locale} />
 
       {/* 컨설팅 섹션 */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">{t.freeConsultation}</h2>
           <p className="text-gray-700 mb-8 max-w-2xl mx-auto">{t.consultationDescription}</p>
-          <Link href={`/${params.locale}/consultation`}>
+          <Link href={`/${locale}/consultation`}>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg">{t.contactUs}</Button>
           </Link>
         </div>
