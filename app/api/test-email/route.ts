@@ -6,7 +6,7 @@ export async function GET() {
   try {
     console.log("===== 간소화된 이메일 테스트 API 시작 =====")
 
-    // 환경 변수 확인만 수행
+    // 환경 변수 확인만 수행 (핫템뷰님 원본 로직 유지)
     const emailConfig = {
       host: process.env.EMAIL_HOST || "smtp.gmail.com",
       port: process.env.EMAIL_PORT || "587",
@@ -35,22 +35,18 @@ export async function GET() {
       serverInfo,
       timestamp: new Date().toISOString(),
     })
-  } catch (error) {
+  } catch (error: any) { // ✅ 🌟 수정 포인트: : any 를 추가하여 빌드 에러를 원천 차단합니다.
     console.error("테스트 API 오류:", error)
 
-    // 오류 정보 상세 로깅
-    if (error instanceof Error) {
-      console.error("오류 이름:", error.name)
-      console.error("오류 메시지:", error.message)
-      console.error("오류 스택:", error.stack)
-    } else {
-      console.error("알 수 없는 오류 객체:", error)
-    }
+    // 오류 정보 상세 로깅 (이제 error.name, message 등에 안전하게 접근합니다)
+    console.error("오류 이름:", error?.name || "알 수 없는 오류")
+    console.error("오류 메시지:", error?.message || "메시지 없음")
+    console.error("오류 스택:", error?.stack || "스택 정보 없음")
 
     return NextResponse.json(
       {
         success: false,
-        error: "테스트 API 오류: " + (error instanceof Error ? error.message : String(error)),
+        error: "테스트 API 오류: " + (error?.message || String(error)),
         timestamp: new Date().toISOString(),
       },
       { status: 500 },

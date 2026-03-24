@@ -12,7 +12,7 @@ export async function GET() {
     const adminPhone = process.env.ADMIN_PHONE_NUMBER
     const senderPhone = process.env.SENDER_PHONE_NUMBER
 
-    // 환경 변수 상태 반환 (실제 값은 보안을 위해 마스킹)
+    // 환경 변수 상태 반환 (실제 값은 보안을 위해 마스킹 - 핫템뷰님 원본 로직)
     const envStatus = {
       COOLSMS_API_KEY: apiKey ? `설정됨 (${apiKey.substring(0, 3)}...)` : "설정되지 않음",
       COOLSMS_API_SECRET: apiSecret ? `설정됨 (${apiSecret.substring(0, 3)}...)` : "설정되지 않음",
@@ -44,14 +44,14 @@ export async function GET() {
       envStatus,
       testMessage,
     })
-  } catch (error) {
+  } catch (error: any) { // ✅ 🌟 수정 포인트: : any 를 추가하여 빌드 에러를 방지합니다.
     console.error("테스트 API 실행 중 오류:", error)
 
-    // 오류 정보 구성
+    // 오류 정보 구성 (이제 error.message 등에 안전하게 접근 가능합니다)
     const errorInfo = {
-      message: error.message || "알 수 없는 오류",
-      stack: error.stack || "스택 정보 없음",
-      name: error.name || "오류 이름 없음",
+      message: error?.message || "알 수 없는 오류",
+      stack: error?.stack || "스택 정보 없음",
+      name: error?.name || "오류 이름 없음",
     }
 
     return NextResponse.json(
