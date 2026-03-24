@@ -137,12 +137,8 @@ export default function CompanyPage({
     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
       <div key={num} className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
         <div className="relative aspect-[3/4] w-full mb-3">
-          <Image 
-            src={`/images/company/${num}.png`} 
-            alt={num <= 8 ? `인증서 ${num}` : num === 9 ? "신규 인증서 1" : "신규 인증서 2"} 
-            fill 
-            className="object-contain p-2" 
-          />
+          <Image src={`/images/company/${num}.png`} alt={`인증서 ${num}`} fill className="object-contain p-2" />
+          
         </div>
         <p className="text-sm text-center text-gray-500 font-medium">
           {num === 1 ? "한방 우물 특허증" 
@@ -155,7 +151,7 @@ export default function CompanyPage({
            : num === 8 ? "GUGU 터치 스위치 전파 인증서"
            : num === 9 ? "ALL IN ONE 스위치 특허증"  // ✅ 9번 이름 필요시 수정
            : num === 10 ? "ALL IN ONE 스위치 안전 인증서" // ✅ 10번 이름 필요시 수정
-           }
+           : "특허 및 인증"}
         </p>
       </div>
     ))}
