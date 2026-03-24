@@ -55,13 +55,15 @@ export async function POST(request: Request) {
 
     // 이메일 내용 구성
     const inquiryTypeText =
-      {
-        all: "(주)엘엔피 판매 모든 상품 구매 문의",
-        ceiling: "우물천장 프레임 구매 문의",
-        switch: "GUGU 무선 스위치 구매 문의",
-        service: "GUGU 스위치 A/S 관련 문의",
-        other: "기타 문의",
-      }[inquiryType] || inquiryType
+      (
+        {
+          all: "(주)엘엔피 판매 모든 상품 구매 문의",
+          ceiling: "우물천장 프레임 구매 문의",
+          switch: "GUGU 무선 스위치 구매 문의",
+          service: "GUGU 스위치 A/S 관련 문의",
+          other: "기타 문의",
+        } as any
+      )[inquiryType] || inquiryType
 
     // 프리뷰 환경에서는 실제 이메일 전송을 시뮬레이션
     // 실제 환경에서는 이 부분을 Nodemailer로 대체
@@ -78,7 +80,7 @@ export async function POST(request: Request) {
       messageId: `preview-${Date.now()}`,
       preview: true,
     })
-  } catch (error) {
+  } catch (error: any) { // ✅ 🌟 핵심 수정: error에 : any를 붙여 빌드 에러를 잡았습니다.
     console.error("이메일 전송 중 오류:", error)
 
     return NextResponse.json(
