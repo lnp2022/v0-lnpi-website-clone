@@ -64,18 +64,16 @@ export default function CompanyPage({
             </div>
 
             <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500 my-8">
-              <ul className="space-y-3 font-semibold text-gray-800">
-                <li className="flex items-center gap-2">✅ {locale === "ko" ? "합리적인 가격" : "Reasonable price"}</li>
-                <li className="flex items-center gap-2">✅ {locale === "ko" ? "1시간 이내의 빠른 설치" : "Quick installation"}</li>
-                <li className="flex items-center gap-2">✅ {locale === "ko" ? "먼지 걱정 없는 청결한 시공" : "Clean construction"}</li>
-              </ul>
-            </div>
+  <ul className="space-y-3 font-semibold text-gray-800">
+    <li className="flex items-center gap-2">✅ {t.companyFeature1}</li>
+    <li className="flex items-center gap-2">✅ {t.companyFeature2}</li>
+    <li className="flex items-center gap-2">✅ {t.companyFeature3}</li>
+  </ul>
+</div>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {locale === "ko" 
-                ? "주식회사 엘엔피는 혁신적인 솔루션을 통해 우물천장 무드등 시공을 누구나 부담 없이 선택할 수 있는 시대를 열었습니다. 오늘날 필수 요소로 자리 잡은 이 변화의 시작에는 엘엔피가 있습니다."
-                : "LNP Corporation has opened an era where anyone can enjoy ceiling mood lighting without burden."}
-            </p>
+<p className="text-lg text-gray-700 leading-relaxed break-keep">
+  {t.companyConcludingSentence}
+</p>
           </div>
 
           <div className="lg:w-1/2 w-full sticky top-24">
@@ -84,7 +82,7 @@ export default function CompanyPage({
         </div>
       </section>
 
-      {/* 핵심 가치 섹션 (번역 적용 버전) */}
+     {/* 핵심 가치 카드 섹션 */}
 <section className="mb-24 bg-gray-50 py-16 px-8 rounded-3xl">
   <h2 className="text-3xl font-bold mb-12 text-center">{t.coreValueTitle}</h2>
   <div className="grid md:grid-cols-2 gap-8">
@@ -92,12 +90,8 @@ export default function CompanyPage({
       <div key={num} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-5">
         <span className="text-3xl font-black text-orange-200">{num}</span>
         <div>
-          <h3 className="text-xl font-bold mb-3 text-gray-900">
-            {t[`coreValue${num}Title` as keyof typeof t]}
-          </h3>
-          <p className="text-gray-600 leading-relaxed break-keep">
-            {t[`coreValue${num}Desc` as keyof typeof t]}
-          </p>
+          <h3 className="text-xl font-bold mb-3 text-gray-900">{t[`coreValue${num}Title` as keyof typeof t]}</h3>
+          <p className="text-gray-600 leading-relaxed break-keep">{t[`coreValue${num}Desc` as keyof typeof t]}</p>
         </div>
       </div>
     ))}
