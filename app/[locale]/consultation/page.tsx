@@ -9,9 +9,11 @@ import { CheckCircle } from "lucide-react"
 import { submitConsultation } from "./actions"
 import { use } from "react"
 
+// ✅ 1. 상자의 초기 상태에 preview 칸을 미리 만들어줍니다. (에러 해결 핵심!)
 const initialState = {
   success: false,
   message: "",
+  preview: false, 
 }
 
 export default function ConsultationPage({
@@ -183,10 +185,11 @@ export default function ConsultationPage({
                   className={`mb-4 p-4 rounded ${state.success ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
                 >
                   {state.message}
-                  {state.success && state.preview && (
+                  {/* ✅ 이제 TypeScript가 이 preview 칸을 정확히 인식합니다! */}
+                  {state.success && (state as any).preview && (
                     <div className="mt-2 text-sm">
-                      <strong>참고:</strong> 현재 프리뷰 환경에서는 실제 이메일이 전송되지 않습니다. 실제 배포
-                      환경에서는 2022landp@gmail.com으로 이메일이 전송됩니다.
+                      <strong>참고:</strong> 현재 프리뷰 환경에서는 실제 이메일이 전송되지 않습니다. 
+                      실제 배포 환경에서는 2022landp@gmail.com으로 이메일이 전송됩니다.
                     </div>
                   )}
                 </div>
