@@ -732,7 +732,7 @@ export default function StandardWirelessSwitchPage({
                 className="w-full h-full"
                 frameBorder="0"
                 allowFullScreen
-                style={{ transform: "scale(1)", transformOrigin: "center", imageRendering: "high-quality" }}
+                style={{ transform: "scale(1)", transformOrigin: "center", imageRendering: "auto" }}
               ></iframe>
             </div>
           </TabsContent>
