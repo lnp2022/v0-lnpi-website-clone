@@ -72,13 +72,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={`/${locale}/cases`} className="hover:text-white">
-                  {t.installationCases}
+                  {/* ✅ 수정 포인트: 번역 키가 없더라도 에러가 나지 않도록 안전장치를 추가했습니다. */}
+                  {(t as any).installationCases || (locale === "ko" ? "시공 사례" : "Installation Cases")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 제품 */}
+          {/* 제품 리스트 */}
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">{t.products}</h3>
             <ul className="space-y-2">
@@ -100,7 +101,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 연락처 */}
+          {/* 연락처 정보 */}
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">{t.contactUs}</h3>
             <ul className="space-y-4">
