@@ -214,6 +214,17 @@ const ko = {
 
   // 무선 스위 페이지
   backToProducts: "제품으로 돌아가기",
+
+  // ko (한국어)에 추가
+coreValueTitle: "핵심 가치 (Core Values)",
+coreValue1Title: "1. 고객 중심 (Customer Focus)",
+coreValue1Desc: "고객의 눈높이에서 생각하고, 고객의 편의를 최우선으로 고려합니다.",
+coreValue2Title: "2. 품질 혁신 (Quality Innovation)",
+coreValue2Desc: "견고한 제품력과 안정적인 품질을 바탕으로 시장을 선도합니다.",
+coreValue3Title: "3. 합리적 가치 제공 (Reasonable Value Offering)",
+coreValue3Desc: "높은 품질과 합리적인 가격을 동시에 실현하여, 누구나 부담 없이 선택할 수 있는 제품을 만듭니다.",
+coreValue4Title: "4. 지속적인 성장과 도전 (Continuous Growth & Challenge)",
+coreValue4Desc: "트렌드에 머무르지 않고 끊임없이 개선하고, 새로운 도약을 위해 도전합니다.",
 }
 
 // 영어 번역
@@ -431,6 +442,17 @@ const en = {
 
   // Wireless Switch Page
   backToProducts: "Back to Products",
+
+  // en (영어)에 추가
+coreValueTitle: "Core Values",
+coreValue1Title: "1. Customer Focus",
+coreValue1Desc: "We think from the customer's perspective and prioritize customer convenience.",
+coreValue2Title: "2. Quality Innovation",
+coreValue2Desc: "We lead the market based on solid product power and stable quality.",
+coreValue3Title: "3. Reasonable Value Offering",
+coreValue3Desc: "We create products that anyone can choose without burden by realizing high quality and reasonable prices.",
+coreValue4Title: "4. Continuous Growth & Challenge",
+coreValue4Desc: "We continuously improve and challenge for new leaps, not staying in trends.",
 }
 
 // 베트남어 번역
@@ -648,6 +670,17 @@ const vi = {
 
   // Wireless Switch Page
   backToProducts: "Quay lại danh sách sản phẩm",
+
+  // vi (베트남어)에 추가
+coreValueTitle: "Giá trị cốt lõi",
+coreValue1Title: "1. Tập trung vào khách hàng (Customer Focus)",
+coreValue1Desc: "Chúng tôi suy nghĩ từ góc độ của khách hàng và ưu tiên sự tiện lợi của khách hàng.",
+coreValue2Title: "2. Đổi mới chất lượng (Quality Innovation)",
+coreValue2Desc: "Chúng tôi dẫn đầu thị trường dựa trên sức mạnh sản phẩm vững chắc và chất lượng ổn định.",
+coreValue3Title: "3. Cung cấp giá trị hợp lý (Reasonable Value Offering)",
+coreValue3Desc: "Chúng tôi tạo ra các sản phẩm mà bất kỳ ai cũng có thể lựa chọn mà không gặp khó khăn.",
+coreValue4Title: "4. Tăng trưởng và thách thức liên tục (Continuous Growth & Challenge)",
+coreValue4Desc: "Chúng tôi liên tục cải tiến và thách thức cho những bước nhảy vọt mới.",
 }
 
 // 태국어 번역
@@ -865,6 +898,17 @@ const th = {
 
   // Wireless Switch Page
   backToProducts: "กลับไปที่หน้ารวมสินค้า",
+
+  // th (태국어)에 추가
+coreValueTitle: "ค่านิยมหลัก (Core Values)",
+coreValue1Title: "1. มุ่งเน้นลูกค้า (Customer Focus)",
+coreValue1Desc: "เราคิดจากมุมมองของลูกค้าและให้ความสำคัญกับความสะดวกของลูกค้า",
+coreValue2Title: "2. นวัตกรรมคุณภาพ (Quality Innovation)",
+coreValue2Desc: "เรานำตลาดด้วยพลังผลิตภัณฑ์ที่แข็งแกร่งและคุณภาพที่มั่นคง",
+coreValue3Title: "3. การนำเสนอคุณค่าที่สมเหตุสมผล (Reasonable Value Offering)",
+coreValue3Desc: "เราสร้างผลิตภัณฑ์ที่ทุกคนสามารถเลือกได้โดยไม่มีภาระ",
+coreValue4Title: "4. การเติบโตและความท้าทายอย่างต่อเนื่อง (Continuous Growth & Challenge)",
+coreValue4Desc: "เราปรับปรุงและท้าทายอย่างต่อเนื่องเพื่อก้าวกระโดดใหม่",
 }
 
 // 중국어 간체 번역
@@ -1082,6 +1126,17 @@ const zh = {
 
   // Wireless Switch Page
   backToProducts: "返回产品列表",
+
+  // zh (중국어)에 추가
+coreValueTitle: "核心价值 (Core Values)",
+coreValue1Title: "1. 以客户为中心 (Customer Focus)",
+coreValue1Desc: "我们从客户的角度思考，优先考虑客户的便利。",
+coreValue2Title: "2. 质量创新 (Quality Innovation)",
+coreValue2Desc: "我们基于坚实的产品力和稳定的质量引领市场。",
+coreValue3Title: "3. 提供合理价值 (Reasonable Value Offering)",
+coreValue3Desc: "我们通过同时实现高质量和合理价格，创造出任何人都可以毫无负担地选择的产品。",
+coreValue4Title: "4. 持续增长与挑战 (Continuous Growth & Challenge)",
+coreValue4Desc: "我们不停留在趋势中，不断改进，挑战新的飞跃。",
 }
 
 // 번역 함수

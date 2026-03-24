@@ -84,21 +84,25 @@ export default function CompanyPage({
         </div>
       </section>
 
-      {/* [2] 핵심 가치 섹션 - 깨진 레이아웃 집중 수리 */}
-      <section className="mb-24 bg-gray-50 py-16 px-8 rounded-3xl">
-        <h2 className="text-3xl font-bold mb-12 text-center">핵심 가치 (Core Values)</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {coreValues.map((value) => (
-            <div key={value.id} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-5">
-              <span className="text-3xl font-black text-orange-200">{value.id}</span>
-              <div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed break-keep">{value.desc}</p>
-              </div>
-            </div>
-          ))}
+      {/* 핵심 가치 섹션 (번역 적용 버전) */}
+<section className="mb-24 bg-gray-50 py-16 px-8 rounded-3xl">
+  <h2 className="text-3xl font-bold mb-12 text-center">{t.coreValueTitle}</h2>
+  <div className="grid md:grid-cols-2 gap-8">
+    {[1, 2, 3, 4].map((num) => (
+      <div key={num} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-5">
+        <span className="text-3xl font-black text-orange-200">{num}</span>
+        <div>
+          <h3 className="text-xl font-bold mb-3 text-gray-900">
+            {t[`coreValue${num}Title` as keyof typeof t]}
+          </h3>
+          <p className="text-gray-600 leading-relaxed break-keep">
+            {t[`coreValue${num}Desc` as keyof typeof t]}
+          </p>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* [3] 회사 연혁 - 신규 데이터 추가 버전 */}
 <section className="mb-24 px-4">
