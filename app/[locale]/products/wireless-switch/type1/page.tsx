@@ -728,7 +728,7 @@ export default function StandardWirelessSwitchPage({
             </div>
             <div className="w-full h-[600px] border rounded overflow-auto">
               <iframe
-                src={`${koreanCatalogEmbedUrl}?dpi=300&quality=high`}
+                src={`${koreanCatalogEmbedUrl}?dpi=300`}
                 className="w-full h-full"
                 frameBorder="0"
                 allowFullScreen
@@ -759,11 +759,11 @@ export default function StandardWirelessSwitchPage({
             </div>
             <div className="w-full h-[600px] border rounded overflow-auto">
               <iframe
-                src={`${englishCatalogEmbedUrl}?dpi=300&quality=high`}
+                src={`${englishCatalogEmbedUrl}?dpi=300`}
                 className="w-full h-full"
                 frameBorder="0"
                 allowFullScreen
-                style={{ transform: "scale(1)", transformOrigin: "center", imageRendering: "high-quality" }}
+                style={{ transform: "scale(1)", transformOrigin: "center", imageRendering: "auto" }}
               ></iframe>
             </div>
           </TabsContent>
