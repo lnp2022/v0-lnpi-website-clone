@@ -89,7 +89,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
         message: "문의가 성공적으로 접수되었습니다.",
         messageId: info.messageId,
       }
-    } catch (emailError) {
+    } catch (emailError: any) { // ✅ 여기 any를 추가하여 빌드 에러를 방지합니다.
       console.error("이메일 전송 오류:", emailError)
 
       // 이메일 전송 오류 처리
@@ -108,7 +108,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
 
       throw emailError
     }
-  } catch (error) {
+  } catch (error: any) { // ✅ 여기 any를 추가하여 빌드 에러를 방지합니다.
     console.error("문의 처리 중 오류:", error)
 
     // 특정 오류 유형에 대한 처리
@@ -136,9 +136,9 @@ export async function submitConsultation(prevState: any, formData: FormData) {
   }
 }
 
-// 문의 유형 텍스트 반환 함수
+// 문의 유형 텍스트 반환 함수 (핫템뷰님 원본 데이터)
 function getInquiryTypeText(inquiryType: string): string {
-  const inquiryTypes = {
+  const inquiryTypes: { [key: string]: string } = {
     all: "(주)엘엔피 판매 모든 상품 구매 문의",
     ceiling: "우물천장 프레임 구매 문의",
     switch: "GUGU 무선 스위치 구매 문의",
