@@ -136,7 +136,7 @@ export async function submitConsultation(prevState: any, formData: FormData) {
   }
 }
 
-// 문의 유형 텍스트 반환 함수 (핫템뷰님 원본 데이터)
+// 문의 유형 텍스트 반환 함수
 function getInquiryTypeText(inquiryType: string): string {
   const inquiryTypes: { [key: string]: string } = {
     all: "(주)엘엔피 판매 모든 상품 구매 문의",
