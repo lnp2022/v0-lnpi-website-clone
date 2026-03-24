@@ -12,7 +12,7 @@ export async function GET() {
       baseUrl = `https://${process.env.VERCEL_URL}`
     }
 
-    // 모든 환경 변수 목록 (값은 보안을 위해 마스킹)
+    // 모든 환경 변수 목록 (값은 보안을 위해 마스킹 - 핫템뷰님 로직 유지)
     const envVars = {
       NODE_ENV: process.env.NODE_ENV || "설정되지 않음",
       VERCEL_ENV: process.env.VERCEL_ENV || "설정되지 않음",
@@ -52,14 +52,15 @@ export async function GET() {
       serverInfo,
       timestamp: new Date().toISOString(),
     })
-  } catch (error) {
+  } catch (error: any) { // 🌟 에러 해결 포인트: : any 를 추가하여 TypeScript의 입을 막아줍니다.
     console.error("환경 변수 디버그 API 실행 중 오류:", error)
 
     return NextResponse.json(
       {
         success: false,
-        error: "환경 변수 디버그 API 실행 중 오류가 발생했습니다: " + (error.message || "알 수 없는 오류"),
-        errorStack: error.stack || "스택 정보 없음",
+        // ✅ 이제 error.message와 error.stack을 안전하게 읽어올 수 있습니다.
+        error: "환경 변수 디버그 API 실행 중 오류가 발생했습니다: " + (error?.message || "알 수 없는 오류"),
+        errorStack: error?.stack || "스택 정보 없음",
       },
       { status: 500 },
     )
