@@ -696,8 +696,7 @@ companyFeature1: "Giá cả hợp lý",
 companyFeature2: "Lắp đặt nhanh chóng trong vòng 1 giờ",
 companyFeature3: "Thi công sạch sẽ, không lo bụi bẩn",
 companyConcludingSentence: "Công ty LNP đã mở ra một kỷ nguyên mới, nơi bất kỳ ai cũng có thể lựa chọn lắp đặt đèn tạo không khí trần mà không gặp khó khăn thông qua các giải pháp sáng tạo. LNP chính là khởi đầu của sự thay đổi đã trở thành yếu tố thiết yếu ngày nay.",
-// [빌드 에러 해결용]
-installationCases: "Trường hợp thi công",
+
 }
 
 // 태국어 번역
@@ -931,8 +930,7 @@ companyFeature1: "ราคาที่เหมาะสม",
 companyFeature2: "ติดตั้งรวดเร็วภายใน 1 ชั่วโมง",
 companyFeature3: "การติดตั้งที่สะอาดโดยไม่ต้องกังวลเรื่องฝุ่น",
 companyConcludingSentence: "บริษัท LNP ได้เปิดยุคที่ทุกคนสามารถเลือกการติดตั้งไฟเพดานสร้างบรรยากาศได้โดยไม่มีภาระผ่านโซลูชั่นที่เป็นนวัตกรรม LNP อยู่ที่จุดเริ่มต้นของการเปลี่ยนแปลงที่กลายเป็นองค์ประกอบสำคัญในปัจจุบัน",
-// [빌드 에러 해결용]
-installationCases: "กรณีการติดตั้ง",
+
 }
 
 // 중국어 간체 번역
@@ -1166,8 +1164,7 @@ companyFeature1: "价格合理",
 companyFeature2: "1 小时内快速安装",
 companyFeature3: "无尘干净施工",
 companyConcludingSentence: "LNP 公司通过创新解决方案，开创了一个任何人都可以毫无负担地选择天花板氛围灯安装의时代。LNP 正是这一变革的开端，如今已成为必不可少的元素。",
-// [빌드 에러 해결용]
-installationCases: "施工案例",
+
 }
 
 // 번역 함수
