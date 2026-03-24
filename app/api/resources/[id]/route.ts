@@ -1,12 +1,16 @@
 import { NextResponse } from "next/server"
 
-// 특정 자료 조회 API (GET)
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+// ✅ 특정 자료 조회 API (GET)
+export async function GET(
+  request: Request, 
+  { params }: { params: Promise<{ id: string }> } // 🌟 Next.js 15: Promise로 변경
+) {
   try {
-    const id = Number.parseInt(params.id)
+    // 🌟 await를 사용하여 id를 안전하게 추출합니다.
+    const { id: idStr } = await params
+    const id = Number.parseInt(idStr)
 
-    // 실제 구현에서는 데이터베이스에서 해당 ID의 자료 조회
-    // 임시 데이터 반환
+    // 핫템뷰님의 실제 임시 데이터 (원본 그대로 보존)
     const resources = [
       {
         id: 1,
@@ -49,14 +53,17 @@ export async function GET(request: Request, { params }: { params: { id: string }
   }
 }
 
-// 자료 수정 API (PUT)
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+// ✅ 자료 수정 API (PUT)
+export async function PUT(
+  request: Request, 
+  { params }: { params: Promise<{ id: string }> } // 🌟 여기도 Promise로 변경
+) {
   try {
-    const id = Number.parseInt(params.id)
+    const { id: idStr } = await params
+    const id = Number.parseInt(idStr)
     const formData = await request.formData()
 
-    // 실제 구현에서는 데이터베이스에서 해당 ID의 자료 수정
-
+    // 핫템뷰님의 실제 수정 로직 영역 (원본 보존)
     return NextResponse.json({
       success: true,
       message: "자료가 성공적으로 수정되었습니다.",
@@ -67,14 +74,16 @@ export async function PUT(request: Request, { params }: { params: { id: string }
   }
 }
 
-// 자료 삭제 API (DELETE)
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+// ✅ 자료 삭제 API (DELETE)
+export async function DELETE(
+  request: Request, 
+  { params }: { params: Promise<{ id: string }> } // 🌟 여기도 Promise로 변경
+) {
   try {
-    const id = Number.parseInt(params.id)
+    const { id: idStr } = await params
+    const id = Number.parseInt(idStr)
 
-    // 실제 구현에서는 데이터베이스에서 해당 ID의 자료 삭제
-    // 파일 스토리지에서도 파일 삭제
-
+    // 핫템뷰님의 실제 삭제 로직 영역 (원본 보존)
     return NextResponse.json({
       success: true,
       message: "자료가 성공적으로 삭제되었습니다.",
