@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "@/lib/translations"
-import { useState } from "react"
+import { useState, use } from "react" // ✅ use를 추가했습니다.
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Download, Calendar, FileText, Eye } from "lucide-react"
@@ -10,10 +10,12 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function ResourceDetailPage({
   params,
 }: {
-  params: { locale: string; id: string }
+  params: Promise<{ locale: string; id: string }> // ✅ Promise 타입으로 수정했습니다.
 }) {
-  const t = useTranslations(params.locale)
-  const resourceId = Number.parseInt(params.id)
+  // ✅ 아래 한 줄로 locale과 id를 안전하게 가져옵니다. 다른 데이터는 절대 건드리지 않습니다.
+  const { locale, id } = use(params)
+  const t = useTranslations(locale)
+  const resourceId = Number.parseInt(id)
   const [isDownloading, setIsDownloading] = useState(false)
 
   // 자료실 데이터 (실제로는 API나 데이터베이스에서 가져올 것)
