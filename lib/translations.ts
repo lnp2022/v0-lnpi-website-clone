@@ -41,6 +41,7 @@ const ko = {
   companyFullAddress: "경기도 김포시 태장로 789 지하 1층 B01,B02,B03호 (장기동, 금광하이테크시티 빌딩)",
   privacyPolicy: "개인정보처리방침",
   termsOfService: "이용약관",
+  installationCases: "시공 사례", // ✅ 아까 푸터 에러 해결을 위해 추가!
 
   // 메인 페이지
   heroTitle: "혁신적인 조명 솔루션으로 공간의 가치를 높입니다",
@@ -171,7 +172,7 @@ const ko = {
   closeImage: "닫기",
 
   // 제품 상세 정보
-  productFeatures: "특징",
+  productFeatureLabel: "특징",
   productSpecifications: "제품 사양",
   material: "재질",
   size: "크기",
