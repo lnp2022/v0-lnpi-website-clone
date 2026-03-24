@@ -13,18 +13,16 @@ export default function ResourcesPage({
   const { locale } = use(params)
   const t = useTranslations(locale)
   const [iframeHeight, setIframeHeight] = useState("800px")
-  const [isLoading, setIsLoading] = useState(true
+  const [isLoading, setIsLoading] = useState(true)
 
-  // iframe 로딩 완료 처리
+  // iframe 로딩 완료 처리 (핫템뷰님 원본 로직 유지)
   const handleIframeLoad = () => {
     setIsLoading(false)
-    // 필요한 경우 iframe 높이 조정 로직 추가
   }
 
-  // 반응형 높이 조정
+  // 반응형 높이 조정 (핫템뷰님 원본 로직 유지)
   useEffect(() => {
     const handleResize = () => {
-      // 화면 크기에 따라 iframe 높이 조정
       if (window.innerWidth < 768) {
         setIframeHeight("600px")
       } else {
@@ -33,7 +31,7 @@ export default function ResourcesPage({
     }
 
     window.addEventListener("resize", handleResize)
-    handleResize() // 초기 로드 시 실행
+    handleResize()
 
     return () => {
       window.removeEventListener("resize", handleResize)
@@ -55,7 +53,7 @@ export default function ResourcesPage({
             </div>
           )}
 
-          {/* 아임웹 게시판 iframe */}
+          {/* 아임웹 게시판 iframe (핫템뷰님 원본 주소 유지) */}
           <iframe
             src="https://lightandpeople.imweb.me/QnA"
             width="100%"
