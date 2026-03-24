@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     try {
       body = await request.json()
       console.log("요청 본문:", JSON.stringify(body))
-    } catch (error) {
+    } catch (error: any) { // ✅ 🌟 수정 포인트 1: 내부 에러에도 : any 추가
       console.error("요청 본문 파싱 오류:", error)
       return NextResponse.json(
         {
@@ -73,14 +73,15 @@ export async function POST(request: Request) {
         content: smsContent.substring(0, 30) + "...",
       },
     })
-  } catch (error) {
+  } catch (error: any) { // ✅ 🌟 수정 포인트 2: 메인 에러에 : any 추가
     console.error("SMS 전송 API 실행 중 오류:", error)
 
     return NextResponse.json(
       {
         success: false,
-        error: "SMS 전송 중 오류가 발생했습니다: " + (error.message || "알 수 없는 오류"),
-        errorStack: error.stack || "스택 정보 없음",
+        // ✅ 이제 error.message와 error.stack을 빌드 에러 없이 꺼낼 수 있습니다.
+        error: "SMS 전송 중 오류가 발생했습니다: " + (error?.message || "알 수 없는 오류"),
+        errorStack: error?.stack || "스택 정보 없음",
       },
       { status: 500 },
     )
