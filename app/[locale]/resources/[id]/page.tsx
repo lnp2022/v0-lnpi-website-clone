@@ -123,7 +123,8 @@ export default function ResourceDetailPage({
       <div className="container mx-auto px-4 py-12 text-center">
         <h1 className="text-3xl font-bold mb-4">자료를 찾을 수 없습니다</h1>
         <p className="text-gray-600 mb-8">요청하신 자료가 존재하지 않거나 삭제되었습니다.</p>
-        <Link href={`/${params.locale}/resources`}>
+        {/* ✅ params.locale 대신 미리 꺼낸 locale을 사용합니다 */}
+        <Link href={`/${locale}/resources`}>
           <Button className="bg-orange-500 hover:bg-orange-600">자료실로 돌아가기</Button>
         </Link>
       </div>
@@ -132,8 +133,8 @@ export default function ResourceDetailPage({
 
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* 뒤로 가기 버튼 */}
-      <Link href={`/${params.locale}/resources`}>
+      {/* 2️⃣ 뒤로 가기 버튼의 Link 수정 */}
+      <Link href={`/${locale}/resources`}>
         <Button variant="ghost" className="mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
           자료실로 돌아가기
@@ -196,7 +197,8 @@ export default function ResourceDetailPage({
               <h2 className="text-lg font-semibold mb-4">관련 자료</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {relatedResources.map((related) => (
-                  <Link key={related.id} href={`/${params.locale}/resources/${related.id}`}>
+                  /* ✅ params.locale 대신 locale을 사용합니다 */
+                  <Link key={related.id} href={`/${locale}/resources/${related.id}`}>
                     <Card className="hover:shadow-md transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start">
