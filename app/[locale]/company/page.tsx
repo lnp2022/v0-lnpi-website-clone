@@ -155,7 +155,7 @@ export default function CompanyPage({
            : num === 8 ? "GUGU 터치 스위치 전파 인증서"
            : num === 9 ? "ALL IN ONE 스위치 특허증"  // ✅ 9번 이름 필요시 수정
            : num === 10 ? "ALL IN ONE 스위치 안전 인증서" // ✅ 10번 이름 필요시 수정
-           : "특허 및 인증"}
+           }
         </p>
       </div>
     ))}
