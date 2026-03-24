@@ -138,7 +138,7 @@ export default function CompanyPage({
                 <Image src={`/images/company/${num}.png`} alt={`인증서 ${num}`} fill className="object-contain p-2" />
               </div>
               <p className="text-sm text-center text-gray-500 font-medium">
-                {num === 1 ? "우물천장 조립체" : num === 2 ? "직간접 조명시스템" : "특허 및 인증"}
+                {num === 1 ? "특허 및 인증" : num === 2 ? "특허 및 인증" : "특허 및 인증"}
               </p>
             </div>
           ))}
