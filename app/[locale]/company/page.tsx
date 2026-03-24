@@ -100,25 +100,34 @@ export default function CompanyPage({
         </div>
       </section>
 
-      {/* [3] 회사 연혁 - 깔끔한 타임라인 */}
-      <section className="mb-24 px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">{t.companyHistory}</h2>
-        <div className="max-w-3xl mx-auto border-l-2 border-orange-200 pl-8 space-y-12">
-          {[2023, 2022, 2021, 2020, 2019].map((year) => (
-            <div key={year} className="relative">
-              <div className="absolute -left-[41px] top-0 w-5 h-5 bg-orange-500 rounded-full border-4 border-white"></div>
-              <div className="font-bold text-2xl text-orange-600 mb-3">{year}</div>
-              <div className="text-gray-700 space-y-2 text-lg">
-                {year === 2023 && <><p>{t.historyItem2023_1}</p><p>{t.historyItem2023_2}</p></>}
-                {year === 2022 && <><p>{t.historyItem2022_1}</p><p>{t.historyItem2022_2}</p><p>{t.historyItem2022_3}</p></>}
-                {year === 2021 && <><p>{t.historyItem2021_1}</p><p>{t.historyItem2021_2}</p></>}
-                {year === 2020 && <p>{t.historyItem2020_1}</p>}
-                {year === 2019 && <><p>{t.historyItem2019_1}</p><p>{t.historyItem2019_2}</p><p>{t.historyItem2019_3}</p></>}
-              </div>
-            </div>
-          ))}
+      {/* [3] 회사 연혁 - 신규 데이터 추가 버전 */}
+<section className="mb-24 px-4">
+  <h2 className="text-3xl font-bold mb-12 text-center">{t.companyHistory}</h2>
+  <div className="max-w-3xl mx-auto border-l-2 border-orange-200 pl-8 space-y-12">
+    {/* 🌟 연혁 배열에 "2025~2026"을 가장 앞에 추가했습니다. */}
+    {["2025~2026", 2023, 2022, 2021, 2020, 2019].map((year) => (
+      <div key={year.toString()} className="relative">
+        <div className="absolute -left-[41px] top-0 w-5 h-5 bg-orange-500 rounded-full border-4 border-white"></div>
+        <div className="font-bold text-2xl text-orange-600 mb-3">{year}</div>
+        <div className="text-gray-700 space-y-2 text-lg">
+          {/* ✅ 신규 추가 항목 */}
+          {year === "2025~2026" && (
+            <>
+              <p>{t.historyItem2025_1}</p>
+              <p>{t.historyItem2025_2}</p>
+            </>
+          )}
+          {/* 기존 항목들 */}
+          {year === 2023 && <><p>{t.historyItem2023_1}</p><p>{t.historyItem2023_2}</p></>}
+          {year === 2022 && <><p>{t.historyItem2022_1}</p><p>{t.historyItem2022_2}</p><p>{t.historyItem2022_3}</p></>}
+          {year === 2021 && <><p>{t.historyItem2021_1}</p><p>{t.historyItem2021_2}</p></>}
+          {year === 2020 && <p>{t.historyItem2020_1}</p>}
+          {year === 2019 && <><p>{t.historyItem2019_1}</p><p>{t.historyItem2019_2}</p><p>{t.historyItem2019_3}</p></>}
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* [4] 특허 및 인증서 - 그리드 정렬 복구 */}
       <section className="mb-24">

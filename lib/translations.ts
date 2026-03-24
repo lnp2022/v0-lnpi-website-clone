@@ -97,6 +97,8 @@ const ko = {
     "고가의 목공 시공으로만 진행 되어 가격 부담 및 공사 기간... 먼지 날림 등의 이유로 거의 하지 못했던 우물천장 무드등 인테리어 공사를 주식회사 엘엔피의 설립과 동시에 저렴한 가격, 1시간 이내의 공사 시간, 먼지 날림 X 등의 이유로 이제는 어느 누구나 부담없이 우물천장 무드등 시공을 할 수 있는 시대가 되었습니다. 그 시작을 주식회사 엘엔피가 하였습니다.",
 
   // 회사 연혁 추가 번역
+  historyItem2025_1: "GUGU ALL IN ONE 무선 일괄 소등 스위치 개발",
+  historyItem2025_2: "ALL IN ONE 스위치 기술 특허 등록",
   historyItem2023_1: "우물천장 라인조명 특허 등록",
   historyItem2023_2: "한방 우물 프레임 특허 등록",
   historyItem2022_1: "GUGU 무선 터치 스위치 기술 특허 등록",
@@ -312,6 +314,8 @@ const en = {
     "Previously, ceiling mood lighting was rarely done due to the burden of high prices, long construction periods, and dust issues associated with expensive carpentry. With the establishment of LNP Corporation, we have ushered in an era where anyone can enjoy ceiling mood lighting without burden, thanks to affordable prices, construction times of less than an hour, and dust-free installation. LNP Corporation started this revolution.",
 
   // Company History Additional Translations
+  historyItem2025_1: "Development of GUGU ALL IN ONE Wireless Master Switch",
+  historyItem2025_2: "Patent registration for ALL IN ONE switch technology",
   historyItem2023_1: "Patent registration for ceiling line lighting",
   historyItem2023_2: "Patent registration for Hambang ceiling frame",
   historyItem2022_1: "Technology patent registration for GUGU wireless touch switch",
@@ -527,6 +531,8 @@ const vi = {
     "Trước đây, việc lắp đặt đèn trần nghệ thuật rất hiếm khi được thực hiện do chi phí cao, thời gian thi công kéo dài và vấn đề bụi bẩn từ việc làm mộc. Với sự ra đời của LNP, chúng tôi đã mở ra một kỷ nguyên mới, nơi bất kỳ ai cũng có thể tận hưởng đèn trần nghệ thuật mà không phải lo lắng, nhờ giá cả hợp lý, thời gian thi công dưới một giờ và không gây bụi bẩn. LNP đã khởi đầu cuộc cách mạng này.",
 
   // Company History Additional Translations
+  historyItem2025_1: "Phát triển Công tắc tổng All-in-One không dây GUGU",
+  historyItem2025_2: "Đăng ký bằng sáng chế công nghệ công tắc All-in-One",
   historyItem2023_1: "Đăng ký bằng sáng chế cho đèn LED dây âm trần",
   historyItem2023_2: "Đăng ký bằng sáng chế cho khung trần Hambang",
   historyItem2022_1: "Đăng ký bằng sáng chế công nghệ cho công tắc cảm ứng không dây GUGU",
@@ -742,6 +748,8 @@ const th = {
     "ในอดีต การติดตั้งไฟเพดานหลุมซ่อนฝ้าทำได้ยากเนื่องจากราคาสูง ระยะเวลาติดตั้งนาน และปัญหาฝุ่นจากการทำงานไม้ ด้วยการก่อตั้ง LNP เราได้เปิดยุคสมัยที่ทุกคนสามารถติดตั้งไฟเพดานหลุมซ่อนฝ้าได้โดยไม่มีภาระ ด้วยราคาที่จับต้องได้ ใช้เวลาติดตั้งไม่ถึงหนึ่งชั่วโมง และไม่มีฝุ่นละออง LNP คือผู้เริ่มต้นการปฏิวัตินี้",
 
   // Company History Additional Translations
+  historyItem2025_1: "พัฒนาสวิตช์ควบคุมหลักแบบ All-in-One ไร้สาย GUGU",
+  historyItem2025_2: "จดสิทธิบัตรเทคโนโลยีสวิตช์แบบ All-in-One",
   historyItem2023_1: "จดสิทธิบัตรไฟเส้นเพดานซ่อนฝ้า",
   historyItem2023_2: "จดสิทธิบัตรเฟรมเพดาน Hambang",
   historyItem2022_1: "จดสิทธิบัตรเทคโนโลยีสวิตช์ทัชไร้สาย GUGU",
@@ -957,6 +965,8 @@ const zh = {
     "过去，天花板凹槽灯因高昂的木工成本、漫长的施工周期和粉尘问题而难以普及。随着 LNP 的成立，凭借合理的价格、不到 1 小时的施工时间以及无粉尘施工，开启了任何人都能轻松享受天花板凹槽灯的时代。LNP 引领了这场变革。",
 
   // Company History Additional Translations
+  historyItem2025_1: "开发 GUGU ALL IN ONE 无线全关开关",
+  historyItem2025_2: "注册 ALL IN ONE 开关技术专利",
   historyItem2023_1: "天花板线条灯专利注册",
   historyItem2023_2: "Hambang 天花板框架专利注册",
   historyItem2022_1: "GUGU 无线触摸开关技术专利注册",
