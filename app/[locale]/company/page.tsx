@@ -147,10 +147,10 @@ export default function CompanyPage({
            : num === 4 ? "우물 천장 몰딩 디자인 특허증"
            : num === 5 ? "GUGU 스위치 특허증"
            : num === 6 ? "연구개발 전담부서 획득"
-           : num === 7 ? <>GUGU 터치 스위치<br/>안전 인증서</>
-           : num === 8 ? <>GUGU 터치 스위치<br/>전파 인증서</>
+           : num === 7 ? "GUGU 터치 스위치       안전 인증서"
+           : num === 8 ? "GUGU 터치 스위치       전파 인증서"
            : num === 9 ? "ALL IN ONE 스위치 특허증"  // ✅ 9번 이름 필요시 수정
-           : num === 10 ? <>ALL IN ONE 스위치<br/>안전 인증서</> // ✅ 10번 이름 필요시 수정
+           : num === 10 ? "ALL IN ONE 스위치       안전 인증서" // ✅ 10번 이름 필요시 수정
            : "특허 및 인증"}
         </p>
       </div>
