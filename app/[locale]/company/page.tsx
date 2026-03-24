@@ -127,23 +127,40 @@ export default function CompanyPage({
   </div>
 </section>
 
-      {/* [4] 특허 및 인증서 - 그리드 정렬 복구 */}
-      <section className="mb-24">
-        <h2 className="text-3xl font-bold mb-4 text-center">{t.patentsAndCertificates}</h2>
-        <p className="text-gray-600 text-center mb-12">{t.patentsDescription}</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-            <div key={num} className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="relative aspect-[3/4] w-full mb-3">
-                <Image src={`/images/company/${num}.png`} alt={`인증서 ${num}`} fill className="object-contain p-2" />
-              </div>
-              <p className="text-sm text-center text-gray-500 font-medium">
-                {num === 1 ? "특허 및 인증" : num === 2 ? "특허 및 인증" : "특허 및 인증"}
-              </p>
-            </div>
-          ))}
+      {/* [4] 특허 및 인증서 - 10장으로 확대 버전 */}
+<section className="mb-24">
+  <h2 className="text-3xl font-bold mb-4 text-center">{t.patentsAndCertificates}</h2>
+  <p className="text-gray-600 text-center mb-12">{t.patentsDescription}</p>
+  
+  {/* 모바일 2열, PC 5열로 배치하면 10장이 아주 예쁘게 들어갑니다. */}
+  <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+      <div key={num} className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
+        <div className="relative aspect-[3/4] w-full mb-3">
+          <Image 
+            src={`/images/company/${num}.png`} 
+            alt={num <= 8 ? `인증서 ${num}` : num === 9 ? "신규 인증서 1" : "신규 인증서 2"} 
+            fill 
+            className="object-contain p-2" 
+          />
         </div>
-      </section>
+        <p className="text-sm text-center text-gray-500 font-medium">
+          {num === 1 ? "한방 우물 특허증" 
+           : num === 2 ? "라인 조명 특허증"
+           : num === 3 ? "우물 천장 몰딩 디자인 특허증"
+           : num === 4 ? "우물 천장 몰딩 디자인 특허증"
+           : num === 5 ? "GUGU 스위치 특허증"
+           : num === 6 ? "연구개발 전담부서 획득"
+           : num === 7 ? "GUGU 터치 스위치 안전 인증서"
+           : num === 8 ? "GUGU 터치 스위치 전파 인증서"
+           : num === 9 ? "ALL IN ONE 스위치 특허증"  // ✅ 9번 이름 필요시 수정
+           : num === 10 ? "ALL IN ONE 스위치 안전 인증서" // ✅ 10번 이름 필요시 수정
+           : "특허 및 인증"}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* [5] 위치 정보 - 지도 레이아웃 고정 */}
       <section>
