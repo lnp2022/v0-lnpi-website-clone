@@ -1,6 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* 최신 버전에서는 낡은 옵션들을 모두 제거해야 정상 작동합니다 */
+  images: {
+    // ✅ 외부 이미지(Vercel Blob Storage) 허용 설정
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "hebbkx1anhila5yf.public.blob.vercel-storage.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+  /* 여기에 다른 설정이 필요하면 나중에 추가하면 됩니다 */
 };
 
 export default nextConfig;
