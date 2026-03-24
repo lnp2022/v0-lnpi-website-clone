@@ -1,17 +1,19 @@
 "use client"
 
 import { useTranslations } from "@/lib/translations"
-import { useState, useEffect } from "react"
+import { useState, useEffect, use } from "react" // ✅ use를 추가했습니다.
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function ResourcesPage({
   params,
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }> // ✅ Promise 타입으로 수정했습니다.
 }) {
-  const t = useTranslations(params.locale)
+  // ✅ 아래 한 줄로 locale 설정을 안전하게 가져옵니다. 텍스트 데이터는 건드리지 않습니다.
+  const { locale } = use(params)
+  const t = useTranslations(locale)
   const [iframeHeight, setIframeHeight] = useState("800px")
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true
 
   // iframe 로딩 완료 처리
   const handleIframeLoad = () => {
