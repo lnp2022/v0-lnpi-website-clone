@@ -215,205 +215,863 @@ const ko = {
 }
 
 // 영어 번역
+// 영어 번역 (English)
 const en = {
-  // 공통 및 메뉴 번역 등 동일 구조 유지 (중략된 부분 복원)
+  // Common
   companyName: "LNP Corporation",
   allRightsReserved: "All rights reserved.",
   learnMore: "Learn More",
   contactUs: "Contact Us",
   submit: "Submit",
-  companyIntroduction: "Company",
-  allProducts: "Products",
+
+  // Header Menu
+  companyIntroduction: "About LNP",
+  allProducts: "All Products",
   ceilingFrame: "Ceiling Frame",
   wirelessSwitch: "GUGU Wireless Switch",
-  freeConsultation: "Contact Us",
+  freeConsultation: "Inquiry",
   board: "Board",
-  ceilingFrameType1: "Sheet Wrapping Ceiling Frame",
-  ceilingFrameType2: "Standard Single Ceiling Frame",
-  ceilingFrameType3: "Seagull Type Single Ceiling Frame",
-  allCategories: "All Ceiling Frames",
-  
-  // 무선 스위치 하위 메뉴
-  wirelessSwitchAllInOne: "All-in-One Master Switch", // 🌟 신제품 영어
-  wirelessSwitchType1: "Standard Type (Non-App Type)",
-  wirelessSwitchType2: "App Support Type",
 
+  // Ceiling Frame Submenu
+  ceilingFrameType1: "General Sheet Wrapping Frame",
+  ceilingFrameType2: "Hambang Standard (Right Angle) Molding Frame",
+  ceilingFrameType3: "Hambang Seagull Molding Frame",
+
+  // Category
+  allCategories: "All Ceiling Frames",
+
+  // Wireless Switch Submenu
+  wirelessSwitchAllInOne: "All-in-One Master Switch", // 🌟 New Product Added!
+  wirelessSwitchType1: "Standard Type (Non-App)",
+  wirelessSwitchType2: "App Supported Type",
+
+  // Accessories
   accessories: "Accessories & Finishing Materials",
+
+  // Footer
   footerCompanyDescription: "LNP Corporation is a leading company providing innovative lighting solutions.",
   quickLinks: "Quick Links",
   products: "Products",
   companyAddress: "123 Teheran-ro, Gangnam-gu, Seoul, LNP Building",
-  companyFullAddress: "B01, B02, B03, Basement Floor 1, 789 Taejang-ro, Gimpo-si, Gyeonggi-do",
+  companyFullAddress: "B01, B02, B03, Basement 1, 789 Taejang-ro, Gimpo-si, Gyeonggi-do, Korea",
   privacyPolicy: "Privacy Policy",
   termsOfService: "Terms of Service",
-  heroTitle: "Enhance Your Space with Innovative Lighting Solutions",
+  installationCases: "Installation Cases", // ✅ Added to resolve previous footer error!
+
+  // Main Page
+  heroTitle: "Enhancing Space Value with Innovative Lighting Solutions",
   heroSubtitle: "Create smarter and more beautiful spaces with our ceiling frames and wireless switches.",
   exploreProducts: "Explore Products",
   companyIntroTitle: "LNP Corporation",
-  companyIntroDescription: "LNP Corporation is a leading company providing innovative lighting solutions...",
+  companyIntroDescription:
+    "LNP Corporation is a leading provider of innovative lighting solutions, boasting top-tier technology in the fields of ceiling frames and wireless switches.",
   companyImage: "Company Image",
   featuredProducts: "Featured Products",
-  featuredProductsDescription: "Discover our featured products at LNP Corporation.",
+  featuredProductsDescription: "Introducing the representative products of LNP Corporation.",
   ceilingFrameShortDesc: "Ceiling frame solutions with innovative design and excellent durability",
-  wirelessSwitchShortDesc: "Easy-to-install and smart wireless switch systems",
+  wirelessSwitchShortDesc: "Smart wireless switch systems with easy installation",
   viewAllProducts: "View All Products",
-  whyChooseUs: "Why Choose Us",
-  whyChooseUsDescription: "Discover the unique values provided by LNP Corporation.",
+  whyChooseUs: "Why Choose LNP?",
+  whyChooseUsDescription: "Discover the unique value provided by LNP Corporation.",
   highlightTitle1: "Premium Quality",
-  highlightDesc1: "We provide top-quality products through strict quality control systems.",
+  highlightDesc1: "We provide top-quality products through our strict quality control system.",
   highlightTitle2: "Expert Team",
-  highlightDesc2: "Our team of experienced professionals provides the best service.",
+  highlightDesc2: "Our team of experienced professionals provides the best possible service.",
   highlightTitle3: "Quick Response",
-  highlightDesc3: "We respond quickly to customer needs to increase satisfaction.",
+  highlightDesc3: "We respond quickly to customer needs to ensure maximum satisfaction.",
   highlightTitle4: "Global Vision",
-  highlightDesc4: "We have a vision to expand beyond domestic markets to global markets.",
-  consultationDescription: "Get optimal lighting solutions through our free consultation.",
+  highlightDesc4: "We have a vision to expand beyond the domestic market into the global market.",
+  consultationDescription: "Get the optimal lighting solution through our free consultation.",
+
+  // Company Intro Page
   aboutUs: "About Us",
-  companyOverview1: "Since its establishment in 2010...",
-  companyOverview2: "Based on our unique technology...",
+  companyOverview1: "Since its establishment in 2010, LNP Corporation has been developing and providing innovative lighting solutions.",
+  companyOverview2:
+    "Based on our unrivaled technology in ceiling frames and wireless switches, we provide the best value to our customers.",
   companyBuilding: "Company Building",
   companyHistory: "Company History",
-  history2023: "Entered the Vietnamese market...",
-  history2020: "Launched new wireless switch products...",
-  history2018: "Developed and launched ceiling frame systems",
-  history2015: "Established a corporate research institute",
-  history2010: "Founded LNP Corporation",
+  history2023: "Expansion into the Vietnamese market and establishment of a local subsidiary",
+  history2020: "Launch of new wireless switch products and acquisition of patents",
+  history2018: "Development and launch of the ceiling frame system",
+  history2015: "Establishment of the Corporate R&D Center",
+  history2010: "Foundation of LNP Corporation",
   visionAndMission: "Vision & Mission",
   vision: "Vision",
-  visionDescription: "Creating a brighter and smarter world...",
+  visionDescription: "Creating a brighter and smarter world through innovative lighting solutions.",
   mission: "Mission",
-  missionDescription: "Setting new standards in the lighting industry...",
-  companyTagline: "Changing the Concept of Lighting Interior",
+  missionDescription: "Setting new standards in the lighting industry with customer-centered innovative products and services.",
+
+  // Company Intro Page Additional Translations
+  companyTagline: "Changing the Concept of Lighting Interior.",
   companyName2: "This is LNP Corporation.",
-  companyDesc1: "Established in 2019 to create a new history...",
-  companyDesc2: "Looking at the history...",
-  companyDesc3: "Ceiling mood lighting...",
-  companyDesc4: "Ceiling mood lighting interior construction...",
-  historyItem2023_1: "Registered patent for ceiling line lighting",
-  historyItem2023_2: "Registered patent for single ceiling frame",
-  historyItem2022_1: "Registered patent for GUGU wireless touch switch",
-  historyItem2022_2: "Established research institute",
-  historyItem2022_3: "Developed single ceiling frame",
-  historyItem2021_1: "Developed ceiling line lighting frame",
-  historyItem2021_2: "Developed GUGU wireless touch switch APP type",
-  historyItem2020_1: "Developed GUGU wireless touch switch standard type",
-  historyItem2019_1: "Established LNP Corporation",
-  historyItem2019_2: "Developed Korea's first ceiling mood lighting frame",
-  historyItem2019_3: "Registered patent related to ceiling mood lighting frame",
-  visionText: "From the customer's perspective...",
-  missionText: "Leader of lighting interior trends growing with customers",
-  productsPageDescription: "Discover the various products of LNP Corporation.",
-  ceilingFrameDescription: "Ceiling frames with innovative design and excellent durability",
-  wirelessSwitchDescription: "Easy-to-install and smart GUGU wireless touch switch systems",
-  lightingDescription: "Energy-efficient lighting products with sophisticated designs",
-  accessoriesDescription: "Finishing materials and other supplies for ceiling and lighting systems",
+  companyDesc1: "Established in 2019 to rewrite the history of apartment lighting interior design in Korea.",
+  companyDesc2:
+    "The history of apartment lighting interior in our country can be clearly divided into before and after the establishment of LNP Corporation, a fact no one can deny.",
+  companyDesc3: "Ceiling mood lighting has now become a fundamental element of apartment lighting interior construction in Korea.",
+  companyDesc4:
+    "Previously, ceiling mood lighting was rarely done due to the burden of high prices, long construction periods, and dust issues associated with expensive carpentry. With the establishment of LNP Corporation, we have ushered in an era where anyone can enjoy ceiling mood lighting without burden, thanks to affordable prices, construction times of less than an hour, and dust-free installation. LNP Corporation started this revolution.",
+
+  // Company History Additional Translations
+  historyItem2023_1: "Patent registration for ceiling line lighting",
+  historyItem2023_2: "Patent registration for Hambang ceiling frame",
+  historyItem2022_1: "Technology patent registration for GUGU wireless touch switch",
+  historyItem2022_2: "Establishment of the R&D center",
+  historyItem2022_3: "Development of the Hambang ceiling frame",
+  historyItem2021_1: "Development of the ceiling line lighting frame",
+  historyItem2021_2: "Development of GUGU wireless touch switch APP type",
+  historyItem2020_1: "Development of GUGU wireless touch switch standard type",
+  historyItem2019_1: "Foundation of LNP Corporation",
+  historyItem2019_2: "Development of Korea's first ceiling mood lighting frame",
+  historyItem2019_3: "Patent registration related to ceiling mood lighting frames",
+
+  // Vision & Mission Additional Translations
+  visionText: "Actively embracing the voice of the customer by standing in their shoes and sharing their mindset.",
+  missionText: "A leader in lighting interior trends that grows together with its customers.",
+
+  // Products Page
+  productsPageDescription: "Discover the diverse product lineup of LNP Corporation.",
+  ceilingFrameDescription: "Ceiling frames with innovative design and excellent durability.",
+  wirelessSwitchDescription: "Easy-to-install and smart GUGU wireless touch switches.",
+  lightingDescription: "Energy-efficient lighting products with sophisticated designs.",
+  accessoriesDescription: "Finishing materials and other supplies for ceiling and lighting systems.",
   viewProducts: "View Products",
   bestSellers: "Best Sellers",
   product: "Product",
-  productDescription: "Products with innovative design and excellent functionality",
+  productDescription: "Products with innovative design and excellent functionality.",
   productFeatures: "Key Features",
   feature1: "Energy-efficient design",
   feature2: "Easy installation and maintenance",
-  feature3: "Use of durable materials",
+  feature3: "Use of highly durable materials",
   inquire: "Inquire",
-  consultationPageDescription: "Get optimal lighting solutions through our free consultation.",
+
+  // Consultation Page
+  consultationPageDescription: "Get the optimal lighting solution through our free consultation.",
   consultationBenefits: "Free Consultation Benefits",
   benefitTitle1: "Customized Solutions",
-  benefitDescription1: "We suggest optimal solutions tailored to your space.",
-  benefitTitle2: "Cost Savings",
-  benefitDescription2: "Efficient product selection can reduce costs.",
+  benefitDescription1: "We propose optimal solutions tailored to the customer's space and requirements.",
+  benefitTitle2: "Cost Reduction",
+  benefitDescription2: "Efficient product selection can reduce initial and maintenance costs.",
   benefitTitle3: "Expert Advice",
-  benefitDescription3: "Get advice from experts with extensive experience.",
-  benefitTitle4: "Quick Response",
-  benefitDescription4: "An expert will contact you within 24 hours.",
-  testimonialTitle: "Customer Testimonial",
-  testimonialSubtitle: "Feedback from customers.",
-  testimonialQuote: "Through LNP's free consultation...",
-  testimonialAuthor: "John Smith",
+  benefitDescription3: "Get advice from experts with extensive experience in the field.",
+  benefitTitle4: "Rapid Response",
+  benefitDescription4: "An expert will contact you within 24 hours of your inquiry.",
+  testimonialTitle: "Customer Reviews",
+  testimonialSubtitle: "Reviews from customers who have experienced LNP's consulting services.",
+  testimonialQuote:
+    "Through LNP's free consultation, I was able to find the perfect lighting solution. I am very satisfied with the professional advice and quick response.",
+  testimonialAuthor: "CEO Kim Chul-su",
   testimonialCompany: "Interior Design Studio",
   requestConsultation: "Request Consultation",
-  formDescription: "Fill out the form below to request a free consultation.",
+  formDescription: "Fill out the form below to apply for a free consultation.",
   name: "Name",
   namePlaceholder: "Enter your name",
-  company: "Company",
+  company: "Company Name",
   companyPlaceholder: "Enter your company name",
   email: "Email",
-  emailPlaceholder: "Enter your email",
-  phone: "Phone",
-  phonePlaceholder: "Enter your phone number",
+  emailPlaceholder: "Enter your email address",
+  phone: "Phone Number",
+  phonePlaceholder: "Enter your contact number",
   projectType: "Project Type",
-  selectProjectType: "Select project type",
+  selectProjectType: "Select a project type",
   other: "Other",
-  message: "Message",
-  messagePlaceholder: "Enter your message",
-  boardTitle: "All About Lighting Questions",
-  boardDescription: "We have compiled the most frequently asked questions.",
+  message: "Inquiry Details",
+  messagePlaceholder: "Enter your inquiry here",
+
+  // Board Additional Translations
+  boardTitle: "Every Question About Lighting, Space Lighting Knowledge-IN",
+  boardDescription: "We have summarized the most frequently asked questions before and after purchasing lighting.",
   backToBoard: "Back to Board",
   relatedPosts: "Related Posts",
   downloadFile: "Download File",
   viewImage: "View Image",
   closeImage: "Close",
+
+  // Product Detailed Information
+  productFeatureLabel: "Features",
   productSpecifications: "Product Specifications",
   material: "Material",
   size: "Size",
   color: "Color",
   type: "Type",
   weight: "Weight",
-  installationGuideButton: "View Installation Guide",
+
+  // Installation Guide
+  installationGuideButton: "View Ceiling Mood Lighting Installation Method",
   loading: "Loading...",
-  saveImageInstruction: '* To save the image, right-click and select "Save Image As".',
-  rollCoverName: "Single Frame Roll Cover",
-  roundCornerName: "Single Frame Round Corner Finishing",
-  wrappingRoundCornerName: "Sheet Wrapping Round Corner Finishing",
-  wrappingSquareCornerName: "Sheet Wrapping Square Corner Finishing",
-  wrappingMiddleFinishingName: "Sheet Wrapping Middle Finishing",
-  rollCoverDesc: "Roll cover needed for single frame installation.",
-  roundCornerDesc: "Round-type finishing material.",
-  wrappingRoundCornerDesc: "Round-type finishing material.",
-  wrappingSquareCornerDesc: "Square-type finishing material.",
-  wrappingMiddleFinishingDesc: "Finishing material.",
-  patentsAndCertificates: "Patents and Certificates",
-  patentsDescription: "LNP Corporation holds numerous patents and certifications.",
-  patent1Title: "Patent - Ceiling Frame Assembly (2023)",
-  patent2Title: "Design Registration - Molding Bar (2019)",
-  patent3Title: "Design Registration - Molding Bar (2019)",
-  patent4Title: "Patent - Lighting Control Device (2022)",
-  patent5Title: "Patent - Ceiling Lighting System (2023)",
-  patent6Title: "R&D Department Certificate (2022)",
+  saveImageInstruction:
+    '* To save the image, right-click after it opens and select "Save Image As".',
+
+  // Newly Added Product Names
+  rollCoverName: "Hambang Frame Roll Cover",
+  roundCornerName: "Hambang Round Corner Finishing Material",
+  wrappingRoundCornerName: "Sheet Wrapping Round Corner Finishing Material",
+  wrappingSquareCornerName: "Sheet Wrapping Right Angle Corner Finishing Material",
+  wrappingMiddleFinishingName: "Sheet Wrapping Middle Finishing Material",
+
+  // Newly Added Product Descriptions
+  rollCoverDesc: "A roll cover required for Hambang frame installation, providing a clean finish and durability.",
+  roundCornerDesc: "A round finishing material that cleanly finishes the corner parts of the Hambang frame.",
+  wrappingRoundCornerDesc: "A round finishing material that cleanly finishes the corner parts of the sheet-wrapped frame.",
+  wrappingSquareCornerDesc: "A right-angle finishing material that cleanly finishes the corner parts of the sheet-wrapped frame.",
+  wrappingMiddleFinishingDesc: "A finishing material that cleanly finishes the middle connection parts of the sheet-wrapped frame.",
+
+  // Patents and Certificates Section
+  patentsAndCertificates: "Patents & Certificates",
+  patentsDescription: "LNP Corporation holds numerous patents and certifications based on its innovative technology.",
+  patent1Title: "Patent Certificate - Ceiling Frame Assembly (2023)",
+  patent2Title: "Design Registration Certificate - Molding Bar for Coffered Ceiling Lighting (2019)",
+  patent3Title: "Design Registration Certificate - Molding Bar for Coffered Ceiling Lighting (2019)",
+  patent4Title: "Patent Certificate - Lighting Control Device (2022)",
+  patent5Title: "Patent Certificate - Direct/Indirect Lighting System for Coffered Ceiling (2023)",
+  patent6Title: "Certificate of Recognition for R&D Department (2022)",
+
+  // Wireless Switch Page
   backToProducts: "Back to Products",
 }
 
 // 베트남어 번역
+// 베트남어 번역 (Tiếng Việt)
 const vi = {
-  ...en, // 기본값 영어 상속 후 필요한 것만 덮어쓰기 (용량 최적화)
-  wirelessSwitchAllInOne: "Công tắc tổng All-in-One", // 🌟 신제품 베트남어
-  wirelessSwitchType1: "Loại tiêu chuẩn (không hỗ trợ ứng dụng)",
-  wirelessSwitchType2: "Loại hỗ trợ ứng dụng",
-  companyName: "Công ty LNP",
+  // Common
+  companyName: "Công ty Cổ phần LNP",
+  allRightsReserved: "Bảo lưu mọi quyền.",
+  learnMore: "Tìm hiểu thêm",
+  contactUs: "Liên hệ",
+  submit: "Gửi đi",
+
+  // Header Menu
+  companyIntroduction: "Giới thiệu công ty",
+  allProducts: "Tất cả sản phẩm",
   ceilingFrame: "Khung trần",
   wirelessSwitch: "Công tắc không dây GUGU",
+  freeConsultation: "Tư vấn",
+  board: "Bảng tin",
+
+  // Ceiling Frame Submenu
+  ceilingFrameType1: "Khung bọc tấm Sheet thông thường",
+  ceilingFrameType2: "Khung phào chỉ Hambang tiêu chuẩn (Góc vuông)",
+  ceilingFrameType3: "Khung phào chỉ Hambang kiểu mòng biển",
+
+  // Category
+  allCategories: "Tất cả khung trần",
+
+  // Wireless Switch Submenu
+  wirelessSwitchAllInOne: "Công tắc tổng All-in-One", // 🌟 Sản phẩm mới!
+  wirelessSwitchType1: "Loại tiêu chuẩn (Không hỗ trợ App)",
+  wirelessSwitchType2: "Loại hỗ trợ App",
+
+  // Accessories
+  accessories: "Phụ kiện & Vật liệu hoàn thiện",
+
+  // Footer
+  footerCompanyDescription: "Công ty Cổ phần LNP là doanh nghiệp hàng đầu cung cấp các giải pháp chiếu sáng sáng tạo.",
+  quickLinks: "Liên kết nhanh",
+  products: "Sản phẩm",
+  companyAddress: "Tòa nhà LNP, 123 Teheran-ro, Gangnam-gu, Seoul",
+  companyFullAddress: "Phòng B01, B02, B03, Tầng hầm 1, 789 Taejang-ro, Gimpo-si, Gyeonggi-do, Hàn Quốc",
+  privacyPolicy: "Chính sách bảo mật",
+  termsOfService: "Điều khoản dịch vụ",
+  installationCases: "Trường hợp thi công", // ✅ Giải quyết lỗi Footer
+
+  // Main Page
+  heroTitle: "Nâng tầm giá trị không gian với giải pháp chiếu sáng sáng tạo",
+  heroSubtitle: "Tạo nên không gian thông minh và đẹp mắt hơn với khung trần và công tắc không dây của chúng tôi.",
+  exploreProducts: "Khám phá sản phẩm",
+  companyIntroTitle: "Công ty Cổ phần LNP",
+  companyIntroDescription:
+    "Công ty Cổ phần LNP là doanh nghiệp dẫn đầu trong việc cung cấp các giải pháp chiếu sáng sáng tạo, sở hữu công nghệ hàng đầu trong lĩnh vực khung trần và công tắc không dây.",
+  companyImage: "Hình ảnh công ty",
+  featuredProducts: "Sản phẩm nổi bật",
+  featuredProductsDescription: "Giới thiệu các sản phẩm tiêu biểu của Công ty Cổ phần LNP.",
+  ceilingFrameShortDesc: "Giải pháp khung trần với thiết kế sáng tạo và độ bền vượt trội",
+  wirelessSwitchShortDesc: "Hệ thống công tắc không dây thông minh, lắp đặt dễ dàng",
+  viewAllProducts: "Xem tất cả sản phẩm",
+  whyChooseUs: "Tại sao chọn LNP?",
+  whyChooseUsDescription: "Khám phá những giá trị khác biệt mà Công ty Cổ phần LNP mang lại.",
+  highlightTitle1: "Chất lượng tốt nhất",
+  highlightDesc1: "Cung cấp sản phẩm chất lượng cao nhất thông qua hệ thống quản lý nghiêm ngặt.",
+  highlightTitle2: "Đội ngũ chuyên gia",
+  highlightDesc2: "Đội ngũ chuyên gia giàu kinh nghiệm luôn mang đến dịch vụ tốt nhất.",
+  highlightTitle3: "Phản hồi nhanh chóng",
+  highlightDesc3: "Đáp ứng nhanh chóng nhu cầu của khách hàng để tối đa hóa sự hài lòng.",
+  highlightTitle4: "Tầm nhìn toàn cầu",
+  highlightDesc4: "Tầm nhìn mở rộng ra thị trường quốc tế vượt xa khỏi Hàn Quốc.",
+  consultationDescription: "Nhận đề xuất giải pháp chiếu sáng tối ưu thông qua tư vấn miễn phí.",
+
+  // Company Intro Page
+  aboutUs: "Giới thiệu",
+  companyOverview1: "Kể từ khi thành lập vào năm 2010, Công ty Cổ phần LNP đã và đang phát triển, cung cấp các giải pháp chiếu sáng sáng tạo.",
+  companyOverview2:
+    "Dựa trên công nghệ độc quyền trong lĩnh vực khung trần và công tắc không dây, chúng tôi mang đến giá trị tốt nhất cho khách hàng.",
+  companyBuilding: "Tòa nhà công ty",
+  companyHistory: "Lịch sử công ty",
+  history2023: "Tiến quân vào thị trường Việt Nam và thành lập pháp nhân tại địa phương",
+  history2020: "Ra mắt sản phẩm công tắc không dây mới và đạt được các bằng sáng chế",
+  history2018: "Phát triển và ra mắt hệ thống khung trần",
+  history2015: "Thành lập Viện nghiên cứu trực thuộc doanh nghiệp",
+  history2010: "Thành lập Công ty Cổ phần LNP",
+  visionAndMission: "Tầm nhìn & Sứ mệnh",
+  vision: "Tầm nhìn",
+  visionDescription: "Kiến tạo thế giới tươi sáng và thông minh hơn thông qua các giải pháp chiếu sáng sáng tạo.",
+  mission: "Sứ mệnh",
+  missionDescription: "Đưa ra các tiêu chuẩn mới cho ngành chiếu sáng bằng các sản phẩm và dịch vụ sáng tạo hướng tới khách hàng.",
+
+  // Company Intro Page Additional Translations
+  companyTagline: "Thay đổi khái niệm về nội thất chiếu sáng.",
+  companyName2: "Chúng tôi là Công ty Cổ phần LNP.",
+  companyDesc1: "Được thành lập vào năm 2019 để viết nên lịch sử mới cho thiết kế nội thất chiếu sáng căn hộ tại Hàn Quốc.",
+  companyDesc2:
+    "Lịch sử nội thất chiếu sáng căn hộ tại đất nước chúng tôi có thể được chia thành hai giai đoạn: trước và sau khi thành lập LNP, một sự thật không ai có thể phủ nhận.",
+  companyDesc3: "Đèn trần nghệ thuật hiện đã trở thành yếu tố cơ bản trong thi công nội thất chiếu sáng căn hộ tại Hàn Quốc.",
+  companyDesc4:
+    "Trước đây, việc lắp đặt đèn trần nghệ thuật rất hiếm khi được thực hiện do chi phí cao, thời gian thi công kéo dài và vấn đề bụi bẩn từ việc làm mộc. Với sự ra đời của LNP, chúng tôi đã mở ra một kỷ nguyên mới, nơi bất kỳ ai cũng có thể tận hưởng đèn trần nghệ thuật mà không phải lo lắng, nhờ giá cả hợp lý, thời gian thi công dưới một giờ và không gây bụi bẩn. LNP đã khởi đầu cuộc cách mạng này.",
+
+  // Company History Additional Translations
+  historyItem2023_1: "Đăng ký bằng sáng chế cho đèn LED dây âm trần",
+  historyItem2023_2: "Đăng ký bằng sáng chế cho khung trần Hambang",
+  historyItem2022_1: "Đăng ký bằng sáng chế công nghệ cho công tắc cảm ứng không dây GUGU",
+  historyItem2022_2: "Thành lập viện nghiên cứu",
+  historyItem2022_3: "Phát triển khung trần Hambang",
+  historyItem2021_1: "Phát triển khung đèn LED dây âm trần",
+  historyItem2021_2: "Phát triển loại APP cho công tắc cảm ứng không dây GUGU",
+  historyItem2020_1: "Phát triển loại tiêu chuẩn cho công tắc cảm ứng không dây GUGU",
+  historyItem2019_1: "Thành lập Công ty Cổ phần LNP",
+  historyItem2019_2: "Phát triển khung đèn trần nghệ thuật đầu tiên tại Hàn Quốc",
+  historyItem2019_3: "Đăng ký bằng sáng chế liên quan đến khung đèn trần nghệ thuật",
+
+  // Vision & Mission Additional Translations
+  visionText: "Chủ động tiếp nhận tiếng nói của khách hàng bằng cách đặt mình vào vị trí của họ và chia sẻ cùng một tư duy.",
+  missionText: "Dẫn đầu xu hướng nội thất chiếu sáng, cùng phát triển với khách hàng.",
+
+  // Products Page
+  productsPageDescription: "Khám phá danh mục sản phẩm đa dạng của Công ty Cổ phần LNP.",
+  ceilingFrameDescription: "Khung trần với thiết kế sáng tạo và độ bền tuyệt vời.",
+  wirelessSwitchDescription: "Công tắc cảm ứng không dây GUGU thông minh, lắp đặt dễ dàng.",
+  lightingDescription: "Sản phẩm chiếu sáng tiết kiệm năng lượng với thiết kế tinh tế.",
+  accessoriesDescription: "Vật liệu hoàn thiện và các vật tư khác cho hệ thống trần và chiếu sáng.",
+  viewProducts: "Xem sản phẩm",
+  bestSellers: "Bán chạy nhất",
+  product: "Sản phẩm",
+  productDescription: "Sản phẩm với thiết kế sáng tạo và tính năng vượt trội.",
+  productFeatures: "Tính năng chính",
+  feature1: "Thiết kế tiết kiệm năng lượng",
+  feature2: "Lắp đặt và bảo trì dễ dàng",
+  feature3: "Sử dụng vật liệu có độ bền cao",
+  inquire: "Liên hệ",
+
+  // Consultation Page
+  consultationPageDescription: "Nhận đề xuất giải pháp chiếu sáng tối ưu thông qua tư vấn miễn phí.",
+  consultationBenefits: "Lợi ích tư vấn miễn phí",
+  benefitTitle1: "Giải pháp tùy chỉnh",
+  benefitDescription1: "Đề xuất các giải pháp tối ưu phù hợp với không gian và yêu cầu của khách hàng.",
+  benefitTitle2: "Tiết kiệm chi phí",
+  benefitDescription2: "Lựa chọn sản phẩm hiệu quả giúp giảm chi phí ban đầu và bảo trì.",
+  benefitTitle3: "Lời khuyên chuyên gia",
+  benefitDescription3: "Nhận lời khuyên từ các chuyên gia có kinh nghiệm phong phú trong lĩnh vực.",
+  benefitTitle4: "Phản hồi nhanh",
+  benefitDescription4: "Chuyên gia sẽ liên hệ với bạn trong vòng 24 giờ sau khi gửi yêu cầu.",
+  testimonialTitle: "Đánh giá của khách hàng",
+  testimonialSubtitle: "Phản hồi từ khách hàng đã trải nghiệm dịch vụ tư vấn của LNP.",
+  testimonialQuote:
+    "Thông qua tư vấn miễn phí của LNP, tôi đã tìm thấy giải pháp chiếu sáng hoàn hảo. Tôi rất hài lòng với lời khuyên chuyên nghiệp và phản hồi nhanh chóng.",
+  testimonialAuthor: "Giám đốc Kim Chul-su",
+  testimonialCompany: "Studio Thiết kế Nội thất",
+  requestConsultation: "Đăng ký tư vấn",
+  formDescription: "Điền vào biểu mẫu bên dưới để đăng ký tư vấn miễn phí.",
+  name: "Tên",
+  namePlaceholder: "Nhập tên của bạn",
+  company: "Tên công ty",
+  companyPlaceholder: "Nhập tên công ty của bạn",
+  email: "Email",
+  emailPlaceholder: "Nhập địa chỉ email của bạn",
+  phone: "Số điện thoại",
+  phonePlaceholder: "Nhập số điện thoại liên lạc",
+  projectType: "Loại dự án",
+  selectProjectType: "Chọn loại dự án",
+  other: "Khác",
+  message: "Nội dung liên hệ",
+  messagePlaceholder: "Nhập nội dung liên hệ của bạn tại đây",
+
+  // Board Additional Translations
+  boardTitle: "Mọi thắc mắc về chiếu sáng, Kiến thức chiếu sáng không gian-IN",
+  boardDescription: "Chúng tôi đã tổng hợp những nội dung khách hàng thường thắc mắc nhất trước và sau khi mua đèn.",
+  backToBoard: "Quay lại bảng tin",
+  relatedPosts: "Bài viết liên quan",
+  downloadFile: "Tải xuống tệp",
+  viewImage: "Xem hình ảnh",
+  closeImage: "Đóng",
+
+  // Product Detailed Information
+  productFeatureLabel: "Đặc điểm",
+  productSpecifications: "Thông số kỹ thuật",
+  material: "Chất liệu",
+  size: "Kích thước",
+  color: "Màu sắc",
+  type: "Loại",
+  weight: "Trọng lượng",
+
+  // Installation Guide
+  installationGuideButton: "Xem cách thi công đèn trần nghệ thuật",
+  loading: "Đang tải...",
+  saveImageInstruction:
+    '* Để lưu ảnh, hãy nhấp chuột phải sau khi ảnh mở ra và chọn "Lưu hình ảnh thành...".',
+
+  // Newly Added Product Names
+  rollCoverName: "Vỏ cuộn khung Hambang",
+  roundCornerName: "Vật liệu hoàn thiện góc tròn khung Hambang",
+  wrappingRoundCornerName: "Vật liệu hoàn thiện góc tròn bọc tấm Sheet",
+  wrappingSquareCornerName: "Vật liệu hoàn thiện góc vuông bọc tấm Sheet",
+  wrappingMiddleFinishingName: "Vật liệu hoàn thiện phần giữa bọc tấm Sheet",
+
+  // Newly Added Product Descriptions
+  rollCoverDesc: "Vỏ cuộn cần thiết khi lắp đặt khung Hambang, mang lại độ bền và vẻ ngoài gọn gàng.",
+  roundCornerDesc: "Vật liệu hoàn thiện giúp xử lý các phần góc của khung Hambang một cách thẩm mỹ.",
+  wrappingRoundCornerDesc: "Vật liệu hoàn thiện giúp xử lý các phần góc của khung bọc tấm Sheet một cách thẩm mỹ.",
+  wrappingSquareCornerDesc: "Vật liệu hoàn thiện giúp xử lý các phần góc vuông của khung bọc tấm Sheet.",
+  wrappingMiddleFinishingDesc: "Vật liệu hoàn thiện giúp xử lý các phần kết nối ở giữa của khung bọc tấm Sheet.",
+
+  // Patents and Certificates Section
+  patentsAndCertificates: "Bằng sáng chế & Chứng chỉ",
+  patentsDescription: "Công ty Cổ phần LNP sở hữu nhiều bằng sáng chế và chứng chỉ dựa trên công nghệ sáng tạo.",
+  patent1Title: "Bằng sáng chế - Cụm khung trần (2023)",
+  patent2Title: "Chứng nhận đăng ký thiết kế - Thanh khuôn cho đèn trần nghệ thuật (2019)",
+  patent3Title: "Chứng nhận đăng ký thiết kế - Thanh khuôn cho đèn trần nghệ thuật (2019)",
+  patent4Title: "Bằng sáng chế - Thiết bị điều khiển chiếu sáng (2022)",
+  patent5Title: "Bằng sáng chế - Hệ thống chiếu sáng trực tiếp/gián tiếp cho trần nghệ thuật (2023)",
+  patent6Title: "Giấy chứng nhận công nhận bộ phận chuyên trách R&D (2022)",
+
+  // Wireless Switch Page
+  backToProducts: "Quay lại danh sách sản phẩm",
 }
 
 // 태국어 번역
+// 태국어 번역 (ภาษาไทย)
 const th = {
-  ...en,
-  wirelessSwitchAllInOne: "สวิตช์ควบคุมหลักแบบออลอินวัน", // 🌟 신제품 태국어
-  wirelessSwitchType1: "แบบมาตรฐาน (ไม่รองรับแอป)",
-  wirelessSwitchType2: "แบบรองรับแอป",
-  companyName: "บริษัท LNP",
+  // Common
+  companyName: "บริษัท แอลเอ็นพี จำกัด",
+  allRightsReserved: "สงวนลิขสิทธิ์ทั้งหมด",
+  learnMore: "เรียนรู้เพิ่มเติม",
+  contactUs: "ติดต่อเรา",
+  submit: "ส่งข้อมูล",
+
+  // Header Menu
+  companyIntroduction: "แนะนำบริษัท",
+  allProducts: "สินค้าทั้งหมด",
   ceilingFrame: "เฟรมเพดาน",
   wirelessSwitch: "สวิตช์ไร้สาย GUGU",
+  freeConsultation: "สอบถามข้อมูล",
+  board: "กระดานข่าว",
+
+  // Ceiling Frame Submenu
+  ceilingFrameType1: "เฟรมหุ้มแผ่นชีททั่วไป",
+  ceilingFrameType2: "เฟรมมอลดิ้ง Hambang แบบมาตรฐาน (มุมฉาก)",
+  ceilingFrameType3: "เฟรมมอลดิ้ง Hambang แบบนกนางนวล",
+
+  // Category
+  allCategories: "เฟรมเพดานทั้งหมด",
+
+  // Wireless Switch Submenu
+  wirelessSwitchAllInOne: "สวิตช์ควบคุมหลักแบบ All-in-One", // 🌟 เพิ่มสินค้าใหม่!
+  wirelessSwitchType1: "แบบมาตรฐาน (ไม่รองรับแอป)",
+  wirelessSwitchType2: "แบบรองรับแอป",
+
+  // Accessories
+  accessories: "อุปกรณ์เสริมและวัสดุตกแต่ง",
+
+  // Footer
+  footerCompanyDescription: "บริษัท แอลเอ็นพี จำกัด เป็นผู้นำในการนำเสนอโซลูชันแสงสว่างที่สร้างสรรค์",
+  quickLinks: "ลิงก์ด่วน",
+  products: "สินค้า",
+  companyAddress: "อาคาร LNP, 123 ถนนเทเฮรัน, เขตคังนัม, โซล",
+  companyFullAddress: "ห้อง B01, B02, B03, ชั้นใต้ดิน 1, 789 ถนนแทจัง, เมืองคิมโพ, จังหวัดคยองกี, เกาหลีใต้",
+  privacyPolicy: "นโยบายความเป็นส่วนตัว",
+  termsOfService: "เงื่อนไขการให้บริการ",
+  installationCases: "กรณีการติดตั้ง", // ✅ แก้ไขข้อผิดพลาด Footer
+
+  // Main Page
+  heroTitle: "ยกระดับคุณค่าของพื้นที่ด้วยโซลูชันแสงสว่างที่สร้างสรรค์",
+  heroSubtitle: "สร้างพื้นที่ที่สมาร์ทและสวยงามยิ่งขึ้นด้วยเฟรมเพดานและสวิตช์ไร้สายของเรา",
+  exploreProducts: "เลือกชมสินค้า",
+  companyIntroTitle: "บริษัท แอลเอ็นพี จำกัด",
+  companyIntroDescription:
+    "บริษัท แอลเอ็นพี จำกัด เป็นบริษัทชั้นนำที่นำเสนอโซลูชันแสงสว่างที่สร้างสรรค์ มีเทคโนโลยีระดับแนวหน้าในด้านเฟรมเพดานและสวิตช์ไร้สาย",
+  companyImage: "รูปภาพบริษัท",
+  featuredProducts: "สินค้าแนะนำ",
+  featuredProductsDescription: "ขอแนะนำสินค้าที่เป็นตัวแทนของ บริษัท แอลเอ็นพี จำกัด",
+  ceilingFrameShortDesc: "โซลูชันเฟรมเพดานด้วยการออกแบบที่สร้างสรรค์และความทนทานที่เป็นเลิศ",
+  wirelessSwitchShortDesc: "ระบบสวิตช์ไร้สายอัจฉริยะที่ติดตั้งง่าย",
+  viewAllProducts: "ดูสินค้าทั้งหมด",
+  whyChooseUs: "ทำไมต้องเลือก LNP?",
+  whyChooseUsDescription: "ค้นพบคุณค่าที่แตกต่างที่ บริษัท แอลเอ็นพี จำกัด มอบให้",
+  highlightTitle1: "คุณภาพที่ดีที่สุด",
+  highlightDesc1: "มอบสินค้าคุณภาพสูงสุดผ่านระบบควบคุมคุณภาพที่เข้มงวด",
+  highlightTitle2: "ทีมงานมืออาชีพ",
+  highlightDesc2: "ทีมผู้เชี่ยวชาญที่มีประสบการณ์สูงพร้อมมอบบริการที่ดีที่สุด",
+  highlightTitle3: "ตอบสนองรวดเร็ว",
+  highlightDesc3: "ตอบสนองต่อความต้องการของลูกค้าอย่างรวดเร็วเพื่อสร้างความพึงพอใจสูงสุด",
+  highlightTitle4: "วิสัยทัศน์ระดับโลก",
+  highlightDesc4: "มีวิสัยทัศน์ที่จะขยายไปสู่ตลาดโลกมากกว่าแค่ในประเทศเกาหลี",
+  consultationDescription: "รับคำแนะนำโซลูชันแสงสว่างที่เหมาะสมที่สุดผ่านการปรึกษาฟรี",
+
+  // Company Intro Page
+  aboutUs: "เกี่ยวกับเรา",
+  companyOverview1: "ตั้งแต่ก่อตั้งในปี 2010 บริษัท แอลเอ็นพี จำกัด ได้พัฒนาและนำเสนอโซลูชันแสงสว่างที่สร้างสรรค์มาโดยตลอด",
+  companyOverview2:
+    "ด้วยเทคโนโลยีที่เป็นเอกลักษณ์ในด้านเฟรมเพดานและสวิตช์ไร้สาย เรามอบคุณค่าที่ดีที่สุดให้กับลูกค้า",
+  companyBuilding: "อาคารบริษัท",
+  companyHistory: "ประวัติบริษัท",
+  history2023: "เข้าสู่ตลาดเวียดนามและก่อตั้งนิติบุคคลในท้องถิ่น",
+  history2020: "เปิดตัวสินค้าสวิตช์ไร้สายใหม่และได้รับสิทธิบัตร",
+  history2018: "พัฒนาและเปิดตัวระบบเฟรมเพดาน",
+  history2015: "ก่อตั้งสถาบันวิจัยในเครือองค์กร",
+  history2010: "ก่อตั้ง บริษัท แอลเอ็นพี จำกัด",
+  visionAndMission: "วิสัยทัศน์และพันธกิจ",
+  vision: "วิสัยทัศน์",
+  visionDescription: "สร้างโลกที่สว่างไสวและสมาร์ทขึ้นผ่านโซลูชันแสงสว่างที่สร้างสรรค์",
+  mission: "พันธกิจ",
+  missionDescription: "นำเสนอมาตรฐานใหม่ให้กับอุตสาหกรรมแสงสว่างด้วยสินค้าและบริการที่สร้างสรรค์โดยยึดลูกค้าเป็นศูนย์กลาง",
+
+  // Company Intro Page Additional Translations
+  companyTagline: "เปลี่ยนแนวคิดของการตกแต่งภายในด้วยแสงสว่าง",
+  companyName2: "เราคือ บริษัท แอลเอ็นพี จำกัด",
+  companyDesc1: "ก่อตั้งขึ้นในปี 2019 เพื่อสร้างประวัติศาสตร์ใหม่ให้กับการตกแต่งภายในด้วยแสงสว่างในอพาร์ตเมนต์ของเกาหลี",
+  companyDesc2:
+    "หากดูประวัติศาสตร์การตกแต่งภายในด้วยแสงสว่างในอพาร์ตเมนต์ของประเทศเรา สามารถแบ่งได้เป็นช่วงก่อนและหลังการก่อตั้ง LNP ซึ่งเป็นข้อเท็จจริงที่ไม่มีใครปฏิเสธได้",
+  companyDesc3: "ไฟเพดานหลุมซ่อนฝ้าได้กลายเป็นองค์ประกอบพื้นฐานของการตกแต่งภายในด้วยแสงสว่างในอพาร์ตเมนต์ของเกาหลีในปัจจุบัน",
+  companyDesc4:
+    "ในอดีต การติดตั้งไฟเพดานหลุมซ่อนฝ้าทำได้ยากเนื่องจากราคาสูง ระยะเวลาติดตั้งนาน และปัญหาฝุ่นจากการทำงานไม้ ด้วยการก่อตั้ง LNP เราได้เปิดยุคสมัยที่ทุกคนสามารถติดตั้งไฟเพดานหลุมซ่อนฝ้าได้โดยไม่มีภาระ ด้วยราคาที่จับต้องได้ ใช้เวลาติดตั้งไม่ถึงหนึ่งชั่วโมง และไม่มีฝุ่นละออง LNP คือผู้เริ่มต้นการปฏิวัตินี้",
+
+  // Company History Additional Translations
+  historyItem2023_1: "จดสิทธิบัตรไฟเส้นเพดานซ่อนฝ้า",
+  historyItem2023_2: "จดสิทธิบัตรเฟรมเพดาน Hambang",
+  historyItem2022_1: "จดสิทธิบัตรเทคโนโลยีสวิตช์ทัชไร้สาย GUGU",
+  historyItem2022_2: "ก่อตั้งศูนย์วิจัยและพัฒนา",
+  historyItem2022_3: "พัฒนาเฟรมเพดาน Hambang",
+  historyItem2021_1: "พัฒนาเฟรมไฟเส้นเพดานหลุม",
+  historyItem2021_2: "พัฒนาสวิตช์ทัชไร้สาย GUGU แบบรองรับแอป",
+  historyItem2020_1: "พัฒนาสวิตช์ทัชไร้สาย GUGU แบบมาตรฐาน",
+  historyItem2019_1: "ก่อตั้ง บริษัท แอลเอ็นพี จำกัด",
+  historyItem2019_2: "พัฒนาเฟรมไฟเพดานหลุมเจ้าแรกในเกาหลี",
+  historyItem2019_3: "จดสิทธิบัตรเกี่ยวกับเฟรมไฟเพดานหลุม",
+
+  // Vision & Mission Additional Translations
+  visionText: "ยอมรับเสียงของลูกค้าอย่างจริงจัง โดยยืนอยู่ในจุดเดียวกับลูกค้าและแบ่งปันความคิดร่วมกัน",
+  missionText: "ผู้นำเทรนด์การตกแต่งภายในด้วยแสงสว่างที่เติบโตไปพร้อมกับลูกค้า",
+
+  // Products Page
+  productsPageDescription: "เลือกชมสินค้าที่หลากหลายของ บริษัท แอลเอ็นพี จำกัด",
+  ceilingFrameDescription: "เฟรมเพดานที่มีดีไซน์สร้างสรรค์และความทนทานเป็นเลิศ",
+  wirelessSwitchDescription: "สวิตช์ทัชไร้สาย GUGU อัจฉริยะ ติดตั้งง่าย",
+  lightingDescription: "สินค้าแสงสว่างที่ประหยัดพลังงานและมีดีไซน์หรูหรา",
+  accessoriesDescription: "วัสดุตกแต่งและอุปกรณ์อื่นๆ สำหรับระบบเพดานและแสงสว่าง",
+  viewProducts: "ดูสินค้า",
+  bestSellers: "สินค้าขายดี",
+  product: "สินค้า",
+  productDescription: "สินค้าที่มีการออกแบบที่สร้างสรรค์และฟังก์ชันการใช้งานที่เป็นเลิศ",
+  productFeatures: "คุณสมบัติหลัก",
+  feature1: "การออกแบบที่ประหยัดพลังงาน",
+  feature2: "ติดตั้งและบำรุงรักษาง่าย",
+  feature3: "ใช้วัสดุที่มีความทนทานสูง",
+  inquire: "สอบถามข้อมูล",
+
+  // Consultation Page
+  consultationPageDescription: "รับคำแนะนำโซลูชันแสงสว่างที่เหมาะสมที่สุดผ่านการปรึกษาฟรี",
+  consultationBenefits: "สิทธิประโยชน์จากการปรึกษาฟรี",
+  benefitTitle1: "โซลูชันที่ปรับตามความต้องการ",
+  benefitDescription1: "เสนอโซลูชันที่เหมาะสมที่สุดตามพื้นที่และความต้องการของลูกค้า",
+  benefitTitle2: "ลดค่าใช้จ่าย",
+  benefitDescription2: "การเลือกสินค้าที่มีประสิทธิภาพช่วยลดค่าใช้จ่ายเริ่มแรกและค่าบำรุงรักษา",
+  benefitTitle3: "คำแนะนำจากผู้เชี่ยวชาญ",
+  benefitDescription3: "รับคำแนะนำจากผู้เชี่ยวชาญที่มีประสบการณ์สูงในสาขานี้",
+  benefitTitle4: "ตอบสนองรวดเร็ว",
+  benefitDescription4: "ผู้เชี่ยวชาญจะติดต่อกลับภายใน 24 ชั่วโมงหลังจากสอบถาม",
+  testimonialTitle: "รีวิวจากลูกค้า",
+  testimonialSubtitle: "รีวิวจากลูกค้าที่เคยใช้บริการปรึกษาของ LNP",
+  testimonialQuote:
+    "ฉันพบโซลูชันแสงสว่างที่สมบูรณ์แบบผ่านการปรึกษาฟรีของ LNP ประทับใจมากกับคำแนะนำที่เป็นมืออาชีพและการตอบกลับที่รวดเร็ว",
+  testimonialAuthor: "CEO คิม ชอล-ซู",
+  testimonialCompany: "สตูดิโอออกแบบภายใน",
+  requestConsultation: "สมัครรับคำปรึกษา",
+  formDescription: "กรอกแบบฟอร์มด้านล่างเพื่อสมัครรับคำปรึกษาฟรี",
+  name: "ชื่อ",
+  namePlaceholder: "กรุณากรอกชื่อของคุณ",
+  company: "ชื่อบริษัท",
+  companyPlaceholder: "กรุณากรอกชื่อบริษัทของคุณ",
+  email: "อีเมล",
+  emailPlaceholder: "กรุณากรอกอีเมลของคุณ",
+  phone: "เบอร์โทรศัพท์",
+  phonePlaceholder: "กรุณากรอกเบอร์โทรศัพท์ติดต่อ",
+  projectType: "ประเภทโปรเจกต์",
+  selectProjectType: "เลือกประเภทโปรเจกต์",
+  other: "อื่นๆ",
+  message: "รายละเอียดการสอบถาม",
+  messagePlaceholder: "กรุณากรอกรายละเอียดการสอบถามของคุณ",
+
+  // Board Additional Translations
+  boardTitle: "ทุกคำถามเกี่ยวกับแสงสว่าง, ความรู้เรื่องแสงสว่างในพื้นที่-IN",
+  boardDescription: "เราได้รวบรวมเนื้อหาที่ลูกค้าสงสัยมากที่สุดทั้งก่อนและหลังการซื้อไฟ",
+  backToBoard: "กลับไปที่กระดานข่าว",
+  relatedPosts: "บทความที่เกี่ยวข้อง",
+  downloadFile: "ดาวน์โหลดไฟล์",
+  viewImage: "ดูรูปภาพ",
+  closeImage: "ปิด",
+
+  // Product Detailed Information
+  productFeatureLabel: "คุณสมบัติ",
+  productSpecifications: "ข้อมูลจำเพาะของสินค้า",
+  material: "วัสดุ",
+  size: "ขนาด",
+  color: "สี",
+  type: "ประเภท",
+  weight: "น้ำหนัก",
+
+  // Installation Guide
+  installationGuideButton: "ดูวิธีการติดตั้งไฟเพดานหลุมซ่อนฝ้า",
+  loading: "กำลังโหลด...",
+  saveImageInstruction:
+    '* หากต้องการบันทึกรูปภาพ ให้คลิกขวาที่รูปภาพหลังจากเปิดขึ้นมาแล้วเลือก "บันทึกรูปภาพเป็น..."',
+
+  // Newly Added Product Names
+  rollCoverName: "โรลคัฟเวอร์เฟรม Hambang",
+  roundCornerName: "วัสดุปิดขอบมุมโค้งเฟรม Hambang",
+  wrappingRoundCornerName: "วัสดุปิดขอบมุมโค้งหุ้มแผ่นชีท",
+  wrappingSquareCornerName: "วัสดุปิดขอบมุมฉากหุ้มแผ่นชีท",
+  wrappingMiddleFinishingName: "วัสดุปิดรอยต่อตรงกลางหุ้มแผ่นชีท",
+
+  // Newly Added Product Descriptions
+  rollCoverDesc: "โรลคัฟเวอร์ที่จำเป็นสำหรับการติดตั้งเฟรม Hambang ช่วยให้งานเรียบร้อยและทนทาน",
+  roundCornerDesc: "วัสดุปิดขอบที่ช่วยปิดส่วนมุมของเฟรม Hambang ให้สวยงาม",
+  wrappingRoundCornerDesc: "วัสดุปิดขอบที่ช่วยปิดส่วนมุมของเฟรมหุ้มแผ่นชีทให้สวยงาม",
+  wrappingSquareCornerDesc: "วัสดุปิดขอบมุมฉากที่ช่วยปิดส่วนมุมของเฟรมหุ้มแผ่นชีทให้สวยงาม",
+  wrappingMiddleFinishingDesc: "วัสดุปิดรอยต่อที่ช่วยปิดส่วนเชื่อมต่อตรงกลางของเฟรมหุ้มแผ่นชีทให้สวยงาม",
+
+  // Patents and Certificates Section
+  patentsAndCertificates: "สิทธิบัตรและใบรับรอง",
+  patentsDescription: "บริษัท แอลเอ็นพี จำกัด ถือครองสิทธิบัตรและใบรับรองจำนวนมากจากเทคโนโลยีที่สร้างสรรค์",
+  patent1Title: "สิทธิบัตร - ชุดประกอบเฟรมเพดาน (2023)",
+  patent2Title: "ใบรับรองการจดทะเบียนดีไซน์ - แถบมอลดิ้งสำหรับไฟเพดานหลุม (2019)",
+  patent3Title: "ใบรับรองการจดทะเบียนดีไซน์ - แถบมอลดิ้งสำหรับไฟเพดานหลุม (2019)",
+  patent4Title: "สิทธิบัตร - อุปกรณ์ควบคุมแสงสว่าง (2022)",
+  patent5Title: "สิทธิบัตร - ระบบแสงสว่างทางตรงและทางอ้อมสำหรับเพดานหลุม (2023)",
+  patent6Title: "ใบรับรองการยอมรับแผนกวิจัยและพัฒนา (2022)",
+
+  // Wireless Switch Page
+  backToProducts: "กลับไปที่หน้ารวมสินค้า",
 }
 
 // 중국어 간체 번역
+// 중국어 간체 번역 (简体中文)
 const zh = {
-  ...en,
-  wirelessSwitchAllInOne: "多合一总开关", // 🌟 신제품 중국어
-  wirelessSwitchType1: "标准型（非应用型）",
-  wirelessSwitchType2: "应用支持型",
-  companyName: "LNP公司",
+  // Common
+  companyName: "株式会社 LNP",
+  allRightsReserved: "版权所有。",
+  learnMore: "了解更多",
+  contactUs: "联系我们",
+  submit: "提交",
+
+  // Header Menu
+  companyIntroduction: "公司介绍",
+  allProducts: "全部产品",
   ceilingFrame: "天花板框架",
-  wirelessSwitch: "GUGU无线开关",
+  wirelessSwitch: "GUGU 无线开关",
+  freeConsultation: "咨询申请",
+  board: "留言板",
+
+  // Ceiling Frame Submenu
+  ceilingFrameType1: "普通贴纸包覆框架",
+  ceilingFrameType2: "Hambang 标准（直角）模制框架",
+  ceilingFrameType3: "Hambang 海鸥型模制框架",
+
+  // Category
+  allCategories: "全部天花板框架",
+
+  // Wireless Switch Submenu
+  wirelessSwitchAllInOne: "多合一全关开关", // 🌟 新产品添加！
+  wirelessSwitchType1: "标准型（不支持 App）",
+  wirelessSwitchType2: "App 支持型",
+
+  // Accessories
+  accessories: "配件及饰面材料",
+
+  // Footer
+  footerCompanyDescription: "株式会社 LNP 是提供创新照明解决方案的领先企业。",
+  quickLinks: "快速链接",
+  products: "产品",
+  companyAddress: "首尔特别市江南区德黑兰路 123, LNP 大厦",
+  companyFullAddress: "韩国京畿道金浦市太庄路 789 地下 1 层 B01, B02, B03 号 (长基洞, 金光高科技城大厦)",
+  privacyPolicy: "隐私政策",
+  termsOfService: "服务条款",
+  installationCases: "施工案例", // ✅ 解决 Footer 错误
+
+  // Main Page
+  heroTitle: "通过创新照明解决方案提升空间价值",
+  heroSubtitle: "利用我们的天花板框架和无线开关，打造更智能、更美观的空间。",
+  exploreProducts: "浏览产品",
+  companyIntroTitle: "株式会社 LNP",
+  companyIntroDescription:
+    "株式会社 LNP 是提供创新照明解决方案的领先企业，在天花板框架和无线开关领域拥有顶尖技术。",
+  companyImage: "公司图片",
+  featuredProducts: "核心产品",
+  featuredProductsDescription: "介绍株式会社 LNP 的代表性产品。",
+  ceilingFrameShortDesc: "兼具创新设计与卓越耐用性的天花板框架解决方案",
+  wirelessSwitchShortDesc: "安装便捷的智能无线开关系统",
+  viewAllProducts: "查看全部产品",
+  whyChooseUs: "为什么选择 LNP？",
+  whyChooseUsDescription: "介绍株式会社 LNP 提供的差异化价值。",
+  highlightTitle1: "卓越品质",
+  highlightDesc1: "通过严格的质量管理体系提供最高品质的产品。",
+  highlightTitle2: "专家团队",
+  highlightDesc2: "拥有丰富经验的专家团队提供最优质的服务。",
+  highlightTitle3: "快速响应",
+  highlightDesc3: "快速响应客户需求，提高客户满意度。",
+  highlightTitle4: "全球愿景",
+  highlightDesc4: "拥有超越韩国、向全球市场扩张的远大愿景。",
+  consultationDescription: "通过免费咨询，获取最适合您的照明解决方案建议。",
+
+  // Company Intro Page
+  aboutUs: "公司介绍",
+  companyOverview1: "株式会社 LNP 自 2010 年成立以来，一直致力于开发和提供创新的照明解决方案。",
+  companyOverview2:
+    "凭借在天花板框架和无线开关领域的独特技术，为客户提供最佳价值。",
+  companyBuilding: "公司大楼",
+  companyHistory: "公司履历",
+  history2023: "进军越南市场并设立当地法人",
+  history2020: "推出无线开关新产品并获得专利",
+  history2018: "开发并推出天花板框架系统",
+  history2015: "设立企业附属研究所",
+  history2010: "成立株式会社 LNP",
+  visionAndMission: "愿景与使命",
+  vision: "愿景",
+  visionDescription: "通过创新的照明解决方案，打造更明亮、更智能的世界。",
+  mission: "使命",
+  missionDescription: "通过以客户为中心的创新产品和服务，树立照明行业的新标准。",
+
+  // Company Intro Page Additional Translations
+  companyTagline: "改变照明装饰的概念。",
+  companyName2: "我们是株式会社 LNP。",
+  companyDesc1: "成立于 2019 年，旨在书写韩国公寓照明装饰的新历史。",
+  companyDesc2:
+    "回顾我国公寓照明装饰的历史，可以毫不夸张地说，它被分为 LNP 成立之前和之后。",
+  companyDesc3: "如今，天花板凹槽灯已成为韩国公寓照明装饰施工的基本要素。",
+  companyDesc4:
+    "过去，天花板凹槽灯因高昂的木工成本、漫长的施工周期和粉尘问题而难以普及。随着 LNP 的成立，凭借合理的价格、不到 1 小时的施工时间以及无粉尘施工，开启了任何人都能轻松享受天花板凹槽灯的时代。LNP 引领了这场变革。",
+
+  // Company History Additional Translations
+  historyItem2023_1: "天花板线条灯专利注册",
+  historyItem2023_2: "Hambang 天花板框架专利注册",
+  historyItem2022_1: "GUGU 无线触摸开关技术专利注册",
+  historyItem2022_2: "设立研究所",
+  historyItem2022_3: "开发 Hambang 天花板框架",
+  historyItem2021_1: "开发天花板线条灯框架",
+  historyItem2021_2: "开发 GUGU 无线触摸开关 App 型",
+  historyItem2020_1: "开发 GUGU 无线触摸开关标准型",
+  historyItem2019_1: "成立株式会社 LNP",
+  historyItem2019_2: "开发韩国首款天花板凹槽灯框架",
+  historyItem2019_3: "注册天花板凹槽灯框架相关专利",
+
+  // Vision & Mission Additional Translations
+  visionText: "站在客户立场，以客户之心，积极采纳客户的声音",
+  missionText: "与客户共同成长的照明装饰趋势领导者",
+
+  // Products Page
+  productsPageDescription: "介绍株式会社 LNP 的多种产品。",
+  ceilingFrameDescription: "设计创新且耐用性卓越的天花板框架",
+  wirelessSwitchDescription: "安装便捷、智能的 GUGU 无线触摸开关",
+  lightingDescription: "节能且设计精美的照明产品",
+  accessoriesDescription: "用于天花板和照明系统的饰面材料及其他耗材",
+  viewProducts: "查看产品",
+  bestSellers: "畅销产品",
+  product: "产品",
+  productDescription: "兼具创新设计与卓越功能性的产品",
+  productFeatures: "主要特点",
+  feature1: "节能设计",
+  feature2: "便捷的安装与维护",
+  feature3: "使用高耐用性材料",
+  inquire: "咨询申请",
+
+  // Consultation Page
+  consultationPageDescription: "通过免费咨询，获取最适合您的照明解决方案建议。",
+  consultationBenefits: "免费咨询权益",
+  benefitTitle1: "定制化解决方案",
+  benefitDescription1: "根据客户的空间和需求，建议最适合的解决方案。",
+  benefitTitle2: "降低成本",
+  benefitDescription2: "通过高效的产品选择，降低初期成本和维护成本。",
+  benefitTitle3: "专家建议",
+  benefitDescription3: "获取拥有丰富经验的专家提供的专业建议。",
+  benefitTitle4: "快速响应",
+  benefitDescription4: "咨询后 24 小时内专家将与您联系。",
+  testimonialTitle: "客户评价",
+  testimonialSubtitle: "体验过 LNP 咨询服务的客户评价。",
+  testimonialQuote:
+    "通过 LNP 的免费咨询，我找到了最完美的照明解决方案。我对专业的建议和快速的响应非常满意。",
+  testimonialAuthor: "金哲秀 代表",
+  testimonialCompany: "室内设计工作室",
+  requestConsultation: "申请咨询",
+  formDescription: "填写下方表格以申请免费咨询。",
+  name: "姓名",
+  namePlaceholder: "请输入姓名",
+  company: "公司名称",
+  companyPlaceholder: "请输入公司名称",
+  email: "电子邮箱",
+  emailPlaceholder: "请输入电子邮箱",
+  phone: "联系方式",
+  phonePlaceholder: "请输入联系方式",
+  projectType: "项目类型",
+  selectProjectType: "请选择项目类型",
+  other: "其他",
+  message: "咨询内容",
+  messagePlaceholder: "请输入咨询内容",
+
+  // Board Additional Translations
+  boardTitle: "关于照明的所有疑问，空间照明知识-IN",
+  boardDescription: "整理了客户在购买照明前后最关心的内容。",
+  backToBoard: "返回留言板",
+  relatedPosts: "相关文章",
+  downloadFile: "下载文件",
+  viewImage: "查看图片",
+  closeImage: "关闭",
+
+  // Product Detailed Information
+  productFeatureLabel: "特点",
+  productSpecifications: "产品规格",
+  material: "材质",
+  size: "尺寸",
+  color: "颜色",
+  type: "类型",
+  weight: "重量",
+
+  // Installation Guide
+  installationGuideButton: "查看天花板凹槽灯施工方法",
+  loading: "加载中...",
+  saveImageInstruction:
+    '* 如需保存图片，请在图片打开后右键点击并选择“图片另存为”。',
+
+  // Newly Added Product Names
+  rollCoverName: "Hambang 框架卷盖",
+  roundCornerName: "Hambang 圆角饰面材",
+  wrappingRoundCornerName: "贴纸包覆圆角饰面材",
+  wrappingSquareCornerName: "贴纸包覆直角饰面材",
+  wrappingMiddleFinishingName: "贴纸包覆中间饰面材",
+
+  // Newly Added Product Descriptions
+  rollCoverDesc: "Hambang 框架安装所需的卷盖，提供整洁的饰面和耐用性。",
+  roundCornerDesc: "整洁修饰 Hambang 框架拐角部分的圆角饰面材料。",
+  wrappingRoundCornerDesc: "整洁修饰贴纸包覆框架拐角部分的圆角饰面材料。",
+  wrappingSquareCornerDesc: "整洁修饰贴纸包覆框架拐角部分的直角饰面材料。",
+  wrappingMiddleFinishingDesc: "整洁修饰贴纸包覆框架中间连接部分的饰面材料。",
+
+  // Patents and Certificates Section
+  patentsAndCertificates: "专利与认证",
+  patentsDescription: "株式会社 LNP 凭借创新技术拥有多项专利和认证。",
+  patent1Title: "专利证 - 天花板框架组件 (2023)",
+  patent2Title: "设计注册证 - 凹槽天花板照明用装饰条 (2019)",
+  patent3Title: "设计注册证 - 凹槽天花板照明用装饰条 (2019)",
+  patent4Title: "专利证 - 照明控制装置 (2022)",
+  patent5Title: "专利证 - 天花板直间接照明系统 (2023)",
+  patent6Title: "研发专门部门认定书 (2022)",
+
+  // Wireless Switch Page
+  backToProducts: "返回产品列表",
 }
 
 // 번역 함수
