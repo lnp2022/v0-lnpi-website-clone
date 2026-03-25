@@ -139,10 +139,12 @@ export async function submitConsultation(prevState: any, formData: FormData) {
 // 문의 유형 텍스트 반환 함수
 function getInquiryTypeText(inquiryType: string): string {
   const inquiryTypes: { [key: string]: string } = {
-    all: "(주)엘엔피 판매 모든 상품 구매 문의",
+    all: "(주)엘엔피 전체 상품 구매 문의",
     ceiling: "우물천장 프레임 구매 문의",
     switch: "GUGU 무선 스위치 구매 문의",
-    service: "GUGU 스위치 A/S 관련 문의",
+    service: "GUGU 무선 스위치 A/S 문의",
+    purchase: "GUGU 올인원 스위치 구매 문의",
+    allinoneservice: "GUGU 올인원 스위치 A/S 문의",
     other: "기타 문의",
   }
 
