@@ -194,7 +194,7 @@ export default function ProductsPage({
                   : "이질감 없는 디자인과 쉬운 설치 및 A/S",
       features: [
         locale === "ko"
-          ? "1인 가구 안심 케어 서비스 제공"
+          ? "1인 가구 안심 케어 서비스 제공 - 올인원 스위치 한정"
           : locale === "en"
             ? "Providing safety care service for single-person households"
             : locale === "vi"
@@ -203,7 +203,7 @@ export default function ProductsPage({
                 ? "ให้บริการดูแลความปลอดภัยสำหรับครัวเรือนคนเดียว"
                 : locale === "zh"
                   ? "为单人家庭提供安心护理服务"
-                  : "1인 가구 안심 케어 서비스 제공",
+                  : "1인 가구 안심 케어 서비스 제공 - 올인원 스위치 한정",
         locale === "ko"
           ? "1~6채널 까지 원하는 채널로 선택 가능"
           : locale === "en"
