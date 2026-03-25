@@ -309,6 +309,28 @@ export default function ConsultationPage({
                               ? "สอบถามเกี่ยวกับบริการสวิตช์ GUGU"
                               : "GUGU开关服务咨询"}
                     </option>
+                    <option value="purchase">
+                      {locale === "ko"
+                        ? "GUGU 올인원 스위치 구매 문의"
+                        : locale === "en"
+                           ? "GUGU All-in-One Switch Purchase Inquiry"
+                           : locale === "vi"
+                              ? "Yêu cầu mua công tắc All-in-One GUGU"
+                              : locale === "th"
+                                 ? "สอบถามการซื้อสวิตช์ GUGU ออลอินวัน"
+                                 : "GUGU 全合一开关购买咨询"}
+                    </option>
+                    <option value="allinone-service">
+                      {locale === "ko"
+                        ? "GUGU 올인원 스위치 A/S 문의"
+                        : locale === "en"
+                           ? "GUGU All-in-One Switch A/S Inquiry"
+                           : locale === "vi"
+                              ? "Yêu cầu bảo hành công tắc All-in-One GUGU"
+                              : locale === "th"
+                                 ? "สอบถามเกี่ยวกับบริการหลังการขายสวิตช์ GUGU ออลอินวัน"
+                                 : "GUGU 全合一开关售后服务咨询"}       
+                    </option>
                     <option value="other">
                       {locale === "ko"
                         ? "기타 문의"
