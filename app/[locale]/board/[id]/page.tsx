@@ -157,6 +157,40 @@ export default function BoardDetailPage({
                 ? "ไฟล์ติดตั้งแอปสวิตช์ GUGU สำหรับ Android (ZIP)"
                 : "适用于安卓系统的GUGU开关应用安装文件 (ZIP)",
     },
+    {
+      id: 6,
+      title:
+        locale === "ko"
+          ? "GUGU 올인원 스위치 설명서"
+          : locale === "en"
+            ? "GUGU All-in-One Switch Manual"
+            : locale === "vi"
+              ? "Hướng dẫn sử dụng công tắc All-in-One GUGU"
+              : locale === "th"
+                ? "คู่มือการใช้งานสวิตช์ GUGU ออลอินวัน"
+                : "GUGU 全合一开关说明书",
+      bgColor: "bg-[#f5f2ea]",
+      // 🖼️ 사진은 기존의 사각형 로고를 그대로 사용하여 일관성을 높였습니다.
+      images: ["/downloads/ALLINONE.jpg"],
+      files: [
+        {
+          name: "ALLINONE_MANUAL.pdf",
+          size: "5.58MB", // 실제 파일 용량에 맞춰 수정해 주세요!
+          // 🔗 사진 속 downloads 폴더 내 파일명과 정확히 매칭했습니다.
+          url: "/downloads/ALLINONE_MANUAL.pdf",
+        },
+      ],
+      content:
+        locale === "ko"
+          ? "GUGU 올인원 스위치 상세 사용 및 설치 설명서"
+          : locale === "en"
+            ? "Detailed manual for GUGU All-in-One Switch use and installation"
+            : locale === "vi"
+              ? "Hướng dẫn chi tiết về cách sử dụng và lắp đặt công tắc All-in-One GUGU"
+              : locale === "th"
+                ? "คู่มือการใช้งานและการติดตั้งสวิตช์ GUGU ออลอินวันอย่างละเอียด"
+                : "GUGU 全合一开关详细使用及安装说明书",
+    },
   ]
 
   const post = posts.find((p) => p.id === postId) || posts[0]
