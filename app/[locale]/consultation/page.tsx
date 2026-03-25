@@ -298,7 +298,7 @@ export default function ConsultationPage({
                               ? "สอบถามการซื้อสวิตช์ไร้สาย GUGU"
                               : "GUGU无线开关购买咨询"}
                     </option>
-                    <option value="service">
+                    <option value="guguservice">
                       {locale === "ko"
                         ? "GUGU 스위치 A/S 관련 문의"
                         : locale === "en"
@@ -320,7 +320,7 @@ export default function ConsultationPage({
                                  ? "สอบถามการซื้อสวิตช์ GUGU ออลอินวัน"
                                  : "GUGU 全合一开关购买咨询"}
                     </option>
-                    <option value="allinone-service">
+                    <option value="allinoneservice">
                       {locale === "ko"
                         ? "GUGU 올인원 스위치 A/S 문의"
                         : locale === "en"
