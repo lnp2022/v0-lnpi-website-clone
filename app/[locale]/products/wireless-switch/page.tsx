@@ -69,7 +69,7 @@ export default function WirelessSwitchPage({
                  : "无线一键总关开关 + 安心护理服务（专利）",
   category: "allinone-type",
       image: "/images/wireless-switch/allinone.png",
-      link: `/${locale}/products/wireless-switch/allinone`,
+      link: `/${locale}/products/wireless-switch/all-in-one`,
     },
   ]
 
