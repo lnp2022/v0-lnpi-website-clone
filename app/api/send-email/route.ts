@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       auth: {
         user: "2022landp@gmail.com", 
         // 보안을 위해 Vercel 환경변수 사용을 권장하지만, 일단 현재 쓰시는 앱 비밀번호를 기본값으로 넣었습니다.
-        pass: process.env.EMAIL_PASS || "ygbc prgb uygc tjsi", 
+        pass: process.env.EMAIL_PASS || "ygbcprgbuygctjsi", 
       },
     })
 
