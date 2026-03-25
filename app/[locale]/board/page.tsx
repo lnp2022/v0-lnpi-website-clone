@@ -119,6 +119,42 @@ export default function BoardPage({
       ],
       content: "2025년~2026년 아파트 입주 정보",
     },
+    {
+      id: 5,
+      title:
+        locale === "ko"
+          ? "GUGU 스위치 APK 파일 다운로드"
+          : locale === "en"
+            ? "GUGU Switch APK File Download"
+            : locale === "vi"
+              ? "Tải xuống tệp APK công tắc GUGU"
+              : locale === "th"
+                ? "ดาวน์โหลดไฟล์ APK สวิตช์ GUGU"
+                : "GUGU开关APK文件下载",
+      // 🎨 기존 카드들과 통일감을 주기 위해 같은 배경색을 사용했습니다.
+      bgColor: "bg-[#f5f2ea]", 
+      // 🖼️ 사진은 기존 로고 이미지를 그대로 사용하거나, public/images에 새 아이콘을 넣고 경로를 바꾸세요.
+      images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8WJFz0qPg3p82AvmALJ0cX37GPqdAN.png"],
+      files: [
+        {
+          // ✅ 실제 파일 이름과 매칭하세요.
+          name: "gugu_switch_v1.zip", 
+          size: "4.7MB", // 실제 파일 용량으로 수정해 주세요!
+          // 🔗 public/downloads 폴더에 파일을 넣으셨다면 아래 경로를 사용하세요.
+          url: "/downloads/gugu_switch_v1.zip",
+        },
+      ],
+      content: 
+        locale === "ko" 
+          ? "안드로이드 전용 GUGU 스위치 앱 설치 파일(ZIP 압축)" 
+          : locale === "en"
+            ? "GUGU Switch App Installation File for Android (ZIP)"
+            : locale === "vi"
+              ? "Tệp cài đặt ứng dụng công tắc GUGU cho Android (ZIP)"
+              : locale === "th"
+                ? "ไฟล์ติดตั้งแอปสวิตช์ GUGU สำหรับ Android (ZIP)"
+                : "适用于安卓系统的GUGU开关应用安装文件 (ZIP)",
+    },
   ]
 
   return (
