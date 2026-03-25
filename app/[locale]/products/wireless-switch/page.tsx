@@ -42,15 +42,15 @@ export default function WirelessSwitchPage({
       name: locale === "ko" ? "GUGU 스마트 무선 터치 스위치 (앱 지원 타입)" : locale === "en" ? "GUGU Smart Wireless Touch Switch (App Support)" : locale === "vi" ? "Công tắc GUGU (App)" : locale === "th" ? "สวิตช์ GUGU (แอป)" : "GUGU智能开关 (应用型)",
       description: locale === "ko" ? "스마트폰 앱으로 제어 가능한 고급형 무선 스위치" : locale === "en" ? "Premium wireless switch with smartphone app control" : locale === "vi" ? "Công tắc cao cấp điều khiển qua ứng dụng" : locale === "th" ? "สวิตช์พรีเมียมควบคุมผ่านแอป" : "可通过应用控制的高级开关",
       category: "app-type",
-      image: "/images/products/app.png",
-      link: `/${locale}/products/wireless-switch/type2`,
+       image: "/images/wireless-switch/001.png",
+       link: `/${locale}/products/wireless-switch/type2`,
     },
     {
       id: 2,
       name: locale === "ko" ? "GUGU 스마트 무선 터치 스위치 (일반 타입)" : locale === "en" ? "GUGU Smart Wireless Touch Switch (Standard)" : locale === "vi" ? "Công tắc GUGU (Tiêu chuẩn)" : locale === "th" ? "สวิตช์ GUGU (มาตรฐาน)" : "GUGU智能开关 (标准型)",
       description: locale === "ko" ? "간편한 설치와 사용이 가능한 기본형 무선 스위치" : locale === "en" ? "Basic wireless switch with easy installation" : locale === "vi" ? "Công tắc cơ bản dễ lắp đặt" : locale === "th" ? "สวิตช์พื้นฐานติดตั้งง่าย" : "易于 설치的基准型开关",
       category: "standard-type",
-      image: "/images/products/general.png",
+      image: "/images/wireless-switch/002.png",
       link: `/${locale}/products/wireless-switch/type1`,
     },
     {
@@ -58,7 +58,7 @@ export default function WirelessSwitchPage({
       name: locale === "ko" ? "GUGU 일괄소등 올인원 스위치" : locale === "en" ? "GUGU Batch Off All-in-One Switch" : locale === "vi" ? "Công tắc All-in-One GUGU" : locale === "th" ? "สวิตช์ GUGU ออลอินวัน" : "GUGU全合一开关",
       description: locale === "ko" ? "조명과 환풍기를 동시에 제어하는 특허 기술 제품" : locale === "en" ? "Patented technology for controlling lights and fans simultaneously" : locale === "vi" ? "Công nghệ cấp bằng sáng chế điều khiển đèn và quạt" : locale === "th" ? "เทคโนโลยีที่จดสิทธิบัตรสำหรับการควบคุมไฟและพัดลม" : "专利技术，同步控制照明与换气扇",
       category: "allinone-type",
-      image: "/images/products/allinone.png",
+      image: "/images/wireless-switch/allinone.png",
       link: `/${locale}/products/wireless-switch/allinone`,
     },
   ]
