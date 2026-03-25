@@ -298,7 +298,7 @@ export default function ConsultationPage({
                               ? "สอบถามการซื้อสวิตช์ไร้สาย GUGU"
                               : "GUGU无线开关购买咨询"}
                     </option>
-                    <option value="guguservice">
+                    <option value="service">
                       {locale === "ko"
                         ? "GUGU 스위치 A/S 관련 문의"
                         : locale === "en"
