@@ -134,7 +134,7 @@ export default function BoardPage({
       // 🎨 기존 카드들과 통일감을 주기 위해 같은 배경색을 사용했습니다.
       bgColor: "bg-[#f5f2ea]", 
       // 🖼️ 사진은 기존 로고 이미지를 그대로 사용하거나, public/images에 새 아이콘을 넣고 경로를 바꾸세요.
-      images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8WJFz0qPg3p82AvmALJ0cX37GPqdAN.png"],
+      images: [""],
       files: [
         {
           // ✅ 실제 파일 이름과 매칭하세요.
