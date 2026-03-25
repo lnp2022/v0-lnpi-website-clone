@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X, ChevronDown, Globe, Youtube } from "lucide-react" // 🌟 Youtube 아이콘 추가
+import { Menu, X, ChevronDown, Globe } from "lucide-react" // 🌟 Youtube 임포트 제거
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/components/locale-provider"
 import { useTranslations } from "@/lib/translations"
@@ -67,7 +67,7 @@ export default function Header() {
           </Link>
 
           {/* 데스크톱 네비게이션 */}
-          <nav className="hidden xl:flex items-center space-x-6"> {/* lg에서 xl로 변경하여 공간 확보 */}
+          <nav className="hidden xl:flex items-center space-x-6"> 
             {navLinks.map((link) => (
               <div key={link.href} className="relative group">
                 <Link
@@ -103,17 +103,23 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* 🌟 언어 선택 및 유튜브 링크 영역 */}
+          {/* 🌟 언어 선택 및 유튜브 이미지 영역 */}
           <div className="flex items-center space-x-2 md:space-x-4">
-            {/* 🎥 유튜브 링크 버튼 추가 */}
+            {/* 🎥 1. 데스크톱: Youtube 아이콘 대신 이미지로 변경 */}
             <Link
               href="https://youtube.com/channel/UC3K5GQBkJ2j-WbTeKiGY_pA?si=r4rf3McGblHFMM8H"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-600 hover:text-[#FF0000] transition-colors"
+              className="p-1 group" // 호버 효과를 위한 group 클래스
               title="YouTube"
             >
-              <Youtube className="h-6 w-6" />
+              <Image 
+                src="/images/youtube-icon.png" // ✅ public/images/ 폴더에 이미지가 있어야 합니다!
+                alt="YouTube"
+                width={28} // 지구본 아이콘과 맞추기 위해 크기 조정 (h-6 w-6 정도)
+                height={28}
+                className="transition-transform group-hover:scale-110 object-contain" // 호버 시 살짝 커지는 효과
+              />
             </Link>
 
             <DropdownMenu>
@@ -147,7 +153,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* 모바일 메뉴 (유튜브 링크 추가) */}
+      {/* 모바일 메뉴 */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4">
@@ -181,15 +187,21 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              {/* 모바일 메뉴 하단에도 유튜브 링크 추가 */}
+              {/* 🎥 2. 모바일 메뉴 하단: 이미지로 변경 */}
               <Link
                 href="https://youtube.com/channel/UC3K5GQBkJ2j-WbTeKiGY_pA?si=r4rf3McGblHFMM8H"
                 target="_blank"
-                className="flex items-center space-x-2 py-4 text-[#FF0000] font-bold border-t"
+                className="flex items-center space-x-2 py-4 border-t"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Youtube className="h-5 w-5" />
-                <span>YouTube 채널 바로가기</span>
+                <Image 
+                  src="/images/youtube-icon.png" 
+                  alt="YouTube" 
+                  width={20} 
+                  height={20} 
+                  className="object-contain"
+                />
+                <span className="text-[#FF0000] font-bold">YouTube 채널 바로가기</span>
               </Link>
             </nav>
           </div>
