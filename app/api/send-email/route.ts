@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       ceiling: "우물천장 프레임 구매 문의",
       switch: "GUGU 무선 스위치 구매 문의",
       purchase: "GUGU 올인원 스위치 구매 문의", // ✅ 핫템뷰님 추가 항목
-      "allinone-service": "GUGU 올인원 스위치 A/S 문의", // ✅ 핫템뷰님 추가 항목
+      allinone-service: "GUGU 올인원 스위치 A/S 문의", // ✅ 핫템뷰님 추가 항목
       other: "기타 문의",
     }
     const inquiryTypeText = inquiryTypeMap[inquiryType] || inquiryType
