@@ -55,9 +55,19 @@ export default function WirelessSwitchPage({
     },
     {
       id: 3,
-      name: locale === "ko" ? "GUGU 일괄소등 올인원 스위치" : locale === "en" ? "GUGU Batch Off All-in-One Switch" : locale === "vi" ? "Công tắc All-in-One GUGU" : locale === "th" ? "สวิตช์ GUGU ออลอินวัน" : "GUGU全合一开关",
-      description: locale === "ko" ? "조명과 환풍기를 동시에 제어하는 특허 기술 제품" : locale === "en" ? "Patented technology for controlling lights and fans simultaneously" : locale === "vi" ? "Công nghệ cấp bằng sáng chế điều khiển đèn và quạt" : locale === "th" ? "เทคโนโลยีที่จดสิทธิบัตรสำหรับการควบคุมไฟและพัดลม" : "专利技术，同步控制照明与换气扇",
-      category: "allinone-type",
+      name: locale === "ko" ? "GUGU 일괄소등 올인원 스위치" : locale === "en" ? "GUGU Batch Off All-in-One Switch" : locale === "vi" ? "Công tắc All-in-One GUGU" : locale === "th" ? "สวิตช์ GUGU ออลอิน원" : "GUGU全合一开关",
+  // 🌟 안심케어 서비스(특허) 내용으로 전면 수정 완료!
+      description: 
+        locale === "ko" 
+           ? "무선 일괄 소등 스위치 + 안심케어 서비스(특허)" 
+           : locale === "en" 
+             ? "Wireless Batch Off Switch + Safety Care Service (Patent)" 
+             : locale === "vi" 
+               ? "Công tắc tắt đồng loạt không dây + Dịch vụ chăm sóc an tâm (Bằng sáng chế)" 
+               : locale === "th" 
+                 ? "สวิตช์ปิดไฟรวมแบบไร้สาย + บริการดูแลความปลอดภัย (สิทธิบัตร)" 
+                 : "无线一键总关开关 + 安心护理服务（专利）",
+  category: "allinone-type",
       image: "/images/wireless-switch/allinone.png",
       link: `/${locale}/products/wireless-switch/allinone`,
     },
@@ -70,7 +80,7 @@ export default function WirelessSwitchPage({
       {/* ✅ 3. 가장 위 히어로 배너 이미지 변경 */}
       <div className="relative w-full h-[300px] md:h-[400px] bg-white">
         <Image
-          src="/images/products/all.png" 
+          src="/images/wireless-switch/main.png" 
           alt="GUGU Switch Lineup"
           fill
           className="object-contain p-8"
