@@ -103,8 +103,26 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* 🌟 언어 선택 및 유튜브 이미지 영역 */}
-          <div className="flex items-center space-x-2 md:space-x-4">
+          {/* 🌟 언어 선택, 카카오톡, 유튜브 이미지 영역 */}
+          <div className="flex items-center space-x-2 md:space-x-3">
+
+            {/* 💬 1. 카카오톡 비즈니스 채널 링크 추가 */}
+            <Link
+              href="https://pf.kakao.com/_byxlxab" // ✅ 엘엔피 공식 비즈니스 채널 링크 적용!
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-1 group"
+              title="카카오톡 상담하기"
+            >
+              <Image 
+                src="/images/kakaotalk-icon.png" // ✅ public/images/ 폴더에 이미지가 있는지 확인해 주세요!
+                alt="KakaoTalk Business"
+                width={60} 
+                height={60} 
+                className="transition-transform group-hover:scale-110 object-contain" 
+              />
+            </Link>
+
             {/* 🎥 1. 데스크톱: Youtube 아이콘 대신 이미지로 변경 */}
             <Link
               href="https://youtube.com/channel/UC3K5GQBkJ2j-WbTeKiGY_pA?si=r4rf3McGblHFMM8H"
