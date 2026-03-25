@@ -116,8 +116,8 @@ export default function Header() {
               <Image 
                 src="/images/youtube-icon.png" // ✅ public/images/ 폴더에 이미지가 있어야 합니다!
                 alt="YouTube"
-                width={100} // 지구본 아이콘과 맞추기 위해 크기 조정 (h-6 w-6 정도)
-                height={100}
+                width={60} // 지구본 아이콘과 맞추기 위해 크기 조정 (h-6 w-6 정도)
+                height={60}
                 className="transition-transform group-hover:scale-110 object-contain" // 호버 시 살짝 커지는 효과
               />
             </Link>
