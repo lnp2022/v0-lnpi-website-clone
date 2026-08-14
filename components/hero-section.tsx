@@ -83,31 +83,33 @@ export default function HeroSection({ locale }: { locale: string }) {
       {/* 🌟 신제품 팝업 창 코드 시작 🌟 */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4">
-          <div className="relative bg-white rounded-xl shadow-2xl max-w-5xl w-full overflow-hidden mx-4">
-            
-            {/* 팝업 이미지 들어가는 곳 */}
-            <div className="relative w-full h-[800px] bg-gray-100">
+          {/* 팝업 전체 카드 (최대 너비를 md 정도로 잡고, 전체 높이가 화면의 90%를 안 넘게 설정) */}
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] flex flex-col overflow-hidden mx-4">
+      
+            {/* 팝업 이미지 들어가는 곳 (h-[800px] 대신 화면 비율 반응형 적용) */}
+            <div className="relative w-full flex-1 min-h-[300px] max-h-[60vh] bg-gray-100 overflow-hidden">
               <Image
-                src="/images/popup.jpg" // 나중에 여기에 진짜 팝업 이미지 이름을 넣을 거예요!
+                src="/images/popup.jpg"
                 alt="신제품 출시 안내"
                 fill
                 className="object-contain"
               />
             </div>
-            
-            {/* 하단 닫기 버튼 영역 */}
-            <div className="p-4 flex justify-between items-center bg-white border-t border-gray-100">
+
+            {/* 하단 닫기 버튼 영역 (항상 바닥에 고정되어 절대 안 잘림!) */}
+            <div className="p-4 flex justify-between items-center bg-white border-t border-gray-100 shrink-0">
               <p className="text-sm font-bold text-orange-600">
                 🎉 LNP 신제품 출시
               </p>
-              <Button 
+              <Button
                 onClick={() => setShowPopup(false)}
-                variant="outline" 
+                variant="outline"
                 className="border-gray-300 text-gray-600 hover:bg-gray-100 px-6"
               >
                 닫기 ✕
               </Button>
             </div>
+
           </div>
         </div>
       )}
